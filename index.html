@@ -1643,90 +1643,60 @@
     });
 
     // Calendar Functionality
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get current date
-        const today = new Date();
-        const currentMonth = today.getMonth();
-        const currentYear = today.getFullYear();
+document.addEventListener('DOMContentLoaded', function () {
+    // Get current date
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
 
-        // Set month titles
-        const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
-        const currentMonthTitle = document.getElementById('currentMonthTitle');
-        const nextMonthTitle = document.getElementById('nextMonthTitle');
-        
-        if (currentMonthTitle) {
-            currentMonthTitle.textContent = `${currentYear}年 ${months[currentMonth]}`;
-        }
+    // Set month titles
+    const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+    const currentMonthTitle = document.getElementById('currentMonthTitle');
+    const nextMonthTitle = document.getElementById('nextMonthTitle');
+    
+    if (currentMonthTitle) {
+        currentMonthTitle.textContent = `${currentYear}年 ${months[currentMonth]}`;
+    }
 
-        // Calculate next month
-        const nextMonthDate = new Date(today);
-        nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
-        const nextMonth = nextMonthDate.getMonth();
-        const nextMonthYear = nextMonthDate.getFullYear();
-        
-        if (nextMonthTitle) {
-            nextMonthTitle.textContent = `${nextMonthYear}年 ${months[nextMonth]}`;
-        }
+    // Calculate next month
+    const nextMonthDate = new Date(today);
+    nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
+    const nextMonth = nextMonthDate.getMonth();
+    const nextMonthYear = nextMonthDate.getFullYear();
+    
+    if (nextMonthTitle) {
+        nextMonthTitle.textContent = `${nextMonthYear}年 ${months[nextMonth]}`;
+    }
 
-        // ボタンの取得
-        const nextMonthBtn = document.getElementById('nextMonthBtn');
-        const currentMonthBtn = document.getElementById('currentMonthBtn');
+    // ボタンとコンテナの取得
+    const nextMonthBtn = document.getElementById('nextMonthBtn');
+    const currentMonthBtn = document.getElementById('currentMonthBtn');
+    const currentMonthCalendar = document.getElementById('currentMonthCalendar');
+    const nextMonthCalendar = document.getElementById('nextMonthCalendar');
+    
+    // 最初は両方のボタンを表示する（デフォルトで表示）
+    if (nextMonthBtn && currentMonthBtn) {
+        nextMonthBtn.style.display = 'inline-block';
+        currentMonthBtn.style.display = 'inline-block';
         
-        // ボタンが存在する場合のみ処理
-        if (nextMonthBtn && currentMonthBtn) {
-            // 最初は「来月」ボタンを非表示にしておく
-            nextMonthBtn.style.display = 'none';
-            currentMonthBtn.style.display = 'none';
+        // Tab switching
+        currentMonthBtn.addEventListener('click', function () {
+            if (currentMonthCalendar) currentMonthCalendar.style.display = 'block';
+            if (nextMonthCalendar) nextMonthCalendar.style.display = 'none';
             
-            // 来月の画像が存在するか確認
-            const nextMonthImg = document.getElementById('nextMonthImage');
-            if (nextMonthImg) {
-                nextMonthImg.onload = function() {
-                    // 画像が読み込めた場合（存在する場合）
-                    nextMonthBtn.style.display = 'inline-block';
-                    currentMonthBtn.style.display = 'inline-block';
-                };
-                
-                nextMonthImg.onerror = function() {
-                    // 画像が読み込めない場合（存在しない場合）
-                    nextMonthBtn.style.display = 'none';
-                    currentMonthBtn.style.display = 'none';
-                    
-                    // 来月のカレンダーセクション全体を非表示に
-                    const nextMonthCalendar = document.getElementById('nextMonthCalendar');
-                    if (nextMonthCalendar) {
-                        nextMonthCalendar.style.display = 'none';
-                    }
-                };
-                
-                // 念のため、SRCを再設定してロードイベントを確実に発火させる
-                nextMonthImg.src = 'images/calendar_next.png';
-            }
+            currentMonthBtn.style.backgroundColor = 'var(--primary-dark)';
+            nextMonthBtn.style.backgroundColor = 'var(--primary-light)';
+        });
 
-            // Tab switching
-            currentMonthBtn.addEventListener('click', function () {
-                const currentMonthCalendar = document.getElementById('currentMonthCalendar');
-                const nextMonthCalendar = document.getElementById('nextMonthCalendar');
-                
-                if (currentMonthCalendar) currentMonthCalendar.style.display = 'block';
-                if (nextMonthCalendar) nextMonthCalendar.style.display = 'none';
-                
-                currentMonthBtn.style.backgroundColor = 'var(--primary-dark)';
-                nextMonthBtn.style.backgroundColor = 'var(--primary-light)';
-            });
-
-            nextMonthBtn.addEventListener('click', function () {
-                const currentMonthCalendar = document.getElementById('currentMonthCalendar');
-                const nextMonthCalendar = document.getElementById('nextMonthCalendar');
-                
-                if (currentMonthCalendar) currentMonthCalendar.style.display = 'none';
-                if (nextMonthCalendar) nextMonthCalendar.style.display = 'block';
-                
-                currentMonthBtn.style.backgroundColor = 'var(--primary-light)';
-                nextMonthBtn.style.backgroundColor = 'var(--primary-dark)';
-            });
-        }
-    });
+        nextMonthBtn.addEventListener('click', function () {
+            if (currentMonthCalendar) currentMonthCalendar.style.display = 'none';
+            if (nextMonthCalendar) nextMonthCalendar.style.display = 'block';
+            
+            currentMonthBtn.style.backgroundColor = 'var(--primary-light)';
+            nextMonthBtn.style.backgroundColor = 'var(--primary-dark)';
+        });
+    }
+});
 
     // 一番上までスクロールする関数
     function scrollToTop() {
