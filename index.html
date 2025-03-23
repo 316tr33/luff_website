@@ -1191,6 +1191,47 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
     }
 }
+/* スマホ表示での動物カード改善 */
+@media screen and (max-width: 768px) {
+    /* 動物カードは1列のまま */
+    .animals-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    /* カードのデザイン改善 */
+    .animal-card {
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto !important;
+        align-items: center;
+    }
+    
+    /* 画像サイズ調整 */
+    .animal-img {
+        width: 120px !important;
+        height: 120px !important;
+        min-width: 120px !important;
+        flex-shrink: 0;
+    }
+    
+    /* テキスト部分 */
+    .animal-info {
+        padding: 10px 15px !important;
+        text-align: left !important;
+    }
+    
+    .animal-info h3 {
+        font-size: 16px !important;
+        margin-bottom: 3px !important;
+    }
+    
+    .animal-info p {
+        font-size: 13px !important;
+        margin-bottom: 5px !important;
+        line-height: 1.4 !important;
+    }
+}
     </style>
 </head>
 
