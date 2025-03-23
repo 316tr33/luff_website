@@ -990,6 +990,51 @@
         margin-bottom: 20px;
     }
 }
+/* スマホ表示でのアクセス・お問い合わせセクション修正 */
+@media screen and (max-width: 768px) {
+    /* コンタクトセクションを縦積みレイアウトに変更 */
+    #contact .contact-content,
+    #contact [style*="display: grid"],
+    #contact [style*="grid-template-columns"] {
+        display: block !important;
+        width: 100% !important;
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* 情報セクションを先に表示し、幅いっぱいに */
+    #contact .contact-info,
+    #contact [style*="background-color: #f9fbf9"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 25px;
+        padding: 20px !important;
+    }
+    
+    /* 情報セクションのテキスト調整 */
+    #contact .contact-info h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    #contact .contact-info-item {
+        margin-bottom: 12px !important;
+    }
+    
+    /* マップセクションを下に表示し、適切な高さに */
+    #contact .map,
+    #contact [style*="align-items: flex-start"],
+    #contact [style*="height: 100%"] {
+        width: 100% !important;
+        height: auto !important;
+        min-height: unset !important;
+    }
+    
+    #contact iframe,
+    #contact [style*="border-radius: 10px; overflow: hidden"] {
+        height: 300px !important;
+        width: 100% !important;
+    }
+}
     </style>
 </head>
 
