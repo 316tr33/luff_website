@@ -1435,6 +1435,40 @@
         display: none !important;
     }
 }
+/* スマホ表示での動物セクションアコーディオン */
+@media screen and (max-width: 768px) {
+    /* デスクトップ用要素を非表示 */
+    .desktop-animal-nav,
+    .desktop-animal-sections {
+        display: none !important;
+    }
+    
+    /* 従来の個別セクションも非表示（ID指定で確実に） */
+    #birds:not(.animal-category-content),
+    #rabbits:not(.animal-category-content),
+    #small-animals:not(.animal-category-content),
+    #special-animals:not(.animal-category-content) {
+        display: none !important;
+    }
+    
+    /* カテゴリーヘッダー */
+    .animal-category-header {
+        background-color: var(--primary-light);
+        color: white;
+        padding: 12px 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+    }
+    
+    /* 他のスタイルは変更なし */
+    /* ... */
+}
     </style>
 </head>
 
