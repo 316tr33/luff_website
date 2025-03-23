@@ -1373,6 +1373,68 @@
         padding-bottom: 10px !important;
     }
 }
+/* スマホ表示での動物セクションアコーディオン */
+@media screen and (max-width: 768px) {
+    /* カテゴリーヘッダー */
+    .animal-category-header {
+        background-color: var(--primary-light);
+        color: white;
+        padding: 12px 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+    }
+    
+    .animal-category-header:hover {
+        background-color: var(--primary);
+    }
+    
+    .animal-category-header h3 {
+        margin: 0;
+        color: white !important;
+        font-size: 18px !important;
+    }
+    
+    .animal-category-header .toggle-icon {
+        font-size: 20px;
+        transition: transform 0.3s;
+    }
+    
+    /* 開いた状態のアイコン回転 */
+    .animal-category-header.active .toggle-icon {
+        transform: rotate(180deg);
+    }
+    
+    /* カテゴリーコンテンツ */
+    .animal-category-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    
+    /* スマホでのグリッド調整 */
+    #animals .animals-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    /* カテゴリー間の余白 */
+    .animal-category {
+        margin-bottom: 20px;
+    }
+}
+
+/* デスクトップではアコーディオン非表示 */
+@media screen and (min-width: 769px) {
+    .animal-category-mobile {
+        display: none !important;
+    }
+}
     </style>
 </head>
 
@@ -1441,292 +1503,348 @@
     </section>
 
     <!-- Animals Section -->
-    <section id="animals" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>ふれあえる動物たち</h2>
-            </div>
+    <!-- Animals Section -->
+<section id="animals" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>ふれあえる動物たち</h2>
+        </div>
 
-            <!-- 動物カテゴリーナビゲーション -->
-            <div style="display: flex; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; gap: 10px;">
-                <a href="#birds" class="btn" style="background-color: var(--primary-light);">鳥類</a>
-                <a href="#rabbits" class="btn" style="background-color: var(--primary-light);">うさぎ・チンチラ</a>
-                <a href="#small-animals" class="btn" style="background-color: var(--primary-light);">小動物</a>
-                <a href="#special-animals" class="btn" style="background-color: var(--primary-light);">珍しい動物</a>
-            </div>
+        <!-- 動物カテゴリーナビゲーション（デスクトップ用） -->
+        <div class="desktop-animal-nav" style="display: flex; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; gap: 10px;">
+            <a href="#birds" class="btn" style="background-color: var(--primary-light);">鳥類</a>
+            <a href="#rabbits" class="btn" style="background-color: var(--primary-light);">うさぎ・チンチラ</a>
+            <a href="#small-animals" class="btn" style="background-color: var(--primary-light);">小動物</a>
+            <a href="#special-animals" class="btn" style="background-color: var(--primary-light);">珍しい動物</a>
+        </div>
 
+        <!-- モバイル用アコーディオン -->
+        <div class="animal-category-mobile">
             <!-- 鳥類 -->
-            <div id="birds" style="margin-bottom: 50px;">
-                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">鳥類
-                </h3>
-                <div class="animals-grid">
-                    <!-- シロハラインコ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="シロハラインコ" loading="lazy">
+            <div class="animal-category">
+                <div class="animal-category-header" data-target="birds-content">
+                    <h3>鳥類</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="birds-content" class="animal-category-content">
+                    <div class="animals-grid">
+                        <!-- シロハラインコ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="シロハラインコ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>シロハラインコ</h3>
+                                <p>ぽっぴちゃん</p>
+                                <p>カラフルな羽と賢い性格が魅力のシロハラインコ。人懐っこい性格で触れ合いを楽しめます。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>シロハラインコ</h3>
-                            <p>ぽっぴちゃん</p>
-                            <p>カラフルな羽と賢い性格が魅力のシロハラインコ。人懐っこい性格で触れ合いを楽しめます。</p>
-                        </div>
-                    </div>
 
-                    <!-- ウロコインコ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ウロコインコ" loading="lazy">
+                        <!-- ウロコインコ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="ウロコインコ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>ウロコインコ</h3>
+                                <p>ぱいんちゃん</p>
+                                <p>ウロコ模様の美しい羽を持つインコ。温厚で穏やかな性格をしています。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>ウロコインコ</h3>
-                            <p>ぱいんちゃん</p>
-                            <p>ウロコ模様の美しい羽を持つインコ。温厚で穏やかな性格をしています。</p>
-                        </div>
-                    </div>
 
-                    <!-- セキセイインコ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="セキセイインコ" loading="lazy">
+                        <!-- セキセイインコ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="セキセイインコ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>セキセイインコ</h3>
+                                <p>そらちゃん</p>
+                                <p>小さな体に大きな魅力を持つセキセイインコ。活発で愛嬌のある姿が人気です。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>セキセイインコ</h3>
-                            <p>そらちゃん</p>
-                            <p>小さな体に大きな魅力を持つセキセイインコ。活発で愛嬌のある姿が人気です。</p>
-                        </div>
-                    </div>
 
-                    <!-- オカメインコ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="オカメインコ" loading="lazy">
+                        <!-- オカメインコ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="オカメインコ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>オカメインコ</h3>
+                                <p>れもんちゃん</p>
+                                <p>頭の冠羽が特徴的なオカメインコ。優しく穏やかな性格で、初めての方にもおすすめです。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>オカメインコ</h3>
-                            <p>れもんちゃん</p>
-                            <p>頭の冠羽が特徴的なオカメインコ。優しく穏やかな性格で、初めての方にもおすすめです。</p>
-                        </div>
-                    </div>
 
-                    <!-- ボタンインコ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ボタンインコ" loading="lazy">
+                        <!-- ボタンインコ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="ボタンインコ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>ボタンインコ</h3>
+                                <p>ぺんちゃん</p>
+                                <p>小さな体が特徴のボタンインコ。とても活発で好奇心旺盛な性格をしています。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>ボタンインコ</h3>
-                            <p>ぺんちゃん</p>
-                            <p>小さな体が特徴のボタンインコ。とても活発で好奇心旺盛な性格をしています。</p>
-                        </div>
-                    </div>
 
-                    <!-- コザクラインコ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="コザクラインコ" loading="lazy">
+                        <!-- コザクラインコ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="コザクラインコ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>コザクラインコ</h3>
+                                <p>さくらちゃん</p>
+                                <p>愛情深く社交的なコザクラインコ。人の指に止まることが大好きです。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>コザクラインコ</h3>
-                            <p>さくらちゃん</p>
-                            <p>愛情深く社交的なコザクラインコ。人の指に止まることが大好きです。</p>
-                        </div>
-                    </div>
 
-                    <!-- ギンバト -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ギンバト" loading="lazy">
+                        <!-- ギンバト -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="ギンバト" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>ギンバト</h3>
+                                <p>たいはくくん</p>
+                                <p>優雅な姿が特徴のギンバト。静かな佇まいで心を癒してくれます。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>ギンバト</h3>
-                            <p>たいはくくん</p>
-                            <p>優雅な姿が特徴のギンバト。静かな佇まいで心を癒してくれます。</p>
-                        </div>
-                    </div>
 
-                    <!-- コールダック -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="コールダック" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>コールダック</h3>
-                            <p>ぶりちゃん</p>
-                            <p>ユニークな鳴き声が特徴のコールダック。愛らしい姿で人気を集めています。</p>
+                        <!-- コールダック -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="コールダック" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>コールダック</h3>
+                                <p>ぶりちゃん</p>
+                                <p>ユニークな鳴き声が特徴のコールダック。愛らしい姿で人気を集めています。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- うさぎ・チンチラ -->
-            <div id="rabbits" style="margin-bottom: 50px;">
-                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">
-                    うさぎ・チンチラ</h3>
-                <div class="animals-grid">
-                    <!-- チンチラ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="チンチラ" loading="lazy">
+            <div class="animal-category">
+                <div class="animal-category-header" data-target="rabbits-content">
+                    <h3>うさぎ・チンチラ</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="rabbits-content" class="animal-category-content">
+                    <div class="animals-grid">
+                        <!-- チンチラ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="チンチラ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>チンチラ</h3>
+                                <p>ねねちゃん</p>
+                                <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>チンチラ</h3>
-                            <p>ねねちゃん</p>
-                            <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
-                        </div>
-                    </div>
 
-                    <!-- アメリカンファジーロップ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
+                        <!-- アメリカンファジーロップ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>アメリカンファジーロップ</h3>
+                                <p>もふこちゃん</p>
+                                <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>アメリカンファジーロップ</h3>
-                            <p>もふこちゃん</p>
-                            <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
-                        </div>
-                    </div>
 
-                    <!-- ホーランドロップ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                        <!-- ホーランドロップ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>ホーランドロップ</h3>
+                                <p>ぼーくん</p>
+                                <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>ホーランドロップ</h3>
-                            <p>ぼーくん</p>
-                            <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
-                        </div>
-                    </div>
 
-                    <!-- ホーランドロップ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>ホーランドロップ</h3>
-                            <p>さっちゃん</p>
-                            <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
+                        <!-- ホーランドロップ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>ホーランドロップ</h3>
+                                <p>さっちゃん</p>
+                                <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- 小動物 -->
-            <div id="small-animals" style="margin-bottom: 50px;">
-                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">小動物
-                </h3>
-                <div class="animals-grid">
-                    <!-- ハムスター -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ハムスター" loading="lazy">
+            <div class="animal-category">
+                <div class="animal-category-header" data-target="small-animals-content">
+                    <h3>小動物</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="small-animals-content" class="animal-category-content">
+                    <div class="animals-grid">
+                        <!-- ハムスター -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="ハムスター" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>ハムスター</h3>
+                                <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>ハムスター</h3>
-                            <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
-                        </div>
-                    </div>
 
-                    <!-- モルモット -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="モルモット" loading="lazy">
+                        <!-- モルモット -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="モルモット" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>モルモット</h3>
+                                <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>モルモット</h3>
-                            <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
-                        </div>
-                    </div>
 
-                    <!-- ハリネズミ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ハリネズミ" loading="lazy">
+                        <!-- ハリネズミ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="ハリネズミ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>ハリネズミ</h3>
+                                <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>ハリネズミ</h3>
-                            <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
-                        </div>
-                    </div>
 
-                    <!-- モモンガ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="モモンガ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>モモンガ</h3>
-                            <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
+                        <!-- モモンガ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="モモンガ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>モモンガ</h3>
+                                <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- 珍しい動物 -->
-            <div id="special-animals" style="margin-bottom: 50px;">
-                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">珍しい動物
-                </h3>
-                <div class="animals-grid">
-                    <!-- フトアゴヒゲトカゲ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="フトアゴヒゲトカゲ" loading="lazy">
+            <div class="animal-category">
+                <div class="animal-category-header" data-target="special-animals-content">
+                    <h3>珍しい動物</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="special-animals-content" class="animal-category-content">
+                    <div class="animals-grid">
+                        <!-- フトアゴヒゲトカゲ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="フトアゴヒゲトカゲ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>フトアゴヒゲトカゲ</h3>
+                                <p>穏やかな性格で人気の爬虫類。ドラゴンのような見た目に触れる珍しい体験ができます。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>フトアゴヒゲトカゲ</h3>
-                            <p>穏やかな性格で人気の爬虫類。ドラゴンのような見た目に触れる珍しい体験ができます。</p>
-                        </div>
-                    </div>
 
-                    <!-- ショウガラゴ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ショウガラゴ" loading="lazy">
+                        <!-- ショウガラゴ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="ショウガラゴ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>ショウガラゴ</h3>
+                                <p>大きな目が特徴的な夜行性の霊長類。珍しい動物との貴重なふれあいが体験できます。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>ショウガラゴ</h3>
-                            <p>大きな目が特徴的な夜行性の霊長類。珍しい動物との貴重なふれあいが体験できます。</p>
-                        </div>
-                    </div>
 
-                    <!-- ミーアキャット -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ミーアキャット" loading="lazy">
+                        <!-- ミーアキャット -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="ミーアキャット" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>ミーアキャット</h3>
+                                <p>好奇心旺盛で愛らしい姿が人気のミーアキャット。その独特の仕草に癒されます。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>ミーアキャット</h3>
-                            <p>好奇心旺盛で愛らしい姿が人気のミーアキャット。その独特の仕草に癒されます。</p>
-                        </div>
-                    </div>
 
-                    <!-- チワワ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="チワワ" loading="lazy">
+                        <!-- チワワ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="チワワ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>チワワ</h3>
+                                <p>小さな体に大きな魅力を持つ犬種。愛らしい姿と甘えん坊な性格が人気です。</p>
+                            </div>
                         </div>
-                        <div class="animal-info">
-                            <h3>チワワ</h3>
-                            <p>小さな体に大きな魅力を持つ犬種。愛らしい姿と甘えん坊な性格が人気です。</p>
-                        </div>
-                    </div>
 
-                    <!-- マイクロブタ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="マイクロブタ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>マイクロブタ</h3>
-                            <p>普通の豚よりもコンパクトなサイズで親しみやすいマイクロブタ。賢くてじゃれつくのが大好きです。</p>
+                        <!-- マイクロブタ -->
+                        <div class="animal-card">
+                            <div class="animal-img">
+                                <img src="/api/placeholder/400/300" alt="マイクロブタ" loading="lazy">
+                            </div>
+                            <div class="animal-info">
+                                <h3>マイクロブタ</h3>
+                                <p>普通の豚よりもコンパクトなサイズで親しみやすいマイクロブタ。賢くてじゃれつくのが大好きです。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- 以下は既存のデスクトップ表示用セクション -->
+        <!-- ※このセクションはCSSでスマホ表示時に非表示にします -->
+        <div class="desktop-animal-sections">
+            <!-- 鳥類 -->
+            <div id="birds" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">鳥類</h3>
+                <div class="animals-grid">
+                    <!-- 既存の鳥類コンテンツ -->
+                </div>
+            </div>
+
+            <!-- うさぎ・チンチラ -->
+            <div id="rabbits" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">うさぎ・チンチラ</h3>
+                <div class="animals-grid">
+                    <!-- 既存のうさぎ・チンチラコンテンツ -->
+                </div>
+            </div>
+
+            <!-- 小動物 -->
+            <div id="small-animals" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">小動物</h3>
+                <div class="animals-grid">
+                    <!-- 既存の小動物コンテンツ -->
+                </div>
+            </div>
+
+            <!-- 珍しい動物 -->
+            <div id="special-animals" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">珍しい動物</h3>
+                <div class="animals-grid">
+                    <!-- 既存の珍しい動物コンテンツ -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Pricing Section -->
     <section id="pricing" class="section pricing">
@@ -2359,6 +2477,40 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+});
+</script>
+<script>
+    // 動物カテゴリーアコーディオン機能
+document.addEventListener('DOMContentLoaded', function() {
+    // モバイル表示時のみ実行
+    if (window.innerWidth <= 768) {
+        const headers = document.querySelectorAll('.animal-category-header');
+        
+        headers.forEach(header => {
+            header.addEventListener('click', function() {
+                // アクティブ状態の切り替え
+                this.classList.toggle('active');
+                
+                // ターゲットコンテンツの取得
+                const targetId = this.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                
+                // コンテンツの表示/非表示切り替え
+                if (content) {
+                    if (this.classList.contains('active')) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        content.style.maxHeight = '0';
+                    }
+                }
+            });
+        });
+        
+        // 初期状態で最初のカテゴリーを開く（オプション）
+        if (headers.length > 0) {
+            headers[0].click();
+        }
+    }
 });
 </script>
 </body>
