@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luff s.a.family - 小動物たちとのふれあい体験</title>
+    <title>Luff s.a.family - 小動物とのふれあい体験</title>
     <style>
         :root {
             --primary: #4CAF50;
@@ -607,6 +607,140 @@
                 gap: 30px;
             }
         }
+        /* 追加するCSS */
+@media screen and (min-width: 768px) {
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: start;
+    }
+    
+    .map {
+        height: 100%;
+        min-height: 400px;
+        aspect-ratio: 1 / 1;
+    }
+}/* 追加するCSS */
+@media screen and (min-width: 768px) {
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: stretch;
+    }
+    
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .map {
+        height: auto;
+        min-height: 350px;
+        /* 正方形から少し長方形に */
+        aspect-ratio: 1 / 0.9;
+    }
+    
+    /* 情報と地図の間にスペースを追加 */
+    .contact-info-item:last-child {
+        margin-bottom: 10px;
+    }
+}
+/* 追加するCSS */
+@media screen and (min-width: 768px) {
+    .contact-content {
+        display: grid;
+        grid-template-columns: 45% 55%;  /* 左右の比率を調整 */
+        gap: 30px;
+        align-items: start;
+    }
+    
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 20px;
+        background-color: #f9fbf9;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .map {
+        height: 100%;
+        min-height: 380px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .map iframe {
+        height: 100%;
+    }
+}
+/* 追加するCSS */
+@media screen and (min-width: 768px) {
+    .contact-content {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        gap: 30px;
+        align-items: start;
+    }
+    
+    .contact-info {
+        padding: 20px;
+        background-color: #f9fbf9;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .map-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .map {
+        width: 90%;
+        aspect-ratio: 1 / 0.85; /* 正方形より少し横長に */
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .map iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+.btn {
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* 通常のボタン（動物たち） */
+.btn {
+    background-color: var(--primary);
+}
+
+.btn:hover {
+    background-color: var(--primary-light);
+}
+
+/* 暗い色のボタン（予約する） */
+.btn.dark {
+    background-color: var(--primary-dark);
+}
+
+.btn.dark:hover {
+    filter: brightness(1.2); /* 20%明るく */
+}
     </style>
 </head>
 
@@ -646,7 +780,7 @@
             <h2>動物たちとの素敵な出会い</h2>
             <p>Luff s.a.familyでは、様々な小動物たちとのゼロ距離の触れ合いを通して、癒しと感動のひとときをお届けします。</p>
             <a href="#animals" class="btn">動物たち</a>
-            <a href="https://forms.gle/あなたのGoogleフォームID" class="btn" style="background-color: var(--primary-dark); margin-left: 15px;">予約する</a>
+            <a href="https://forms.gle/1gvBUKnQsN4eaTH28" class="btn">予約する</a>
         </div>
     </section>
 
@@ -981,7 +1115,7 @@
                             <li>動物への餌やり体験</li>
                             <li>中学生以上が対象</li>
                         </ul>
-                        <a href="https://forms.gle/あなたのGoogleフォームID" class="btn">予約する</a>
+                        <a href="https://forms.gle/1gvBUKnQsN4eaTH28" class="btn">予約する</a>
                     </div>
                 </div>
 
@@ -999,7 +1133,7 @@
                             <li>動物への餌やり体験</li>
                             <li>小学6年生未満が対象</li>
                         </ul>
-                        <a href="https://forms.gle/あなたのGoogleフォームID" class="btn">予約する</a>
+                        <a href="https://forms.gle/1gvBUKnQsN4eaTH28" class="btn">予約する</a>
                     </div>
                 </div>
             </div>
@@ -1081,175 +1215,250 @@
         </div>
     </section>
 
-    <!-- Calendar Section -->
-    <section id="calendar" class="section" style="background-color: var(--background-alt);">
-        <div class="container">
-            <div class="section-title">
-                <h2>営業カレンダー</h2>
+    <!-- 初めての方へ Section -->
+<section id="for-beginners" class="section" style="background-color: var(--background-alt);">
+    <div class="container">
+        <div class="section-title">
+            <h2>初めての方へ</h2>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- カード1: ご来店前に -->
+                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <span style="font-size: 36px; color: var(--primary);">📝</span>
+                        <h3 style="margin-top: 10px; color: var(--primary-dark);">ご来店前に</h3>
+                    </div>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>動物にアレルギーがある方は事前にご相談ください</li>
+                        <li>予約すると待ち時間なくご案内できます</li>
+                        <li>香水や強い臭いのするものは避けてください</li>
+                        <li>動物が驚くため、大きな声や急な動きは控えましょう</li>
+                    </ul>
+                </div>
+                
+                <!-- カード2: おすすめの服装 -->
+                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <span style="font-size: 36px; color: var(--primary);">👕</span>
+                        <h3 style="margin-top: 10px; color: var(--primary-dark);">おすすめの服装</h3>
+                    </div>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>動物の爪が引っかかりにくい服装がおすすめです</li>
+                        <li>ボタンやビーズなど、小さなパーツが取れやすい服装は避けましょう</li>
+                        <li>動物の毛が付きやすいため、黒い服は避けることをおすすめします</li>
+                        <li>肩や膝が出ている服装は、小さな引っかき傷の可能性があります</li>
+                    </ul>
+                </div>
+                
+                <!-- カード3: 触れ合い方のコツ -->
+                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <span style="font-size: 36px; color: var(--primary);">🐾</span>
+                        <h3 style="margin-top: 10px; color: var(--primary-dark);">触れ合い方のコツ</h3>
+                    </div>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>最初はゆっくりと手を差し出し、動物に近づかせましょう</li>
+                        <li>頭や背中を優しく撫でると喜びます</li>
+                        <li>急な動きは動物を驚かせるので避けましょう</li>
+                        <li>動物の体をしっかり支えて抱っこしてください</li>
+                        <li>スタッフの指示に従い、安全に触れ合いましょう</li>
+                    </ul>
+                </div>
             </div>
-            <div class="calendar-container"
-                style="display: flex; flex-direction: column; max-width: 800px; margin: 0 auto;">
-                <div class="calendar-nav" style="display: flex; justify-content: center; margin-bottom: 20px;">
-                    <button id="currentMonthBtn" class="btn"
-                        style="margin-right: 10px; background-color: var(--primary-dark);">今月</button>
-                    <button id="nextMonthBtn" class="btn" style="background-color: var(--primary-light);">来月</button>
-                </div>
+            
+            <!-- 補足情報 -->
+            <div style="margin-top: 40px; text-align: center; padding: 20px; background-color: rgba(76, 175, 80, 0.1); border-radius: 10px;">
+                <p style="margin-bottom: 10px;">初めてのご来店でも安心してお楽しみいただけるよう、スタッフがしっかりとサポートいたします。</p>
+                <p>不安なことがあれば、お気軽に<a href="#contact" style="color: var(--primary-dark); text-decoration: underline;">お問い合わせ</a>ください。</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div id="currentMonthCalendar" style="margin-bottom: 30px;">
-                    <h3 id="currentMonthTitle"
-                        style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
-                    <p style="text-align: center; margin-bottom: 15px;">※営業日・定休日は毎月変わります。最新情報は<a href="#"
-                            style="color: var(--primary-dark); text-decoration: underline;">公式Instagram</a>でもご確認いただけます。
+<!-- ギャラリー Section -->
+<section id="gallery" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>ギャラリー</h2>
+        </div>
+        
+        <!-- ギャラリーグリッド -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-bottom: 30px;">
+            <!-- 画像アイテム (必要な数だけ複製) -->
+            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="/api/placeholder/400/300" alt="動物たちの様子" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="/api/placeholder/400/300" alt="動物たちの様子" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="/api/placeholder/400/300" alt="動物たちの様子" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="/api/placeholder/400/300" alt="動物たちの様子" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="/api/placeholder/400/300" alt="動物たちの様子" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="/api/placeholder/400/300" alt="動物たちの様子" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+        
+        <!-- もっと見るボタン -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank" class="btn" style="padding: 12px 25px;">
+                <span style="display: flex; align-items: center; justify-content: center;">
+                    <span style="margin-right: 8px;">📱</span> Instagramでもっと見る
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+
+   <!-- Calendar Section -->
+<section id="calendar" class="section" style="background-color: var(--background-alt);">
+    <div class="container">
+        <div class="section-title">
+            <h2>営業カレンダー</h2>
+        </div>
+        <div class="calendar-container"
+            style="display: flex; flex-direction: column; max-width: 800px; margin: 0 auto;">
+            <div class="calendar-nav" style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <button id="currentMonthBtn" class="btn"
+                    style="margin-right: 10px; background-color: var(--primary-dark); display: none;">今月</button>
+                <button id="nextMonthBtn" class="btn" style="background-color: var(--primary-light); display: none;">来月</button>
+            </div>
+
+            <div id="currentMonthCalendar" style="margin-bottom: 30px;">
+                <h3 id="currentMonthTitle"
+                    style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
+                    <p style="text-align: center; margin-bottom: 15px; line-height: 1.7;">
+                        ※来月のスケジュールは毎月20日頃に更新します。<br>
+                        最新情報は<a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank"
+                            style="color: var(--primary-dark); text-decoration: underline; font-weight: 600;">公式Instagram</a>でもご確認いただけます。
                     </p>
-                    <div class="calendar"
-                        style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <thead>
-                                <tr style="background-color: var(--primary);">
-                                    <th style="padding: 10px; color: white; width: 14.28%;">日</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">月</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">火</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">水</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">木</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">金</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">土</th>
-                                </tr>
-                            </thead>
-                            <tbody id="currentMonthBody">
-                                <!-- Calendar will be generated by JavaScript -->
-                            </tbody>
-                        </table>
-                    </div>
-                    <div style="margin-top: 15px; display: flex; justify-content: center;">
-                        <div style="display: flex; align-items: center; margin-right: 20px;">
-                            <div
-                                style="width: 20px; height: 20px; background-color: var(--primary-light); margin-right: 8px; border-radius: 4px;">
-                            </div>
-                            <span>営業日</span>
-                        </div>
-                        <div style="display: flex; align-items: center;">
-                            <div
-                                style="width: 20px; height: 20px; background-color: #f5f5f5; margin-right: 8px; border-radius: 4px;">
-                            </div>
-                            <span>定休日</span>
-                        </div>
-                    </div>
+                
+                <!-- カレンダー画像を表示 -->
+                <div style="width: 100%; text-align: center; margin-bottom: 15px;">
+                    <img id="currentMonthImage" src="images/calendar_current.png" alt="今月のカレンダー" style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
                 </div>
+            </div>
 
-                <div id="nextMonthCalendar" style="display: none;">
-                    <h3 id="nextMonthTitle"
-                        style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
-                    <p style="text-align: center; margin-bottom: 15px;">※来月のスケジュールは20日頃に更新されます。最新情報は<a href="#"
-                            style="color: var(--primary-dark); text-decoration: underline;">公式Instagram</a>でご確認ください。</p>
-                    <div class="calendar"
-                        style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <thead>
-                                <tr style="background-color: var(--primary);">
-                                    <th style="padding: 10px; color: white; width: 14.28%;">日</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">月</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">火</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">水</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">木</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">金</th>
-                                    <th style="padding: 10px; color: white; width: 14.28%;">土</th>
-                                </tr>
-                            </thead>
-                            <tbody id="nextMonthBody">
-                                <!-- Calendar will be generated by JavaScript -->
-                            </tbody>
-                        </table>
-                    </div>
-                    <div style="margin-top: 15px; display: flex; justify-content: center;">
-                        <div style="display: flex; align-items: center; margin-right: 20px;">
-                            <div
-                                style="width: 20px; height: 20px; background-color: var(--primary-light); margin-right: 8px; border-radius: 4px;">
-                            </div>
-                            <span>営業日</span>
-                        </div>
-                        <div style="display: flex; align-items: center;">
-                            <div
-                                style="width: 20px; height: 20px; background-color: #f5f5f5; margin-right: 8px; border-radius: 4px;">
-                            </div>
-                            <span>定休日</span>
-                        </div>
-                    </div>
+            <div id="nextMonthCalendar" style="display: none;">
+                <h3 id="nextMonthTitle"
+                    style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
+                    <p style="text-align: center; margin-bottom: 15px; line-height: 1.7;">
+                        ※来月のスケジュールは毎月20日頃に更新します。<br>
+                        最新情報は<a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank"
+                            style="color: var(--primary-dark); text-decoration: underline; font-weight: 600;">公式Instagram</a>でもご確認いただけます。
+                    </p>
+                
+                <!-- 来月のカレンダー画像を表示 -->
+                <div style="width: 100%; text-align: center; margin-bottom: 15px;">
+                    <img id="nextMonthImage" src="images/calendar_next.png" alt="来月のカレンダー" style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="contact" class="section">
         <div class="container">
             <div class="section-title">
                 <h2>アクセス・お問い合わせ</h2>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Luff s.a.family</h3>
-                    <div class="contact-info-item">
-                        <i>📍</i>
-                        <p>〒123-4567 東京都○○区△△町1-2-3</p>
+            <div class="contact-content" style="display: grid; grid-template-columns: 45% 55%; gap: 30px; align-items: flex-start;">
+                <div class="contact-info" style="background-color: #f9fbf9; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-dark);">Luff s.a.family</h3>
+                    <!-- 絵文字と文章の整列を修正 -->
+                    <div class="contact-info-item" style="display: flex; align-items: center; margin-bottom: 12px;">
+                        <i style="min-width: 24px; margin-right: 10px; font-style: normal;">📍</i>
+                        <p style="margin: 0;">〒610-0361 京都府京田辺市河原受田４３−８ ルーブルビル本館 2A</p>
                     </div>
-                    <div class="contact-info-item">
-                        <i>📞</i>
-                        <p>03-1234-5678</p>
+                    <div class="contact-info-item" style="display: flex; align-items: center; margin-bottom: 12px;">
+                        <i style="min-width: 24px; margin-right: 10px; font-style: normal;">📞</i>
+                        <p style="margin: 0;">070-1820-9305</p>
                     </div>
-                    <div class="contact-info-item">
-                        <i>📧</i>
-                        <p>info@luff-family.jp</p>
+                    <div class="contact-info-item" style="display: flex; align-items: center; margin-bottom: 12px;">
+                        <i style="min-width: 24px; margin-right: 10px; font-style: normal;">🕒</i>
+                        <p style="margin: 0;">営業時間: 13:00〜18:00</p>
                     </div>
-                    <div class="contact-info-item">
-                        <i>🕒</i>
-                        <p>営業時間: 13:00〜18:00</p>
+                    <div class="contact-info-item" style="display: flex; align-items: center; margin-bottom: 12px;">
+                        <i style="min-width: 24px; margin-right: 10px; font-style: normal;">📅</i>
+                        <p style="margin: 0;">定休日: 不定休<br>（上記カレンダーもしくは公式Instagramをご確認ください）</p>
                     </div>
-                    <div class="contact-info-item">
-                        <i>📅</i>
-                        <p>定休日: 不定休（下記カレンダーをご確認ください）</p>
+                    <div class="contact-info-item" style="display: flex; align-items: center; margin-bottom: 12px;">
+                        <i style="min-width: 24px; margin-right: 10px; font-style: normal;">🚆</i>
+                        <p style="margin: 0;">最寄り駅: 近鉄新田辺駅から徒歩2分<br>JR京田辺駅から徒歩10分</p>
                     </div>
-                    <p>最寄り駅: ○○線△△駅より徒歩5分</p>
+                    <div class="contact-info-item" style="display: flex; align-items: center; margin-bottom: 12px;">
+                        <i style="min-width: 24px; margin-right: 10px; font-style: normal;">🅿️</i>
+                        <p style="margin: 0;">近くに60分100円のコインパーキングあり</p>
+                    </div>
                 </div>
-                <div class="map">
-                    <img src="/api/placeholder/600/350" alt="Luff s.a.family 地図">
+                <!-- マップの部分を修正 - サイズを大きくし、左テキストとバランスを取る -->
+                <div style="display: flex; align-items: flex-start; height: 100%;">
+                    <div style="width: 100%; height: 100%; min-height: 340px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.453943677601!2d135.76805529049258!3d34.81967750294489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001176b4b1efe31%3A0x6b9db6606b0bdd25!2z5YuV54mp44G144KM44GC44GEIEx1ZmYgLSBzLmEuZmFtaWx5!5e0!3m2!1sja!2sjp!4v1742710096069!5m2!1sja!2sjp"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" width="50" height="50">
-                    <p>Luff s.a.family では、小さな動物たちとのふれあいを通して、心温まるひとときをご提供しています。</p>
+   <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <!-- ロゴの比率を正確に保ち、文字の太さを元に戻す -->
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <div style="width: 60px; height: 60px; flex-shrink: 0; margin-right: 15px;">
+                        <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" 
+                             style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; 
+                                    border: 2px solid rgba(255, 255, 255, 0.2); padding: 2px;">
+                    </div>
+                    <h2 style="color: white; font-size: 24px; margin: 0; font-weight: 600;">Luff s.a.family</h2>
                 </div>
-                <div class="footer-links">
-                    <h3>サイトマップ</h3>
-                    <ul>
-                        <li><a href="#about">コンセプト</a></li>
-                        <li><a href="#animals">動物たち</a></li>
-                        <li><a href="#pricing">料金プラン</a></li>
-                        <li><a href="#faq">よくある質問</a></li>
-                        <li><a href="#calendar">営業カレンダー</a></li>
-                        <li><a href="#contact">アクセス</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>SNS</h3>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">YouTube</a></li>
-                    </ul>
-                </div>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; font-size: 14px;">Luff s.a.family では、小さな動物たちとのふれあいを通して、心温まるひとときをご提供しています。多種多様な小動物との出会いをお楽しみください。</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Luff s.a.family All Rights Reserved.</p>
+            <div class="footer-links">
+                <h3>サイトマップ</h3>
+                <ul style="padding-left: 0;">
+                    <li><a href="#about" style="transition: all 0.2s ease; display: inline-block; padding: 3px 0;">コンセプト</a></li>
+                    <li><a href="#animals" style="transition: all 0.2s ease; display: inline-block; padding: 3px 0;">動物たち</a></li>
+                    <li><a href="#pricing" style="transition: all 0.2s ease; display: inline-block; padding: 3px 0;">料金プラン</a></li>
+                    <li><a href="#faq" style="transition: all 0.2s ease; display: inline-block; padding: 3px 0;">よくある質問</a></li>
+                    <li><a href="#calendar" style="transition: all 0.2s ease; display: inline-block; padding: 3px 0;">営業カレンダー</a></li>
+                    <li><a href="#contact" style="transition: all 0.2s ease; display: inline-block; padding: 3px 0;">アクセス</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>フォローする</h3>
+                <ul style="padding-left: 0;">
+                    <li><a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank" style="transition: all 0.2s ease; display: inline-block; padding: 3px 0;">
+                        <span style="display: flex; align-items: center;">
+                            <span style="display: inline-block; width: 20px; text-align: center; margin-right: 8px;">📸</span> Instagram
+                        </span>
+                    </a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom" style="padding-top: 25px; margin-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <p>&copy; 2025 Luff s.a.family All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
 
     <script>
         // FAQ Accordion
@@ -1303,146 +1512,70 @@
         });
 
         // Calendar Functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get current date
-            const today = new Date();
-            const currentMonth = today.getMonth();
-            const currentYear = today.getFullYear();
+document.addEventListener('DOMContentLoaded', function () {
+    // Get current date
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
 
-            // Set month titles
-            const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
-            document.getElementById('currentMonthTitle').textContent = `${currentYear}年 ${months[currentMonth]}`;
+    // Set month titles
+    const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+    document.getElementById('currentMonthTitle').textContent = `${currentYear}年 ${months[currentMonth]}`;
 
-            // Calculate next month
-            const nextMonthDate = new Date(today);
-            nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
-            const nextMonth = nextMonthDate.getMonth();
-            const nextMonthYear = nextMonthDate.getFullYear();
-            document.getElementById('nextMonthTitle').textContent = `${nextMonthYear}年 ${months[nextMonth]}`;
+    // Calculate next month
+    const nextMonthDate = new Date(today);
+    nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
+    const nextMonth = nextMonthDate.getMonth();
+    const nextMonthYear = nextMonthDate.getFullYear();
+    document.getElementById('nextMonthTitle').textContent = `${nextMonthYear}年 ${months[nextMonth]}`;
 
-            // Generate calendars
-            generateCalendar(currentYear, currentMonth, 'currentMonthBody');
-            generateCalendar(nextMonthYear, nextMonth, 'nextMonthBody');
+    // 最初は「来月」ボタンを非表示にしておく
+    document.getElementById('nextMonthBtn').style.display = 'none';
+    document.getElementById('currentMonthBtn').style.display = 'none';
+    
+    // 来月の画像が存在するか確認
+    const nextMonthImg = document.getElementById('nextMonthImage');
+    nextMonthImg.onload = function() {
+        // 画像が読み込めた場合（存在する場合）
+        document.getElementById('nextMonthBtn').style.display = 'inline-block';
+        document.getElementById('currentMonthBtn').style.display = 'inline-block';
+    };
+    
+    nextMonthImg.onerror = function() {
+        // 画像が読み込めない場合（存在しない場合）
+        document.getElementById('nextMonthBtn').style.display = 'none';
+        document.getElementById('currentMonthBtn').style.display = 'none';
+        
+        // 来月のカレンダーセクション全体を非表示に
+        document.getElementById('nextMonthCalendar').style.display = 'none';
+    };
+    
+    // 念のため、SRCを再設定してロードイベントを確実に発火させる
+    nextMonthImg.src = 'images/calendar_next.png';
 
-            // Tab switching
-            document.getElementById('currentMonthBtn').addEventListener('click', function () {
-                document.getElementById('currentMonthCalendar').style.display = 'block';
-                document.getElementById('nextMonthCalendar').style.display = 'none';
-                document.getElementById('currentMonthBtn').style.backgroundColor = 'var(--primary-dark)';
-                document.getElementById('nextMonthBtn').style.backgroundColor = 'var(--primary-light)';
-            });
+    // Tab switching
+    document.getElementById('currentMonthBtn').addEventListener('click', function () {
+        document.getElementById('currentMonthCalendar').style.display = 'block';
+        document.getElementById('nextMonthCalendar').style.display = 'none';
+        document.getElementById('currentMonthBtn').style.backgroundColor = 'var(--primary-dark)';
+        document.getElementById('nextMonthBtn').style.backgroundColor = 'var(--primary-light)';
+    });
 
-            document.getElementById('nextMonthBtn').addEventListener('click', function () {
-                document.getElementById('currentMonthCalendar').style.display = 'none';
-                document.getElementById('nextMonthCalendar').style.display = 'block';
-                document.getElementById('currentMonthBtn').style.backgroundColor = 'var(--primary-light)';
-                document.getElementById('nextMonthBtn').style.backgroundColor = 'var(--primary-dark)';
-            });
-        });
+    document.getElementById('nextMonthBtn').addEventListener('click', function () {
+        document.getElementById('currentMonthCalendar').style.display = 'none';
+        document.getElementById('nextMonthCalendar').style.display = 'block';
+        document.getElementById('currentMonthBtn').style.backgroundColor = 'var(--primary-light)';
+        document.getElementById('nextMonthBtn').style.backgroundColor = 'var(--primary-dark)';
+    });
+});
 
-        // 一番上までスクロールする関数
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        function generateCalendar(year, month, targetId) {
-            const targetElement = document.getElementById(targetId);
-            targetElement.innerHTML = '';
-
-            const firstDay = new Date(year, month, 1);
-            const lastDay = new Date(year, month + 1, 0);
-            const daysInMonth = lastDay.getDate();
-            const startDay = firstDay.getDay();
-
-            let date = 1;
-
-            // Fixed holiday dates - approximately 8 days per month (simulating the random schedule)
-            let holidays;
-
-            if (targetId === 'currentMonthBody') {
-                // Create somewhat random holidays for current month
-                holidays = [3, 4, 11, 12, 17, 18, 24, 25];
-            } else {
-                // Next month holidays - shown if after the 20th of current month
-                const today = new Date();
-                if (today.getDate() >= 20) {
-                    holidays = [1, 2, 8, 9, 15, 16, 22, 23, 29, 30];
-                } else {
-                    // If before the 20th, show "Coming soon" message
-                    const tr = document.createElement('tr');
-                    const td = document.createElement('td');
-                    td.colSpan = 7;
-                    td.style.padding = '50px 20px';
-                    td.style.textAlign = 'center';
-                    td.innerHTML = '来月の予定表は20日頃に更新されます<br>少々お待ちください';
-                    tr.appendChild(td);
-                    targetElement.appendChild(tr);
-                    return;
-                }
-            }
-
-            // Create calendar rows
-            for (let i = 0; i < 6; i++) {
-                const row = document.createElement('tr');
-
-                for (let j = 0; j < 7; j++) {
-                    const cell = document.createElement('td');
-                    cell.style.padding = '10px';
-                    cell.style.textAlign = 'center';
-                    cell.style.height = '50px';
-                    cell.style.border = '1px solid #e0e0e0';
-
-                    if (i === 0 && j < startDay) {
-                        // Empty cells before the first day
-                        cell.style.backgroundColor = '#f9f9f9';
-                    } else if (date > daysInMonth) {
-                        // Empty cells after the last day
-                        cell.style.backgroundColor = '#f9f9f9';
-                    } else {
-                        // Fill in the date
-                        cell.textContent = date;
-
-                        // Mark holidays
-                        if (holidays.includes(date)) {
-                            cell.style.backgroundColor = '#f5f5f5';
-                            cell.style.color = '#999';
-                            cell.innerHTML += '<br><small>定休日</small>';
-                        } else {
-                            // Normal business day
-                            cell.style.backgroundColor = 'var(--primary-light)';
-                            cell.style.color = 'var(--text)';
-                            cell.innerHTML += '<br><small>13:00-18:00</small>';
-                        }
-
-                        // Mark today's date in current month
-                        const today = new Date();
-                        if (
-                            targetId === 'currentMonthBody' &&
-                            date === today.getDate() &&
-                            month === today.getMonth() &&
-                            year === today.getFullYear()
-                        ) {
-                            cell.style.border = '2px solid var(--primary-dark)';
-                            cell.style.fontWeight = 'bold';
-                        }
-
-                        date++;
-                    }
-
-                    row.appendChild(cell);
-                }
-
-                targetElement.appendChild(row);
-
-                // Stop if we've gone through all the days of the month
-                if (date > daysInMonth) {
-                    break;
-                }
-            }
-        }
+// 一番上までスクロールする関数
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
     </script>
 </body>
 
