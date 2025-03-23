@@ -1232,6 +1232,83 @@
         line-height: 1.4 !important;
     }
 }
+/* カードスライダーのスタイル（スマホ向け） */
+@media screen and (max-width: 768px) {
+    /* スライダーコンテナ */
+    .beginners-slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    /* スライド */
+    .beginners-slider-wrapper {
+        display: flex;
+        transition: transform 0.4s ease;
+    }
+    
+    .beginners-slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* ナビゲーションボタン */
+    .beginners-slider-nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 15px 0 25px;
+    }
+    
+    .beginners-slider-nav button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: var(--primary);
+        color: white;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* インジケーター */
+    .beginners-slider-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .beginners-indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+    }
+    
+    .beginners-indicator.active {
+        background-color: var(--primary);
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* 通常のグリッドを非表示 */
+    #for-beginners [style*="display: grid"] {
+        display: none !important;
+    }
+}
+
+/* デスクトップではスライダーを非表示 */
+@media screen and (min-width: 769px) {
+    .beginners-mobile-slider {
+        display: none !important;
+    }
+}
     </style>
 </head>
 
@@ -1715,6 +1792,74 @@
             <h2>初めての方へ</h2>
         </div>
         <div style="max-width: 800px; margin: 0 auto;">
+            <!-- モバイル用スライダー -->
+<div class="beginners-mobile-slider">
+    <div class="beginners-slider-container">
+        <div class="beginners-slider-wrapper" id="beginnersSlider">
+            <!-- スライド1: ご来店前に -->
+            <div class="beginners-slide">
+                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px; margin: 0 10px;">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <span style="font-size: 36px; color: var(--primary);">📝</span>
+                        <h3 style="margin-top: 10px; color: var(--primary-dark);">ご来店前に</h3>
+                    </div>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>動物にアレルギーがある方は事前にご相談ください</li>
+                        <li>予約すると待ち時間なくご案内できます</li>
+                        <li>香水や強い臭いのするものは避けてください</li>
+                        <li>動物が驚くため、大きな声や急な動きは控えましょう</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- スライド2: おすすめの服装 -->
+            <div class="beginners-slide">
+                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px; margin: 0 10px;">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <span style="font-size: 36px; color: var(--primary);">👕</span>
+                        <h3 style="margin-top: 10px; color: var(--primary-dark);">おすすめの服装</h3>
+                    </div>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>動物の爪が引っかかりにくい服装がおすすめです</li>
+                        <li>ボタンやビーズなど、小さなパーツが取れやすい服装は避けましょう</li>
+                        <li>動物の毛が付きやすいため、黒い服は避けることをおすすめします</li>
+                        <li>肩や膝が出ている服装は、小さな引っかき傷の可能性があります</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- スライド3: 触れ合い方のコツ -->
+            <div class="beginners-slide">
+                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px; margin: 0 10px;">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <span style="font-size: 36px; color: var(--primary);">🐾</span>
+                        <h3 style="margin-top: 10px; color: var(--primary-dark);">触れ合い方のコツ</h3>
+                    </div>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>最初はゆっくりと手を差し出し、動物に近づかせましょう</li>
+                        <li>頭や背中を優しく撫でると喜びます</li>
+                        <li>急な動きは動物を驚かせるので避けましょう</li>
+                        <li>動物の体をしっかり支えて抱っこしてください</li>
+                        <li>スタッフの指示に従い、安全に触れ合いましょう</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- スライダーインジケーター -->
+        <div class="beginners-slider-indicators">
+            <span class="beginners-indicator active" data-index="0"></span>
+            <span class="beginners-indicator" data-index="1"></span>
+            <span class="beginners-indicator" data-index="2"></span>
+        </div>
+        
+        <!-- スライダーナビゲーション -->
+        <div class="beginners-slider-nav">
+            <button id="prevSlide">←</button>
+            <button id="nextSlide">→</button>
+        </div>
+    </div>
+</div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 <!-- カード1: ご来店前に -->
                 <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
@@ -2079,6 +2224,78 @@ document.addEventListener('DOMContentLoaded', function () {
             behavior: 'smooth'
         });
     }
+</script>
+<script>
+    // スライダー機能
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('beginnersSlider');
+    const indicators = document.querySelectorAll('.beginners-indicator');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
+    
+    if (!slider || !prevBtn || !nextBtn) return;
+    
+    let currentSlide = 0;
+    const slideCount = slider.children.length;
+    
+    // スライドを表示
+    function showSlide(index) {
+        if (index < 0) index = slideCount - 1;
+        if (index >= slideCount) index = 0;
+        
+        currentSlide = index;
+        
+        // スライダーを移動
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // インジケーターを更新
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === currentSlide);
+        });
+    }
+    
+    // 前へボタン
+    prevBtn.addEventListener('click', () => {
+        showSlide(currentSlide - 1);
+    });
+    
+    // 次へボタン
+    nextBtn.addEventListener('click', () => {
+        showSlide(currentSlide + 1);
+    });
+    
+    // インジケーター
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', () => {
+            const index = parseInt(indicator.getAttribute('data-index'));
+            showSlide(index);
+        });
+    });
+    
+    // スワイプ機能（タッチデバイス用）
+    let startX, endX;
+    const minSwipeDistance = 50;
+    
+    slider.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+    
+    slider.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        
+        const distance = startX - endX;
+        
+        if (Math.abs(distance) >= minSwipeDistance) {
+            if (distance > 0) {
+                // 左スワイプ（次へ）
+                showSlide(currentSlide + 1);
+            } else {
+                // 右スワイプ（前へ）
+                showSlide(currentSlide - 1);
+            }
+        }
+    });
+});
 </script>
 </body>
 
