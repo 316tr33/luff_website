@@ -1035,6 +1035,70 @@
         width: 100% !important;
     }
 }
+/* スマホ表示での料金プラン横並び */
+@media screen and (max-width: 768px) {
+    /* 料金プランを横並びに */
+    .pricing-container {
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    /* カードを小さく調整 */
+    .pricing-card {
+        max-width: 48% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        font-size: 14px;
+    }
+    
+    /* ヘッダー部分を小さく */
+    .pricing-header {
+        padding: 15px 10px !important;
+    }
+    
+    .pricing-header h3 {
+        font-size: 18px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .price {
+        font-size: 24px !important;
+    }
+    
+    /* ボディ部分を小さく */
+    .pricing-body {
+        padding: 15px 10px !important;
+    }
+    
+    .pricing-body ul {
+        margin-bottom: 15px !important;
+    }
+    
+    .pricing-body ul li {
+        margin-bottom: 8px !important;
+        font-size: 13px !important;
+    }
+    
+    /* ボタンの調整 */
+    .pricing-body .btn {
+        padding: 8px 15px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* リスト項目が多すぎる場合のフォールバック（超小型スマホ用） */
+@media screen and (max-width: 360px) {
+    .pricing-container {
+        flex-direction: column !important;
+    }
+    
+    .pricing-card {
+        max-width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+}
     </style>
 </head>
 
