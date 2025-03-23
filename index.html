@@ -1349,6 +1349,30 @@
         color: var(--primary);
     }
 }
+/* スライダーボタン位置の調整 */
+@media screen and (max-width: 768px) {
+    /* インジケーターの位置調整 */
+    .beginners-slider-indicators {
+        margin-top: 20px !important; /* 上部マージンを増やす */
+        margin-bottom: 15px !important;
+    }
+    
+    /* ナビゲーションボタンの位置調整 */
+    .beginners-slider-nav {
+        margin-top: 5px !important;
+        margin-bottom: 30px !important; /* 下部マージンも増やして全体のバランスを調整 */
+    }
+    
+    /* スライドコンテンツの下部余白追加 */
+    .beginners-slide > div {
+        margin-bottom: 10px !important; /* スライドの内容と下部の間隔も確保 */
+    }
+    
+    /* スライダーコンテナ自体も少し余裕を持たせる */
+    .beginners-slider-container {
+        padding-bottom: 10px !important;
+    }
+}
     </style>
 </head>
 
