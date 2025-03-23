@@ -858,6 +858,97 @@
         min-width: 30px;
     }
 }
+/* スマホ表示時の画像サイズ調整 */
+@media screen and (max-width: 768px) {
+    /* 動物カード画像の高さ調整 */
+    .animal-img {
+        height: 180px; /* 250pxから180pxに縮小 */
+    }
+    
+    /* 動物カードのサイズ調整 */
+    .animal-card {
+        margin-bottom: 15px;
+    }
+    
+    /* 動物カード情報部分の余白調整 */
+    .animal-info {
+        padding: 15px;
+    }
+    
+    .animal-info h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .animal-info p {
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+    
+    /* ギャラリー画像のサイズ調整 */
+    #gallery .grid-item {
+        height: 160px !important; /* ギャラリー画像の高さを縮小 */
+    }
+    
+    /* グリッドレイアウトの調整（2列表示） */
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+}
+
+/* タブレットサイズの調整 */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* 動物カード画像の高さ調整 */
+    .animal-img {
+        height: 200px;
+    }
+    
+    /* ギャラリー画像のサイズ調整 */
+    #gallery .grid-item {
+        height: 180px !important;
+    }
+    
+    /* グリッドレイアウトの調整（3列表示） */
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+/* スマホ表示時の画像サイズ調整 */
+@media screen and (max-width: 768px) {
+    /* ギャラリーのグリッドレイアウト調整 */
+    #gallery .container > div[style*="display: grid"] {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2列表示に変更 */
+        gap: 10px !important; /* 隙間を小さく */
+    }
+    
+    /* ギャラリー画像のサイズ調整 */
+    #gallery .container > div[style*="display: grid"] > div {
+        height: 160px !important; /* 高さを縮小 */
+    }
+    
+    /* 動物カード画像の高さ調整 */
+    .animal-img {
+        height: 180px; /* 250pxから180pxに縮小 */
+    }
+    
+    /* 動物カード情報部分の調整 */
+    .animal-info {
+        padding: 15px;
+    }
+    
+    .animal-info h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .animal-info p {
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+}
     </style>
 </head>
 
