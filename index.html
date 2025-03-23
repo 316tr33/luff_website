@@ -2337,26 +2337,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-<script>
-    // モバイルメニュー改善
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navUl = document.querySelector('nav ul');
-    
-    if (mobileMenuBtn && navUl) {
-        mobileMenuBtn.addEventListener('click', () => {
-            const isDisplayed = navUl.style.display === 'flex';
-            navUl.style.display = isDisplayed ? 'none' : 'flex';
-            
-            // メニュー表示時のスクロール制御
-            document.body.classList.toggle('menu-open', !isDisplayed);
-            
-            // メニューボタンのアクティブ状態
-            mobileMenuBtn.classList.toggle('active', !isDisplayed);
-        });
-    }
-});
-</script>
 </body>
 
 </html>
