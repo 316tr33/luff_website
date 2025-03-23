@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luff s.a.family - 小動物とのふれあい体験</title>
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --primary-light: #81C784;
+            --primary-dark: #388E3C;
+            --accent: #FFD54F;
+            --text: #212121;
+            --text-light: #757575;
+            --background: #FFFFFF;
+            --background-alt: #F5F9F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #F9FBF9;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #AED581;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: opacity 0.3s;
+        }
+        
+        .logo-link:hover {
+            opacity: 0.9;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            min-width: 50px;
+            margin-right: 15px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #AED581;
+            padding: 2px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/store-interior.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.9);
+            padding: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            background-color: rgba(255, 255, 255, 0.6);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .hero-logo-link {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .hero-logo-link:hover .hero-logo {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25), 0 0 20px rgba(174, 213, 129, 0.5);
+            border-color: white;
+        }
+        
+        .hero-logo-link:hover::after {
+            content: '✨ Instagramをチェック ✨';
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: pulse 1.5s infinite;
+        }
+        
+        .hero-logo-link::after {
+            content: '✨ Instagramをチェック ✨';
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: translateX(-50%) scale(1);
+            }
+            50% {
+                transform: translateX(-50%) scale(1.05);
+            }
+            100% {
+                transform: translateX(-50%) scale(1);
+            }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 60px;
+            background-color: var(--accent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about {
+            background-color: #F0F7E6;
+            background-image: linear-gradient(to bottom right, #F0F7E6, #E8F3D6);
+            border-top: 2px solid rgba(76, 175, 80, 0.2);
+            border-bottom: 2px solid rgba(76, 175, 80, 0.2);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+            font-size: 18px;
+            line-height: 2;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Animals Section */
+        .animals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .animal-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .animal-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .animal-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .animal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .animal-card:hover .animal-img img {
+            transform: scale(1.1);
+        }
+
+        .animal-info {
+            padding: 20px;
+        }
+
+        .animal-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .animal-info p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background-color: var(--background-alt);
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .pricing-header h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .pricing-body {
+            padding: 30px 20px;
+        }
+
+        .pricing-body ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .pricing-body ul li {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background-color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: var(--background-alt);
+        }
+
+        .faq-answer-content {
+            padding: 20px 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-info-item i {
+            color: var(--primary);
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        .map {
+            flex: 1;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            flex: 1;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 300px;
+        }
+
+        .footer-links {
+            flex: 1;
+        }
+
+        .footer-links h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .animals-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-content {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .animals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="javascript:void(0);" onclick="scrollToTop()" class="logo-link">
+                    <div class="logo">
+                        <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" width="50" height="50"
+                            style="min-width: 50px;">
+                        <h1>Luff s.a.family</h1>
+                    </div>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#about">コンセプト</a></li>
+                        <li><a href="#animals">動物たち</a></li>
+                        <li><a href="#pricing">料金プラン</a></li>
+                        <li><a href="#faq">よくある質問</a></li>
+                        <li><a href="#calendar">営業カレンダー</a></li>
+                        <li><a href="#contact">アクセス</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-btn">≡</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank" class="hero-logo-link">
+                <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" class="hero-logo">
+            </a>
+            <h2>動物たちとの素敵な出会い</h2>
+            <p>Luff s.a.familyでは、様々な小動物たちとのゼロ距離の触れ合いを通して、癒しと感動のひとときをお届けします。</p>
+            <a href="#animals" class="btn">動物たち</a>
+            <a href="https://forms.gle/あなたのGoogleフォームID" class="btn" style="background-color: var(--primary-dark); margin-left: 15px;">予約する</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Luff s.a.familyについて</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Luff
+                        s.a.familyは、都会の喧騒を忘れて動物たちと心温まる時間を過ごせる場所です。私たちのお店では、ウサギやハムスター、モルモットといった身近な小動物から、チンチラ、ハリネズミ、モモンガなどの珍しい小動物、さらにはインコなどの鳥類、フトアゴヒゲトカゲやショウガラゴ、ミーアキャットといった珍しい動物まで、多種多様な生き物たちが仲良く共存しています。
+                    </p>
+                    <p>すべての動物たちとゼロ距離で触れ合うことができ、その温もりや息遣いを直に感じることができます。日常では体験できない小さな命との交流を通して、心身ともにリラックスしていただける空間をご提供します。
+                    </p>
+                    <p>当店では動物たちの健康と幸福を第一に考え、ストレスのない環境づくりを心がけています。皆様のご来店を心よりお待ちしております。</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/meerkat-interior.jpg" alt="Luff s.a.family ミーアキャット">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animals Section -->
+    <section id="animals" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>ふれあえる動物たち</h2>
+            </div>
+
+            <!-- 動物カテゴリーナビゲーション -->
+            <div style="display: flex; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; gap: 10px;">
+                <a href="#birds" class="btn" style="background-color: var(--primary-light);">鳥類</a>
+                <a href="#rabbits" class="btn" style="background-color: var(--primary-light);">うさぎ・チンチラ</a>
+                <a href="#small-animals" class="btn" style="background-color: var(--primary-light);">小動物</a>
+                <a href="#special-animals" class="btn" style="background-color: var(--primary-light);">珍しい動物</a>
+            </div>
+
+            <!-- 鳥類 -->
+            <div id="birds" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">鳥類
+                </h3>
+                <div class="animals-grid">
+                    <!-- シロハラインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="シロハラインコ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>シロハラインコ</h3>
+                            <p>ぽっぴちゃん</p>
+                            <p>カラフルな羽と賢い性格が魅力のシロハラインコ。人懐っこい性格で触れ合いを楽しめます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ウロコインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ウロコインコ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ウロコインコ</h3>
+                            <p>ぱいんちゃん</p>
+                            <p>ウロコ模様の美しい羽を持つインコ。温厚で穏やかな性格をしています。</p>
+                        </div>
+                    </div>
+
+                    <!-- セキセイインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="セキセイインコ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>セキセイインコ</h3>
+                            <p>そらちゃん</p>
+                            <p>小さな体に大きな魅力を持つセキセイインコ。活発で愛嬌のある姿が人気です。</p>
+                        </div>
+                    </div>
+
+                    <!-- オカメインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="オカメインコ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>オカメインコ</h3>
+                            <p>れもんちゃん</p>
+                            <p>頭の冠羽が特徴的なオカメインコ。優しく穏やかな性格で、初めての方にもおすすめです。</p>
+                        </div>
+                    </div>
+
+                    <!-- ボタンインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ボタンインコ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ボタンインコ</h3>
+                            <p>ぺんちゃん</p>
+                            <p>小さな体が特徴のボタンインコ。とても活発で好奇心旺盛な性格をしています。</p>
+                        </div>
+                    </div>
+
+                    <!-- コザクラインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="コザクラインコ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>コザクラインコ</h3>
+                            <p>さくらちゃん</p>
+                            <p>愛情深く社交的なコザクラインコ。人の指に止まることが大好きです。</p>
+                        </div>
+                    </div>
+
+                    <!-- ギンバト -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ギンバト">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ギンバト</h3>
+                            <p>たいはくくん</p>
+                            <p>優雅な姿が特徴のギンバト。静かな佇まいで心を癒してくれます。</p>
+                        </div>
+                    </div>
+
+                    <!-- コールダック -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="コールダック">
+                        </div>
+                        <div class="animal-info">
+                            <h3>コールダック</h3>
+                            <p>ぶりちゃん</p>
+                            <p>ユニークな鳴き声が特徴のコールダック。愛らしい姿で人気を集めています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- うさぎ・チンチラ -->
+            <div id="rabbits" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">
+                    うさぎ・チンチラ</h3>
+                <div class="animals-grid">
+                    <!-- チンチラ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="チンチラ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>チンチラ</h3>
+                            <p>ねねちゃん</p>
+                            <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
+                        </div>
+                    </div>
+
+                    <!-- アメリカンファジーロップ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>アメリカンファジーロップ</h3>
+                            <p>もふこちゃん</p>
+                            <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
+                        </div>
+                    </div>
+
+                    <!-- ホーランドロップ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ホーランドロップ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ホーランドロップ</h3>
+                            <p>ぼーくん</p>
+                            <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
+                        </div>
+                    </div>
+
+                    <!-- ホーランドロップ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ホーランドロップ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ホーランドロップ</h3>
+                            <p>さっちゃん</p>
+                            <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 小動物 -->
+            <div id="small-animals" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">小動物
+                </h3>
+                <div class="animals-grid">
+                    <!-- ハムスター -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ハムスター">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ハムスター</h3>
+                            <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
+                        </div>
+                    </div>
+
+                    <!-- モルモット -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="モルモット">
+                        </div>
+                        <div class="animal-info">
+                            <h3>モルモット</h3>
+                            <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ハリネズミ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ハリネズミ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ハリネズミ</h3>
+                            <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
+                        </div>
+                    </div>
+
+                    <!-- モモンガ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="モモンガ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>モモンガ</h3>
+                            <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 珍しい動物 -->
+            <div id="special-animals" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">珍しい動物
+                </h3>
+                <div class="animals-grid">
+                    <!-- フトアゴヒゲトカゲ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="フトアゴヒゲトカゲ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>フトアゴヒゲトカゲ</h3>
+                            <p>穏やかな性格で人気の爬虫類。ドラゴンのような見た目に触れる珍しい体験ができます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ショウガラゴ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ショウガラゴ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ショウガラゴ</h3>
+                            <p>大きな目が特徴的な夜行性の霊長類。珍しい動物との貴重なふれあいが体験できます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ミーアキャット -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ミーアキャット">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ミーアキャット</h3>
+                            <p>好奇心旺盛で愛らしい姿が人気のミーアキャット。その独特の仕草に癒されます。</p>
+                        </div>
+                    </div>
+
+                    <!-- チワワ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="チワワ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>チワワ</h3>
+                            <p>小さな体に大きな魅力を持つ犬種。愛らしい姿と甘えん坊な性格が人気です。</p>
+                        </div>
+                    </div>
+
+                    <!-- マイクロブタ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="マイクロブタ">
+                        </div>
+                        <div class="animal-info">
+                            <h3>マイクロブタ</h3>
+                            <p>普通の豚よりもコンパクトなサイズで親しみやすいマイクロブタ。賢くてじゃれつくのが大好きです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>料金プラン</h2>
+            </div>
+            <div class="pricing-container">
+                <!-- Adult Pricing -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>大人料金</h3>
+                        <div class="price">¥1,500</div>
+                        <p>1時間</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul>
+                            <li>すべての動物とのふれあい</li>
+                            <li>スタッフによる動物の解説</li>
+                            <li>動物への餌やり体験</li>
+                            <li>中学生以上が対象</li>
+                        </ul>
+                        <a href="https://forms.gle/あなたのGoogleフォームID" class="btn">予約する</a>
+                    </div>
+                </div>
+
+                <!-- Child Pricing -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>子供料金</h3>
+                        <div class="price">¥800</div>
+                        <p>1時間</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul>
+                            <li>すべての動物とのふれあい</li>
+                            <li>スタッフによる動物の解説</li>
+                            <li>動物への餌やり体験</li>
+                            <li>小学6年生未満が対象</li>
+                        </ul>
+                        <a href="https://forms.gle/あなたのGoogleフォームID" class="btn">予約する</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>よくある質問</h2>
+            </div>
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>予約は必要ですか？</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>混雑を避けるため、特に週末や祝日はご予約をおすすめしています。平日でも来店前にお電話いただけると確実です。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>小さな子供でも大丈夫ですか？</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>はい、小さなお子様も楽しめるようになっています。ただし、動物たちを優しく扱えるよう、保護者の方が必ず同伴してください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>アレルギーが心配です</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>動物アレルギーをお持ちの方は事前にご相談ください。症状によっては入店をお断りする場合もございますので、ご了承ください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>団体での利用はできますか？</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>10名以上の団体様は、事前にご予約いただければ対応可能です。特別プランについてはお電話でご相談ください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>写真撮影はできますか？</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>個人での撮影は可能です。ただし、フラッシュの使用はお控えください。動物たちが驚いてしまいます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="section" style="background-color: var(--background-alt);">
+        <div class="container">
+            <div class="section-title">
+                <h2>営業カレンダー</h2>
+            </div>
+            <div class="calendar-container"
+                style="display: flex; flex-direction: column; max-width: 800px; margin: 0 auto;">
+                <div class="calendar-nav" style="display: flex; justify-content: center; margin-bottom: 20px;">
+                    <button id="currentMonthBtn" class="btn"
+                        style="margin-right: 10px; background-color: var(--primary-dark);">今月</button>
+                    <button id="nextMonthBtn" class="btn" style="background-color: var(--primary-light);">来月</button>
+                </div>
+
+                <div id="currentMonthCalendar" style="margin-bottom: 30px;">
+                    <h3 id="currentMonthTitle"
+                        style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
+                    <p style="text-align: center; margin-bottom: 15px;">※営業日・定休日は毎月変わります。最新情報は<a href="#"
+                            style="color: var(--primary-dark); text-decoration: underline;">公式Instagram</a>でもご確認いただけます。
+                    </p>
+                    <div class="calendar"
+                        style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background-color: var(--primary);">
+                                    <th style="padding: 10px; color: white; width: 14.28%;">日</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">月</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">火</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">水</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">木</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">金</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">土</th>
+                                </tr>
+                            </thead>
+                            <tbody id="currentMonthBody">
+                                <!-- Calendar will be generated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 15px; display: flex; justify-content: center;">
+                        <div style="display: flex; align-items: center; margin-right: 20px;">
+                            <div
+                                style="width: 20px; height: 20px; background-color: var(--primary-light); margin-right: 8px; border-radius: 4px;">
+                            </div>
+                            <span>営業日</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 20px; height: 20px; background-color: #f5f5f5; margin-right: 8px; border-radius: 4px;">
+                            </div>
+                            <span>定休日</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="nextMonthCalendar" style="display: none;">
+                    <h3 id="nextMonthTitle"
+                        style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
+                    <p style="text-align: center; margin-bottom: 15px;">※来月のスケジュールは20日頃に更新されます。最新情報は<a href="#"
+                            style="color: var(--primary-dark); text-decoration: underline;">公式Instagram</a>でご確認ください。</p>
+                    <div class="calendar"
+                        style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background-color: var(--primary);">
+                                    <th style="padding: 10px; color: white; width: 14.28%;">日</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">月</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">火</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">水</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">木</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">金</th>
+                                    <th style="padding: 10px; color: white; width: 14.28%;">土</th>
+                                </tr>
+                            </thead>
+                            <tbody id="nextMonthBody">
+                                <!-- Calendar will be generated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 15px; display: flex; justify-content: center;">
+                        <div style="display: flex; align-items: center; margin-right: 20px;">
+                            <div
+                                style="width: 20px; height: 20px; background-color: var(--primary-light); margin-right: 8px; border-radius: 4px;">
+                            </div>
+                            <span>営業日</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 20px; height: 20px; background-color: #f5f5f5; margin-right: 8px; border-radius: 4px;">
+                            </div>
+                            <span>定休日</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>アクセス・お問い合わせ</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Luff s.a.family</h3>
+                    <div class="contact-info-item">
+                        <i>📍</i>
+                        <p>〒123-4567 東京都○○区△△町1-2-3</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <i>📞</i>
+                        <p>03-1234-5678</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <i>📧</i>
+                        <p>info@luff-family.jp</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <i>🕒</i>
+                        <p>営業時間: 13:00〜18:00</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <i>📅</i>
+                        <p>定休日: 不定休（下記カレンダーをご確認ください）</p>
+                    </div>
+                    <p>最寄り駅: ○○線△△駅より徒歩5分</p>
+                </div>
+                <div class="map">
+                    <img src="/api/placeholder/600/350" alt="Luff s.a.family 地図">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" width="50" height="50">
+                    <p>Luff s.a.family では、小さな動物たちとのふれあいを通して、心温まるひとときをご提供しています。</p>
+                </div>
+                <div class="footer-links">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="#about">コンセプト</a></li>
+                        <li><a href="#animals">動物たち</a></li>
+                        <li><a href="#pricing">料金プラン</a></li>
+                        <li><a href="#faq">よくある質問</a></li>
+                        <li><a href="#calendar">営業カレンダー</a></li>
+                        <li><a href="#contact">アクセス</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>SNS</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Luff s.a.family All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+
+                // If clicked item wasn't active, make it active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+
+                // Change plus/minus icon
+                document.querySelectorAll('.faq-question span:last-child').forEach(icon => {
+                    icon.textContent = '+';
+                });
+
+                if (!isActive) {
+                    question.querySelector('span:last-child').textContent = '-';
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+            const nav = document.querySelector('nav ul');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Calendar Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get current date
+            const today = new Date();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+
+            // Set month titles
+            const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+            document.getElementById('currentMonthTitle').textContent = `${currentYear}年 ${months[currentMonth]}`;
+
+            // Calculate next month
+            const nextMonthDate = new Date(today);
+            nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
+            const nextMonth = nextMonthDate.getMonth();
+            const nextMonthYear = nextMonthDate.getFullYear();
+            document.getElementById('nextMonthTitle').textContent = `${nextMonthYear}年 ${months[nextMonth]}`;
+
+            // Generate calendars
+            generateCalendar(currentYear, currentMonth, 'currentMonthBody');
+            generateCalendar(nextMonthYear, nextMonth, 'nextMonthBody');
+
+            // Tab switching
+            document.getElementById('currentMonthBtn').addEventListener('click', function () {
+                document.getElementById('currentMonthCalendar').style.display = 'block';
+                document.getElementById('nextMonthCalendar').style.display = 'none';
+                document.getElementById('currentMonthBtn').style.backgroundColor = 'var(--primary-dark)';
+                document.getElementById('nextMonthBtn').style.backgroundColor = 'var(--primary-light)';
+            });
+
+            document.getElementById('nextMonthBtn').addEventListener('click', function () {
+                document.getElementById('currentMonthCalendar').style.display = 'none';
+                document.getElementById('nextMonthCalendar').style.display = 'block';
+                document.getElementById('currentMonthBtn').style.backgroundColor = 'var(--primary-light)';
+                document.getElementById('nextMonthBtn').style.backgroundColor = 'var(--primary-dark)';
+            });
+        });
+
+        // 一番上までスクロールする関数
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function generateCalendar(year, month, targetId) {
+            const targetElement = document.getElementById(targetId);
+            targetElement.innerHTML = '';
+
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const daysInMonth = lastDay.getDate();
+            const startDay = firstDay.getDay();
+
+            let date = 1;
+
+            // Fixed holiday dates - approximately 8 days per month (simulating the random schedule)
+            let holidays;
+
+            if (targetId === 'currentMonthBody') {
+                // Create somewhat random holidays for current month
+                holidays = [3, 4, 11, 12, 17, 18, 24, 25];
+            } else {
+                // Next month holidays - shown if after the 20th of current month
+                const today = new Date();
+                if (today.getDate() >= 20) {
+                    holidays = [1, 2, 8, 9, 15, 16, 22, 23, 29, 30];
+                } else {
+                    // If before the 20th, show "Coming soon" message
+                    const tr = document.createElement('tr');
+                    const td = document.createElement('td');
+                    td.colSpan = 7;
+                    td.style.padding = '50px 20px';
+                    td.style.textAlign = 'center';
+                    td.innerHTML = '来月の予定表は20日頃に更新されます<br>少々お待ちください';
+                    tr.appendChild(td);
+                    targetElement.appendChild(tr);
+                    return;
+                }
+            }
+
+            // Create calendar rows
+            for (let i = 0; i < 6; i++) {
+                const row = document.createElement('tr');
+
+                for (let j = 0; j < 7; j++) {
+                    const cell = document.createElement('td');
+                    cell.style.padding = '10px';
+                    cell.style.textAlign = 'center';
+                    cell.style.height = '50px';
+                    cell.style.border = '1px solid #e0e0e0';
+
+                    if (i === 0 && j < startDay) {
+                        // Empty cells before the first day
+                        cell.style.backgroundColor = '#f9f9f9';
+                    } else if (date > daysInMonth) {
+                        // Empty cells after the last day
+                        cell.style.backgroundColor = '#f9f9f9';
+                    } else {
+                        // Fill in the date
+                        cell.textContent = date;
+
+                        // Mark holidays
+                        if (holidays.includes(date)) {
+                            cell.style.backgroundColor = '#f5f5f5';
+                            cell.style.color = '#999';
+                            cell.innerHTML += '<br><small>定休日</small>';
+                        } else {
+                            // Normal business day
+                            cell.style.backgroundColor = 'var(--primary-light)';
+                            cell.style.color = 'var(--text)';
+                            cell.innerHTML += '<br><small>13:00-18:00</small>';
+                        }
+
+                        // Mark today's date in current month
+                        const today = new Date();
+                        if (
+                            targetId === 'currentMonthBody' &&
+                            date === today.getDate() &&
+                            month === today.getMonth() &&
+                            year === today.getFullYear()
+                        ) {
+                            cell.style.border = '2px solid var(--primary-dark)';
+                            cell.style.fontWeight = 'bold';
+                        }
+
+                        date++;
+                    }
+
+                    row.appendChild(cell);
+                }
+
+                targetElement.appendChild(row);
+
+                // Stop if we've gone through all the days of the month
+                if (date > daysInMonth) {
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
