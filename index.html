@@ -1099,6 +1099,44 @@
         margin-bottom: 15px !important;
     }
 }
+/* スマホ表示でのAboutセクション改善 */
+@media screen and (max-width: 768px) {
+    /* Luff s.a.familyについてのテキスト調整 */
+    .about-text {
+        font-size: 15px !important; /* 文字サイズを小さく */
+        line-height: 1.7 !important; /* 行間を広げる */
+        padding: 0 5px !important; /* 左右の余白を追加 */
+    }
+    
+    .about-text p {
+        margin-bottom: 15px !important; /* 段落間の余白を調整 */
+        text-align: justify; /* 文字を両端揃えにして読みやすく */
+        letter-spacing: -0.01em; /* 文字間隔を少し詰める */
+    }
+    
+    /* セクションタイトルの調整 */
+    .section-title h2 {
+        font-size: 24px !important;
+    }
+    
+    /* ミーアキャットの画像サイズ調整 */
+    .about-image {
+        max-height: 200px !important; /* 高さ制限 */
+        overflow: hidden !important;
+    }
+    
+    .about-image img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+    
+    /* Aboutセクション全体の内部余白調整 */
+    .about .container {
+        padding: 0 15px !important;
+    }
+}
     </style>
 </head>
 
