@@ -1152,6 +1152,45 @@
         max-height: 250px !important; /* 高さの上限を設定 */
     }
 }
+/* スマホ表示でのヘッダー高さ縮小 */
+@media screen and (max-width: 768px) {
+    /* ヘッダー全体の高さ縮小 */
+    header {
+        height: auto !important;
+    }
+    
+    .header-content {
+        padding: 8px 0 !important; /* パディングを縮小 */
+    }
+    
+    /* ロゴサイズの縮小 */
+    .logo img {
+        height: 35px !important;
+        width: 35px !important;
+        min-width: 35px !important;
+        margin-right: 10px !important;
+    }
+    
+    .logo h1 {
+        font-size: 18px !important;
+    }
+    
+    /* モバイルメニューボタンの調整 */
+    .mobile-menu-btn {
+        font-size: 22px !important;
+        padding: 5px !important;
+    }
+    
+    /* ヘッダー固定による本文マージン調整 */
+    .hero {
+        margin-top: 55px !important; /* ヘッダー高さに合わせて調整 */
+    }
+    
+    /* ヘッダースクロール時の影を強調（オプション） */
+    header {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+    }
+}
     </style>
 </head>
 
