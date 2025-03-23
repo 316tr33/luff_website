@@ -1137,6 +1137,21 @@
         padding: 0 15px !important;
     }
 }
+/* ミーアキャット画像の見切れ修正 */
+@media screen and (max-width: 768px) {
+    /* ミーアキャットの画像サイズ調整 - 見切れない方法 */
+    .about-image {
+        max-height: none !important; /* 高さ制限を解除 */
+        margin-bottom: 20px !important;
+    }
+    
+    .about-image img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important; /* coverからcontainに変更 */
+        max-height: 250px !important; /* 高さの上限を設定 */
+    }
+}
     </style>
 </head>
 
