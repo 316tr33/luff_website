@@ -1309,6 +1309,46 @@
         display: none !important;
     }
 }
+/* モバイルメニューの隙間修正 */
+@media screen and (max-width: 768px) {
+    /* モバイルメニュー表示位置の調整 */
+    nav ul {
+        position: fixed;
+        top: 51px !important; /* ヘッダーの高さに合わせて調整 */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    /* メニュー項目の調整 */
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 12px 20px;
+        width: 100%;
+    }
+    
+    /* メニュー表示時のスクロール防止（オプション） */
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    /* メニューボタンアクティブ時のスタイル（オプション） */
+    .mobile-menu-btn.active {
+        color: var(--primary);
+    }
+}
     </style>
 </head>
 
@@ -2295,6 +2335,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+});
+</script>
+<script>
+    // モバイルメニュー改善
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navUl = document.querySelector('nav ul');
+    
+    if (mobileMenuBtn && navUl) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isDisplayed = navUl.style.display === 'flex';
+            navUl.style.display = isDisplayed ? 'none' : 'flex';
+            
+            // メニュー表示時のスクロール制御
+            document.body.classList.toggle('menu-open', !isDisplayed);
+            
+            // メニューボタンのアクティブ状態
+            mobileMenuBtn.classList.toggle('active', !isDisplayed);
+        });
+    }
 });
 </script>
 </body>
