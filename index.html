@@ -60,11 +60,11 @@
             align-items: center;
             transition: opacity 0.3s;
         }
-        
+
         .logo-link:hover {
             opacity: 0.9;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
@@ -83,7 +83,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
-        
+
         .logo:hover img {
             transform: scale(1.05);
         }
@@ -132,7 +132,7 @@
             color: white;
             margin-top: 80px;
         }
-        
+
         .hero-logo {
             width: 200px;
             height: 200px;
@@ -147,18 +147,18 @@
             cursor: pointer;
             position: relative;
         }
-        
+
         .hero-logo-link {
             display: inline-block;
             position: relative;
         }
-        
+
         .hero-logo-link:hover .hero-logo {
             transform: scale(1.05);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25), 0 0 20px rgba(174, 213, 129, 0.5);
             border-color: white;
         }
-        
+
         .hero-logo-link:hover::after {
             content: '✨ Instagramをチェック ✨';
             position: absolute;
@@ -176,7 +176,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             animation: pulse 1.5s infinite;
         }
-        
+
         .hero-logo-link::after {
             content: '✨ Instagramをチェック ✨';
             position: absolute;
@@ -194,14 +194,16 @@
             transition: opacity 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        
+
         @keyframes pulse {
             0% {
                 transform: translateX(-50%) scale(1);
             }
+
             50% {
                 transform: translateX(-50%) scale(1.05);
             }
+
             100% {
                 transform: translateX(-50%) scale(1);
             }
@@ -238,7 +240,7 @@
         }
 
         .btn:hover {
-            background-color: var(--primary-dark);
+            background-color: var(--primary-light);
             transform: translateY(-3px);
         }
 
@@ -289,7 +291,7 @@
             font-size: 18px;
             line-height: 2;
         }
-        
+
         .about-text p {
             margin-bottom: 20px;
         }
@@ -582,10 +584,6 @@
                 display: block;
             }
 
-            .animals-grid {
-                grid-template-columns: 1fr;
-            }
-
             .hero h2 {
                 font-size: 36px;
             }
@@ -607,333 +605,86 @@
                 gap: 30px;
             }
         }
-        /* 追加するCSS */
-@media screen and (min-width: 768px) {
-    .contact-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        align-items: start;
-    }
-    
-    .map {
-        height: 100%;
-        min-height: 400px;
-        aspect-ratio: 1 / 1;
-    }
-}/* 追加するCSS */
-@media screen and (min-width: 768px) {
-    .contact-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        align-items: stretch;
-    }
-    
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .map {
-        height: auto;
-        min-height: 350px;
-        /* 正方形から少し長方形に */
-        aspect-ratio: 1 / 0.9;
-    }
-    
-    /* 情報と地図の間にスペースを追加 */
-    .contact-info-item:last-child {
-        margin-bottom: 10px;
-    }
-}
-/* 追加するCSS */
-@media screen and (min-width: 768px) {
-    .contact-content {
-        display: grid;
-        grid-template-columns: 45% 55%;  /* 左右の比率を調整 */
-        gap: 30px;
-        align-items: start;
-    }
-    
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        padding: 20px;
-        background-color: #f9fbf9;
-        border-radius: 10px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    }
-    
-    .map {
-        height: 100%;
-        min-height: 380px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    }
-    
-    .map iframe {
-        height: 100%;
-    }
-}
-/* 追加するCSS */
-@media screen and (min-width: 768px) {
-    .contact-content {
-        display: grid;
-        grid-template-columns: 45% 55%;
-        gap: 30px;
-        align-items: start;
-    }
-    
-    .contact-info {
-        padding: 20px;
-        background-color: #f9fbf9;
-        border-radius: 10px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    }
-    
-    .map-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    
-    .map {
-        width: 90%;
-        aspect-ratio: 1 / 0.85; /* 正方形より少し横長に */
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    }
-    
-    .map iframe {
-        width: 100%;
-        height: 100%;
-    }
-}
-.btn {
-    transition: background-color 0.3s, transform 0.2s;
-}
 
-.btn:hover {
-    transform: translateY(-3px);
-}
+        @media screen and (min-width: 768px) {
+            .contact-content {
+                display: grid;
+                grid-template-columns: 45% 55%;
+                gap: 30px;
+                align-items: start;
+            }
 
-/* 通常のボタン（動物たち） */
-.btn {
-    background-color: var(--primary);
-}
+            .contact-info {
+                padding: 20px;
+                background-color: #f9fbf9;
+                border-radius: 10px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            }
 
-.btn:hover {
-    background-color: var(--primary-light);
-}
+            .map {
+                width: 90%;
+                aspect-ratio: 1 / 0.85;
+                /* 正方形より少し横長に */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            }
 
-/* 暗い色のボタン（予約する） */
-.btn.dark {
-    background-color: var(--primary-dark);
-}
+            .map iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
 
-.btn.dark:hover {
-    filter: brightness(1.2); /* 20%明るく */
-}
-/* <style> タグ内に追加 */
-    @media screen and (min-width: 992px) {
-    nav ul li {
-        margin-left: 20px; /* 30pxから20pxに減らす */
-    }
-    
-    nav ul li a {
-        font-size: 15px; /* 16pxから15pxに減らす */
-    }
-}
+        /* 暗い色のボタン（予約する） */
+        .btn.dark {
+            background-color: var(--primary-dark);
+        }
 
-@media screen and (min-width: 1200px) {
-    nav ul li {
-        margin-left: 30px; /* 大きい画面では元のスペースに戻す */
-    }
-    
-    nav ul li a {
-        font-size: 16px; /* 大きい画面では元のサイズに戻す */
-    }
-}
-@media screen and (max-width: 768px) {
-    /* モバイルメニューの表示時のスタイル */
-    nav ul {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
-    
-    nav ul li {
-        margin: 0;
-        padding: 10px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    
-    nav ul li:last-child {
-        border-bottom: none;
-    }
-    
-    .mobile-menu-btn {
-        font-size: 28px;
-        padding: 5px 10px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .section {
-        padding: 40px 0;
-    }
-    
-    .section-title {
-        margin-bottom: 30px;
-    }
-    
-    .section-title h2 {
-        font-size: 28px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .animal-card {
-        margin-bottom: 25px;
-    }
-    
-    .animal-img {
-        height: 200px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .faq-question {
-        padding: 15px;
-        font-size: 16px;
-    }
-    
-    .faq-answer-content {
-        padding: 15px;
-        font-size: 15px;
-    }
-}
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-    
-    p {
-        margin-bottom: 15px;
-    }
-    
-    .hero h2 {
-        font-size: 32px;
-    }
-    
-    .hero p {
-        font-size: 18px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .btn {
-        padding: 12px 25px;
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .contact-info-item {
-        margin-bottom: 20px;
-    }
-    
-    .contact-info-item i {
-        font-size: 20px;
-        min-width: 30px;
-    }
-}
-/* スマホ表示時の画像サイズ調整 */
-@media screen and (max-width: 768px) {
-    /* 動物カード画像の高さ調整 */
-    .animal-img {
-        height: 180px; /* 250pxから180pxに縮小 */
-    }
-    
-    /* 動物カードのサイズ調整 */
-    .animal-card {
-        margin-bottom: 15px;
-    }
-    
-    /* 動物カード情報部分の余白調整 */
-    .animal-info {
-        padding: 15px;
-    }
-    
-    .animal-info h3 {
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
-    
-    .animal-info p {
-        font-size: 14px;
-        margin-bottom: 10px;
-        line-height: 1.4;
-    }
-    
-    /* ギャラリー画像のサイズ調整 */
-    #gallery .grid-item {
-        height: 160px !important; /* ギャラリー画像の高さを縮小 */
-    }
-    
-    /* グリッドレイアウトの調整（2列表示） */
-    #gallery .gallery-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-    }
-}
+        .btn.dark:hover {
+            filter: brightness(1.2);
+            /* 20%明るく */
+        }
 
-/* タブレットサイズの調整 */
+        /* ギャラリーセクションとカードのレスポンシブ調整 - 統合版 */
+/* タブレット用 */
 @media screen and (min-width: 769px) and (max-width: 992px) {
-    /* 動物カード画像の高さ調整 */
-    .animal-img {
-        height: 200px;
+    /* ギャラリーレイアウト */
+    #gallery .gallery-grid,
+    #gallery .container>div[style*="display: grid"] {
+        grid-template-columns: repeat(3, 1fr) !important;
     }
     
-    /* ギャラリー画像のサイズ調整 */
-    #gallery .grid-item {
+    #gallery .grid-item,
+    #gallery .container>div[style*="display: grid"]>div {
         height: 180px !important;
     }
     
-    /* グリッドレイアウトの調整（3列表示） */
-    #gallery .gallery-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
+    /* 動物カード */
+    .animal-img {
+        height: 200px;
     }
 }
-/* スマホ表示時の画像サイズ調整 */
+
+/* スマホ用 */
 @media screen and (max-width: 768px) {
-    /* ギャラリーのグリッドレイアウト調整 */
-    #gallery .container > div[style*="display: grid"] {
-        grid-template-columns: repeat(2, 1fr) !important; /* 2列表示に変更 */
-        gap: 10px !important; /* 隙間を小さく */
+    /* ギャラリーレイアウト */
+    #gallery .gallery-grid,
+    #gallery .container>div[style*="display: grid"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
     }
     
-    /* ギャラリー画像のサイズ調整 */
-    #gallery .container > div[style*="display: grid"] > div {
-        height: 160px !important; /* 高さを縮小 */
+    #gallery .grid-item,
+    #gallery .container>div[style*="display: grid"]>div {
+        height: 160px !important;
     }
     
-    /* 動物カード画像の高さ調整 */
+    /* 動物カード */
     .animal-img {
-        height: 180px; /* 250pxから180pxに縮小 */
+        height: 180px;
     }
     
-    /* 動物カード情報部分の調整 */
     .animal-info {
         padding: 15px;
     }
@@ -949,526 +700,669 @@
         line-height: 1.4;
     }
 }
-/* スマホ表示でのアクセス・お問い合わせセクション修正 */
-@media screen and (max-width: 768px) {
-    /* コンタクトセクションのグリッドレイアウトを解除 */
-    #contact .contact-content {
-        display: block !important; /* グリッドを解除して縦並びに */
-        grid-template-columns: unset !important;
-        gap: 0 !important;
-    }
-    
-    /* 情報欄の調整 */
-    #contact .contact-info {
-        margin-bottom: 30px;
-        width: 100%;
-        padding: 15px !important;
-    }
-    
-    /* 連絡先アイコンと文字の整列 */
-    #contact .contact-info-item {
-        display: flex !important;
-        align-items: flex-start !important;
-        margin-bottom: 15px !important;
-    }
-    
-    #contact .contact-info-item i {
-        min-width: 30px !important;
-        margin-right: 10px !important;
-        margin-top: 3px !important;
-    }
-    
-    /* マップコンテナの調整 */
-    #contact .map, 
-    #contact div[style*="display: flex; align-items: flex-start; height: 100%;"] {
-        width: 100% !important;
-        min-height: 250px !important; /* スマホでの高さを縮小 */
-    }
-    
-    /* マップの下部余白追加 */
-    #contact iframe {
-        margin-bottom: 20px;
-    }
-}
-/* スマホ表示でのアクセス・お問い合わせセクション修正 */
-@media screen and (max-width: 768px) {
-    /* コンタクトセクションを縦積みレイアウトに変更 */
-    #contact .contact-content,
-    #contact [style*="display: grid"],
-    #contact [style*="grid-template-columns"] {
-        display: block !important;
-        width: 100% !important;
-        grid-template-columns: 1fr !important;
-    }
-    
-    /* 情報セクションを先に表示し、幅いっぱいに */
-    #contact .contact-info,
-    #contact [style*="background-color: #f9fbf9"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-bottom: 25px;
-        padding: 20px !important;
-    }
-    
-    /* 情報セクションのテキスト調整 */
-    #contact .contact-info h3 {
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
-    
-    #contact .contact-info-item {
-        margin-bottom: 12px !important;
-    }
-    
-    /* マップセクションを下に表示し、適切な高さに */
-    #contact .map,
-    #contact [style*="align-items: flex-start"],
-    #contact [style*="height: 100%"] {
-        width: 100% !important;
-        height: auto !important;
-        min-height: unset !important;
-    }
-    
-    #contact iframe,
-    #contact [style*="border-radius: 10px; overflow: hidden"] {
-        height: 300px !important;
-        width: 100% !important;
-    }
-}
-/* スマホ表示での料金プラン横並び */
-@media screen and (max-width: 768px) {
-    /* 料金プランを横並びに */
-    .pricing-container {
-        flex-direction: row !important;
-        justify-content: center;
-        gap: 10px;
-        align-items: stretch;
-    }
-    
-    /* カードを小さく調整 */
-    .pricing-card {
-        max-width: 48% !important;
-        min-width: 0 !important;
-        margin: 0 !important;
-        font-size: 14px;
-    }
-    
-    /* ヘッダー部分を小さく */
-    .pricing-header {
-        padding: 15px 10px !important;
-    }
-    
-    .pricing-header h3 {
-        font-size: 18px !important;
-        margin-bottom: 10px !important;
-    }
-    
-    .price {
-        font-size: 24px !important;
-    }
-    
-    /* ボディ部分を小さく */
-    .pricing-body {
-        padding: 15px 10px !important;
-    }
-    
-    .pricing-body ul {
-        margin-bottom: 15px !important;
-    }
-    
-    .pricing-body ul li {
-        margin-bottom: 8px !important;
-        font-size: 13px !important;
-    }
-    
-    /* ボタンの調整 */
-    .pricing-body .btn {
-        padding: 8px 15px !important;
-        font-size: 14px !important;
-    }
-}
 
-/* リスト項目が多すぎる場合のフォールバック（超小型スマホ用） */
-@media screen and (max-width: 360px) {
-    .pricing-container {
-        flex-direction: column !important;
-    }
-    
-    .pricing-card {
-        max-width: 100% !important;
-        margin-bottom: 15px !important;
-    }
-}
-/* スマホ表示でのAboutセクション改善 */
-@media screen and (max-width: 768px) {
-    /* Luff s.a.familyについてのテキスト調整 */
-    .about-text {
-        font-size: 15px !important; /* 文字サイズを小さく */
-        line-height: 1.7 !important; /* 行間を広げる */
-        padding: 0 5px !important; /* 左右の余白を追加 */
-    }
-    
-    .about-text p {
-        margin-bottom: 15px !important; /* 段落間の余白を調整 */
-        text-align: justify; /* 文字を両端揃えにして読みやすく */
-        letter-spacing: -0.01em; /* 文字間隔を少し詰める */
-    }
-    
-    /* セクションタイトルの調整 */
-    .section-title h2 {
-        font-size: 24px !important;
-    }
-    
-    /* ミーアキャットの画像サイズ調整 */
-    .about-image {
-        max-height: 200px !important; /* 高さ制限 */
-        overflow: hidden !important;
-    }
-    
-    .about-image img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: cover !important;
-        object-position: center !important;
-    }
-    
-    /* Aboutセクション全体の内部余白調整 */
-    .about .container {
-        padding: 0 15px !important;
-    }
-}
-/* ミーアキャット画像の見切れ修正 */
-@media screen and (max-width: 768px) {
-    /* ミーアキャットの画像サイズ調整 - 見切れない方法 */
-    .about-image {
-        max-height: none !important; /* 高さ制限を解除 */
-        margin-bottom: 20px !important;
-    }
-    
-    .about-image img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important; /* coverからcontainに変更 */
-        max-height: 250px !important; /* 高さの上限を設定 */
-    }
-}
-/* スマホ表示でのヘッダー高さ縮小 */
-@media screen and (max-width: 768px) {
-    /* ヘッダー全体の高さ縮小 */
-    header {
-        height: auto !important;
-    }
-    
-    .header-content {
-        padding: 8px 0 !important; /* パディングを縮小 */
-    }
-    
-    /* ロゴサイズの縮小 */
-    .logo img {
-        height: 35px !important;
-        width: 35px !important;
-        min-width: 35px !important;
-        margin-right: 10px !important;
-    }
-    
-    .logo h1 {
-        font-size: 18px !important;
-    }
-    
-    /* モバイルメニューボタンの調整 */
-    .mobile-menu-btn {
-        font-size: 22px !important;
-        padding: 5px !important;
-    }
-    
-    /* ヘッダー固定による本文マージン調整 */
-    .hero {
-        margin-top: 55px !important; /* ヘッダー高さに合わせて調整 */
-    }
-    
-    /* ヘッダースクロール時の影を強調（オプション） */
-    header {
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
-    }
-}
-/* スマホ表示での動物カード改善 */
-@media screen and (max-width: 768px) {
-    /* 動物カードは1列のまま */
-    .animals-grid {
-        grid-template-columns: 1fr !important;
-        gap: 15px !important;
-    }
-    
-    /* カードのデザイン改善 */
-    .animal-card {
-        display: flex !important;
-        flex-direction: row !important;
-        height: auto !important;
-        align-items: center;
-    }
-    
-    /* 画像サイズ調整 */
-    .animal-img {
-        width: 120px !important;
-        height: 120px !important;
-        min-width: 120px !important;
-        flex-shrink: 0;
-    }
-    
-    /* テキスト部分 */
-    .animal-info {
-        padding: 10px 15px !important;
-        text-align: left !important;
-    }
-    
-    .animal-info h3 {
-        font-size: 16px !important;
-        margin-bottom: 3px !important;
-    }
-    
-    .animal-info p {
-        font-size: 13px !important;
-        margin-bottom: 5px !important;
-        line-height: 1.4 !important;
-    }
-}
-/* カードスライダーのスタイル（スマホ向け） */
-@media screen and (max-width: 768px) {
-    /* スライダーコンテナ */
-    .beginners-slider-container {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-    
-    /* スライド */
-    .beginners-slider-wrapper {
-        display: flex;
-        transition: transform 0.4s ease;
-    }
-    
-    .beginners-slide {
-        min-width: 100%;
-        box-sizing: border-box;
-    }
-    
-    /* ナビゲーションボタン */
-    .beginners-slider-nav {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin: 15px 0 25px;
-    }
-    
-    .beginners-slider-nav button {
-        width: 40px;
-        height: 40px;
-        border: none;
-        background-color: var(--primary);
-        color: white;
-        border-radius: 50%;
-        font-size: 18px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* インジケーター */
-    .beginners-slider-indicators {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        margin-bottom: 20px;
-    }
-    
-    .beginners-indicator {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #ddd;
-        cursor: pointer;
-    }
-    
-    .beginners-indicator.active {
-        background-color: var(--primary);
-        width: 10px;
-        height: 10px;
-    }
-    
-    /* 通常のグリッドを非表示 */
-    #for-beginners [style*="display: grid"] {
-        display: none !important;
-    }
-}
+        @media screen and (min-width: 992px) {
+            nav ul li {
+                margin-left: 20px;
+                /* 30pxから20pxに減らす */
+            }
 
-/* デスクトップではスライダーを非表示 */
-@media screen and (min-width: 769px) {
-    .beginners-mobile-slider {
-        display: none !important;
-    }
-}
-/* モバイルメニューの隙間修正 */
-@media screen and (max-width: 768px) {
-    /* モバイルメニュー表示位置の調整 */
-    nav ul {
-        position: fixed;
-        top: 51px !important; /* ヘッダーの高さに合わせて調整 */
-        left: 0;
-        width: 100%;
-        background-color: white;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    
-    /* メニュー項目の調整 */
-    nav ul li {
-        margin: 0;
-        width: 100%;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    
-    nav ul li a {
-        display: block;
-        padding: 12px 20px;
-        width: 100%;
-    }
-    
-    /* メニュー表示時のスクロール防止（オプション） */
-    body.menu-open {
-        overflow: hidden;
-    }
-    
-    /* メニューボタンアクティブ時のスタイル（オプション） */
-    .mobile-menu-btn.active {
-        color: var(--primary);
-    }
-}
-/* スライダーボタン位置の調整 */
-@media screen and (max-width: 768px) {
-    /* インジケーターの位置調整 */
-    .beginners-slider-indicators {
-        margin-top: 20px !important; /* 上部マージンを増やす */
-        margin-bottom: 15px !important;
-    }
-    
-    /* ナビゲーションボタンの位置調整 */
-    .beginners-slider-nav {
-        margin-top: 5px !important;
-        margin-bottom: 30px !important; /* 下部マージンも増やして全体のバランスを調整 */
-    }
-    
-    /* スライドコンテンツの下部余白追加 */
-    .beginners-slide > div {
-        margin-bottom: 10px !important; /* スライドの内容と下部の間隔も確保 */
-    }
-    
-    /* スライダーコンテナ自体も少し余裕を持たせる */
-    .beginners-slider-container {
-        padding-bottom: 10px !important;
-    }
-}
-/* スマホ表示での動物セクションアコーディオン */
-@media screen and (max-width: 768px) {
-    /* カテゴリーヘッダー */
-    .animal-category-header {
-        background-color: var(--primary-light);
-        color: white;
-        padding: 12px 15px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s;
-    }
-    
-    .animal-category-header:hover {
-        background-color: var(--primary);
-    }
-    
-    .animal-category-header h3 {
-        margin: 0;
-        color: white !important;
-        font-size: 18px !important;
-    }
-    
-    .animal-category-header .toggle-icon {
-        font-size: 20px;
-        transition: transform 0.3s;
-    }
-    
-    /* 開いた状態のアイコン回転 */
-    .animal-category-header.active .toggle-icon {
-        transform: rotate(180deg);
-    }
-    
-    /* カテゴリーコンテンツ */
-    .animal-category-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-    }
-    
-    /* スマホでのグリッド調整 */
-    #animals .animals-grid {
-        grid-template-columns: 1fr !important;
-        gap: 15px !important;
-    }
-    
-    /* カテゴリー間の余白 */
-    .animal-category {
-        margin-bottom: 20px;
-    }
-}
+            nav ul li a {
+                font-size: 15px;
+                /* 16pxから15pxに減らす */
+            }
+        }
 
-/* デスクトップではアコーディオン非表示 */
-@media screen and (min-width: 769px) {
-    .animal-category-mobile {
-        display: none !important;
-    }
-}
-/* スマホ表示での動物セクションアコーディオン */
-@media screen and (max-width: 768px) {
-    /* デスクトップ用要素を非表示 */
-    .desktop-animal-nav,
-    .desktop-animal-sections {
-        display: none !important;
-    }
-    
-    /* 従来の個別セクションも非表示（ID指定で確実に） */
-    #birds:not(.animal-category-content),
-    #rabbits:not(.animal-category-content),
-    #small-animals:not(.animal-category-content),
-    #special-animals:not(.animal-category-content) {
-        display: none !important;
-    }
-    
-    /* カテゴリーヘッダー */
-    .animal-category-header {
-        background-color: var(--primary-light);
-        color: white;
-        padding: 12px 15px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s;
-    }
-    
-    /* 他のスタイルは変更なし */
-    /* ... */
-}
+        @media screen and (min-width: 1200px) {
+            nav ul li {
+                margin-left: 30px;
+                /* 大きい画面では元のスペースに戻す */
+            }
+
+            nav ul li a {
+                font-size: 16px;
+                /* 大きい画面では元のサイズに戻す */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /* モバイルメニューの表示時のスタイル */
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+
+            nav ul li {
+                margin: 0;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            .mobile-menu-btn {
+                font-size: 28px;
+                padding: 5px 10px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .section {
+                padding: 40px 0;
+            }
+
+            .section-title {
+                margin-bottom: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .faq-question {
+                padding: 15px;
+                font-size: 16px;
+            }
+
+            .faq-answer-content {
+                padding: 15px;
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .contact-info-item {
+                margin-bottom: 20px;
+            }
+
+            .contact-info-item i {
+                font-size: 20px;
+                min-width: 30px;
+            }
+        }
+
+        /* スマホ表示でのアクセス・お問い合わせセクション修正 */
+        @media screen and (max-width: 768px) {
+
+            /* コンタクトセクションを縦積みレイアウトに変更 */
+            #contact .contact-content,
+            #contact [style*="display: grid"],
+            #contact [style*="grid-template-columns"] {
+                display: block !important;
+                width: 100% !important;
+                grid-template-columns: 1fr !important;
+            }
+
+            /* 情報セクションを先に表示し、幅いっぱいに */
+            #contact .contact-info,
+            #contact [style*="background-color: #f9fbf9"] {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-bottom: 25px;
+                padding: 20px !important;
+            }
+
+            /* 情報セクションのテキスト調整 */
+            #contact .contact-info h3 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+
+            #contact .contact-info-item {
+                margin-bottom: 12px !important;
+            }
+
+            /* マップセクションを下に表示し、適切な高さに */
+            #contact .map,
+            #contact [style*="align-items: flex-start"],
+            #contact [style*="height: 100%"] {
+                width: 100% !important;
+                height: auto !important;
+                min-height: unset !important;
+            }
+
+            #contact iframe,
+            #contact [style*="border-radius: 10px; overflow: hidden"] {
+                height: 300px !important;
+                width: 100% !important;
+            }
+        }
+
+        /* スマホ表示での料金プラン横並び */
+        @media screen and (max-width: 768px) {
+
+            /* 料金プランを横並びに */
+            .pricing-container {
+                flex-direction: row !important;
+                justify-content: center;
+                gap: 10px;
+                align-items: stretch;
+            }
+
+            /* カードを小さく調整 */
+            .pricing-card {
+                max-width: 48% !important;
+                min-width: 0 !important;
+                margin: 0 !important;
+                font-size: 14px;
+            }
+
+            /* ヘッダー部分を小さく */
+            .pricing-header {
+                padding: 15px 10px !important;
+            }
+
+            .pricing-header h3 {
+                font-size: 18px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .price {
+                font-size: 24px !important;
+            }
+
+            /* ボディ部分を小さく */
+            .pricing-body {
+                padding: 15px 10px !important;
+            }
+
+            .pricing-body ul {
+                margin-bottom: 15px !important;
+            }
+
+            .pricing-body ul li {
+                margin-bottom: 8px !important;
+                font-size: 13px !important;
+            }
+
+            /* ボタンの調整 */
+            .pricing-body .btn {
+                padding: 8px 15px !important;
+                font-size: 14px !important;
+            }
+        }
+
+        /* リスト項目が多すぎる場合のフォールバック（超小型スマホ用） */
+        @media screen and (max-width: 360px) {
+            .pricing-container {
+                flex-direction: column !important;
+            }
+
+            .pricing-card {
+                max-width: 100% !important;
+                margin-bottom: 15px !important;
+            }
+        }
+
+        /* スマホ表示でのAboutセクション改善 */
+        @media screen and (max-width: 768px) {
+
+            /* Luff s.a.familyについてのテキスト調整 */
+            .about-text {
+                font-size: 15px !important;
+                /* 文字サイズを小さく */
+                line-height: 1.7 !important;
+                /* 行間を広げる */
+                padding: 0 5px !important;
+                /* 左右の余白を追加 */
+            }
+
+            .about-text p {
+                margin-bottom: 15px !important;
+                /* 段落間の余白を調整 */
+                text-align: justify;
+                /* 文字を両端揃えにして読みやすく */
+                letter-spacing: -0.01em;
+                /* 文字間隔を少し詰める */
+            }
+
+            /* セクションタイトルの調整 */
+            .section-title h2 {
+                font-size: 24px !important;
+            }
+
+            /* ミーアキャットの画像サイズ調整 */
+            .about-image {
+                max-height: 200px !important;
+                /* 高さ制限 */
+                overflow: hidden !important;
+            }
+
+            .about-image img {
+                width: 100% !important;
+                height: auto !important;
+                object-fit: cover !important;
+                object-position: center !important;
+            }
+
+            /* Aboutセクション全体の内部余白調整 */
+            .about .container {
+                padding: 0 15px !important;
+            }
+        }
+
+        /* ミーアキャット画像の見切れ修正 */
+        @media screen and (max-width: 768px) {
+
+            /* ミーアキャットの画像サイズ調整 - 見切れない方法 */
+            .about-image {
+                max-height: none !important;
+                /* 高さ制限を解除 */
+                margin-bottom: 20px !important;
+            }
+
+            .about-image img {
+                width: 100% !important;
+                height: auto !important;
+                object-fit: contain !important;
+                /* coverからcontainに変更 */
+                max-height: 250px !important;
+                /* 高さの上限を設定 */
+            }
+        }
+
+        /* スマホ表示でのヘッダー高さ縮小 */
+        @media screen and (max-width: 768px) {
+
+            /* ヘッダー全体の高さ縮小 */
+            header {
+                height: auto !important;
+            }
+
+            .header-content {
+                padding: 8px 0 !important;
+                /* パディングを縮小 */
+            }
+
+            /* ロゴサイズの縮小 */
+            .logo img {
+                height: 35px !important;
+                width: 35px !important;
+                min-width: 35px !important;
+                margin-right: 10px !important;
+            }
+
+            .logo h1 {
+                font-size: 18px !important;
+            }
+
+            /* モバイルメニューボタンの調整 */
+            .mobile-menu-btn {
+                font-size: 22px !important;
+                padding: 5px !important;
+            }
+
+            /* ヘッダー固定による本文マージン調整 */
+            .hero {
+                margin-top: 55px !important;
+                /* ヘッダー高さに合わせて調整 */
+            }
+        }
+
+        /* スマホ表示での動物カード改善 */
+        @media screen and (max-width: 768px) {
+
+            /* 動物カードは1列のまま */
+            .animals-grid {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+
+            /* カードのデザイン改善 */
+            .animal-card {
+                display: flex !important;
+                flex-direction: row !important;
+                height: auto !important;
+                align-items: center;
+            }
+
+            /* 画像サイズ調整 */
+            .animal-img {
+                width: 120px !important;
+                height: 120px !important;
+                min-width: 120px !important;
+                flex-shrink: 0;
+            }
+
+            /* テキスト部分 */
+            .animal-info {
+                padding: 10px 15px !important;
+                text-align: left !important;
+            }
+
+            .animal-info h3 {
+                font-size: 16px !important;
+                margin-bottom: 3px !important;
+            }
+
+            .animal-info p {
+                font-size: 13px !important;
+                margin-bottom: 5px !important;
+                line-height: 1.4 !important;
+            }
+        }
+
+        /* カードスライダーのスタイル（スマホ向け） */
+        @media screen and (max-width: 768px) {
+
+            /* スライダーコンテナ */
+            .beginners-slider-container {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            /* スライド */
+            .beginners-slider-wrapper {
+                display: flex;
+                transition: transform 0.4s ease;
+            }
+
+            .beginners-slide {
+                min-width: 100%;
+                box-sizing: border-box;
+            }
+
+            /* ナビゲーションボタン */
+            .beginners-slider-nav {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin: 15px 0 25px;
+            }
+
+            .beginners-slider-nav button {
+                width: 40px;
+                height: 40px;
+                border: none;
+                background-color: var(--primary);
+                color: white;
+                border-radius: 50%;
+                font-size: 18px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            /* インジケーター */
+            .beginners-slider-indicators {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-bottom: 20px;
+            }
+
+            .beginners-indicator {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #ddd;
+                cursor: pointer;
+            }
+
+            .beginners-indicator.active {
+                background-color: var(--primary);
+                width: 10px;
+                height: 10px;
+            }
+
+            /* 通常のグリッドを非表示 */
+            #for-beginners [style*="display: grid"] {
+                display: none !important;
+            }
+        }
+
+        /* デスクトップではスライダーを非表示 */
+        @media screen and (min-width: 769px) {
+            .beginners-mobile-slider {
+                display: none !important;
+            }
+        }
+
+        /* モバイルメニューの隙間修正 */
+        @media screen and (max-width: 768px) {
+
+            /* モバイルメニュー表示位置の調整 */
+            nav ul {
+                position: fixed;
+                top: 51px !important;
+                /* ヘッダーの高さに合わせて調整 */
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                border-top: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            /* メニュー項目の調整 */
+            nav ul li {
+                margin: 0;
+                width: 100%;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 12px 20px;
+                width: 100%;
+            }
+        }
+
+        /* スライダーボタン位置の調整 */
+        @media screen and (max-width: 768px) {
+
+            /* インジケーターの位置調整 */
+            .beginners-slider-indicators {
+                margin-top: 20px !important;
+                /* 上部マージンを増やす */
+                margin-bottom: 15px !important;
+            }
+
+            /* ナビゲーションボタンの位置調整 */
+            .beginners-slider-nav {
+                margin-top: 5px !important;
+                margin-bottom: 30px !important;
+                /* 下部マージンも増やして全体のバランスを調整 */
+            }
+
+            /* スライドコンテンツの下部余白追加 */
+            .beginners-slide>div {
+                margin-bottom: 10px !important;
+                /* スライドの内容と下部の間隔も確保 */
+            }
+
+            /* スライダーコンテナ自体も少し余裕を持たせる */
+            .beginners-slider-container {
+                padding-bottom: 10px !important;
+            }
+        }
+
+        /* スマホ表示での動物セクションアコーディオン */
+        @media screen and (max-width: 768px) {
+
+            /* カテゴリーヘッダー */
+            .animal-category-header {
+                background-color: var(--primary-light);
+                color: white;
+                padding: 12px 15px;
+                border-radius: 8px;
+                margin-bottom: 15px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s;
+            }
+
+            .animal-category-header:hover {
+                background-color: var(--primary);
+            }
+
+            .animal-category-header h3 {
+                margin: 0;
+                color: white !important;
+                font-size: 18px !important;
+            }
+
+            .animal-category-header .toggle-icon {
+                font-size: 20px;
+                transition: transform 0.3s;
+            }
+
+            /* 開いた状態のアイコン回転 */
+            .animal-category-header.active .toggle-icon {
+                transform: rotate(180deg);
+            }
+
+            /* カテゴリーコンテンツ */
+            .animal-category-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+            }
+
+            /* スマホでのグリッド調整 */
+            #animals .animals-grid {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+
+            /* カテゴリー間の余白 */
+            .animal-category {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* デスクトップではアコーディオン非表示 */
+        @media screen and (min-width: 769px) {
+            .animal-category-mobile {
+                display: none !important;
+            }
+        }
+
+        /* スマホ表示での動物セクションアコーディオン */
+        @media screen and (max-width: 768px) {
+
+            /* デスクトップ用要素を非表示 */
+            .desktop-animal-nav,
+            .desktop-animal-sections {
+                display: none !important;
+            }
+
+            /* 従来の個別セクションも非表示（ID指定で確実に） */
+            #birds:not(.animal-category-content),
+            #rabbits:not(.animal-category-content),
+            #small-animals:not(.animal-category-content),
+            #special-animals:not(.animal-category-content) {
+                display: none !important;
+            }
+        }
+
+        /* モバイル表示でのヒーローセクション調整 */
+        @media screen and (max-width: 768px) {
+
+            /* ロゴを適度なサイズに調整 */
+            .hero-logo {
+                width: 170px !important;
+                height: 170px !important;
+                margin-bottom: 25px !important;
+            }
+
+            /* Instagramテキストを常時表示し、サイズ調整 */
+            .hero-logo-link::after {
+                opacity: 1 !important;
+                bottom: 40px !important;
+                font-size: 14px !important;
+                /* サイズアップ */
+                padding: 6px 15px !important;
+                /* パディング調整 */
+                white-space: nowrap;
+                animation: pulse 1.5s infinite;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+                /* シャドウ強化 */
+                font-weight: 700 !important;
+                /* 太字に */
+            }
+
+            /* ホバー時のアニメーションも維持 */
+            .hero-logo-link:hover::after {
+                animation: pulse 1.5s infinite;
+            }
+
+            /* ホバー効果のサイズも調整 */
+            .hero-logo-link:hover .hero-logo {
+                transform: scale(1.03) !important;
+            }
+
+            /* ヒーロー全体の高さも少し調整 */
+            .hero {
+                min-height: 80vh !important;
+                height: auto !important;
+                padding: 100px 0 60px !important;
+            }
+        }
+
+        /* さらに小さい画面用 */
+        @media screen and (max-width: 480px) {
+            .hero-logo {
+                width: 140px !important;
+                height: 140px !important;
+            }
+
+            .hero-logo-link::after {
+                font-size: 12px !important;
+                /* サイズアップ */
+                padding: 5px 12px !important;
+                /* パディング調整 */
+                bottom: 30px !important;
+            }
+        }
     </style>
 </head>
 
@@ -1504,7 +1398,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank" class="hero-logo-link">
+            <a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank"
+                class="hero-logo-link">
                 <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" class="hero-logo">
             </a>
             <h2>動物たちとの素敵な出会い</h2>
@@ -1538,578 +1433,583 @@
 
     <!-- Animals Section -->
     <!-- Animals Section -->
-<section id="animals" class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>ふれあえる動物たち</h2>
+    <section id="animals" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>ふれあえる動物たち</h2>
+            </div>
+
+            <!-- 動物カテゴリーナビゲーション -->
+            <div class="desktop-animal-nav"
+                style="display: flex; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; gap: 10px;">
+                <a href="#birds" class="btn" style="background-color: var(--primary-light);">鳥類</a>
+                <a href="#rabbits" class="btn" style="background-color: var(--primary-light);">うさぎ・チンチラ</a>
+                <a href="#small-animals" class="btn" style="background-color: var(--primary-light);">小動物</a>
+                <a href="#special-animals" class="btn" style="background-color: var(--primary-light);">珍しい動物</a>
+            </div>
+
+            <!-- モバイル用アコーディオン -->
+            <div class="animal-category-mobile">
+                <!-- 鳥類 -->
+                <div class="animal-category">
+                    <div class="animal-category-header" data-target="birds-content">
+                        <h3>鳥類</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div id="birds-content" class="animal-category-content">
+                        <div class="animals-grid">
+                            <!-- シロハラインコ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="シロハラインコ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>シロハラインコ</h3>
+                                    <p>ぽっぴちゃん</p>
+                                    <p>カラフルな羽と賢い性格が魅力のシロハラインコ。人懐っこい性格で触れ合いを楽しめます。</p>
+                                </div>
+                            </div>
+
+                            <!-- ウロコインコ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ウロコインコ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ウロコインコ</h3>
+                                    <p>ぱいんちゃん</p>
+                                    <p>ウロコ模様の美しい羽を持つインコ。温厚で穏やかな性格をしています。</p>
+                                </div>
+                            </div>
+
+                            <!-- セキセイインコ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="セキセイインコ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>セキセイインコ</h3>
+                                    <p>そらちゃん</p>
+                                    <p>小さな体に大きな魅力を持つセキセイインコ。活発で愛嬌のある姿が人気です。</p>
+                                </div>
+                            </div>
+
+                            <!-- オカメインコ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="オカメインコ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>オカメインコ</h3>
+                                    <p>れもんちゃん</p>
+                                    <p>頭の冠羽が特徴的なオカメインコ。優しく穏やかな性格で、初めての方にもおすすめです。</p>
+                                </div>
+                            </div>
+
+                            <!-- ボタンインコ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ボタンインコ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ボタンインコ</h3>
+                                    <p>ぺんちゃん</p>
+                                    <p>小さな体が特徴のボタンインコ。とても活発で好奇心旺盛な性格をしています。</p>
+                                </div>
+                            </div>
+
+                            <!-- コザクラインコ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="コザクラインコ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>コザクラインコ</h3>
+                                    <p>さくらちゃん</p>
+                                    <p>愛情深く社交的なコザクラインコ。人の指に止まることが大好きです。</p>
+                                </div>
+                            </div>
+
+                            <!-- ギンバト -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ギンバト" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ギンバト</h3>
+                                    <p>たいはくくん</p>
+                                    <p>優雅な姿が特徴のギンバト。静かな佇まいで心を癒してくれます。</p>
+                                </div>
+                            </div>
+
+                            <!-- コールダック -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="コールダック" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>コールダック</h3>
+                                    <p>ぶりちゃん</p>
+                                    <p>ユニークな鳴き声が特徴のコールダック。愛らしい姿で人気を集めています。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- うさぎ・チンチラ -->
+                <div class="animal-category">
+                    <div class="animal-category-header" data-target="rabbits-content">
+                        <h3>うさぎ・チンチラ</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div id="rabbits-content" class="animal-category-content">
+                        <div class="animals-grid">
+                            <!-- チンチラ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="チンチラ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>チンチラ</h3>
+                                    <p>ねねちゃん</p>
+                                    <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
+                                </div>
+                            </div>
+
+                            <!-- アメリカンファジーロップ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>アメリカンファジーロップ</h3>
+                                    <p>もふこちゃん</p>
+                                    <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
+                                </div>
+                            </div>
+
+                            <!-- ホーランドロップ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ホーランドロップ</h3>
+                                    <p>ぼーくん</p>
+                                    <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
+                                </div>
+                            </div>
+
+                            <!-- ホーランドロップ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ホーランドロップ</h3>
+                                    <p>さっちゃん</p>
+                                    <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 小動物 -->
+                <div class="animal-category">
+                    <div class="animal-category-header" data-target="small-animals-content">
+                        <h3>小動物</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div id="small-animals-content" class="animal-category-content">
+                        <div class="animals-grid">
+                            <!-- ハムスター -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ハムスター" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ハムスター</h3>
+                                    <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
+                                </div>
+                            </div>
+
+                            <!-- モルモット -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="モルモット" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>モルモット</h3>
+                                    <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
+                                </div>
+                            </div>
+
+                            <!-- ハリネズミ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ハリネズミ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ハリネズミ</h3>
+                                    <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
+                                </div>
+                            </div>
+
+                            <!-- モモンガ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="モモンガ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>モモンガ</h3>
+                                    <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 珍しい動物 -->
+                <div class="animal-category">
+                    <div class="animal-category-header" data-target="special-animals-content">
+                        <h3>珍しい動物</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div id="special-animals-content" class="animal-category-content">
+                        <div class="animals-grid">
+                            <!-- フトアゴヒゲトカゲ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="フトアゴヒゲトカゲ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>フトアゴヒゲトカゲ</h3>
+                                    <p>穏やかな性格で人気の爬虫類。ドラゴンのような見た目に触れる珍しい体験ができます。</p>
+                                </div>
+                            </div>
+
+                            <!-- ショウガラゴ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ショウガラゴ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ショウガラゴ</h3>
+                                    <p>大きな目が特徴的な夜行性の霊長類。珍しい動物との貴重なふれあいが体験できます。</p>
+                                </div>
+                            </div>
+
+                            <!-- ミーアキャット -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ミーアキャット" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ミーアキャット</h3>
+                                    <p>好奇心旺盛で愛らしい姿が人気のミーアキャット。その独特の仕草に癒されます。</p>
+                                </div>
+                            </div>
+
+                            <!-- チワワ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="チワワ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>チワワ</h3>
+                                    <p>小さな体に大きな魅力を持つ犬種。愛らしい姿と甘えん坊な性格が人気です。</p>
+                                </div>
+                            </div>
+
+                            <!-- マイクロブタ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="マイクロブタ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>マイクロブタ</h3>
+                                    <p>普通の豚よりもコンパクトなサイズで親しみやすいマイクロブタ。賢くてじゃれつくのが大好きです。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 鳥類（デスクトップ） -->
+            <div id="birds" class="desktop-animal-sections" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">鳥類
+                </h3>
+                <div class="animals-grid">
+                    <!-- シロハラインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="シロハラインコ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>シロハラインコ</h3>
+                            <p>ぽっぴちゃん</p>
+                            <p>カラフルな羽と賢い性格が魅力のシロハラインコ。人懐っこい性格で触れ合いを楽しめます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ウロコインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ウロコインコ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ウロコインコ</h3>
+                            <p>ぱいんちゃん</p>
+                            <p>ウロコ模様の美しい羽を持つインコ。温厚で穏やかな性格をしています。</p>
+                        </div>
+                    </div>
+
+                    <!-- セキセイインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="セキセイインコ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>セキセイインコ</h3>
+                            <p>そらちゃん</p>
+                            <p>小さな体に大きな魅力を持つセキセイインコ。活発で愛嬌のある姿が人気です。</p>
+                        </div>
+                    </div>
+
+                    <!-- オカメインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="オカメインコ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>オカメインコ</h3>
+                            <p>れもんちゃん</p>
+                            <p>頭の冠羽が特徴的なオカメインコ。優しく穏やかな性格で、初めての方にもおすすめです。</p>
+                        </div>
+                    </div>
+
+                    <!-- ボタンインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ボタンインコ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ボタンインコ</h3>
+                            <p>ぺんちゃん</p>
+                            <p>小さな体が特徴のボタンインコ。とても活発で好奇心旺盛な性格をしています。</p>
+                        </div>
+                    </div>
+
+                    <!-- コザクラインコ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="コザクラインコ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>コザクラインコ</h3>
+                            <p>さくらちゃん</p>
+                            <p>愛情深く社交的なコザクラインコ。人の指に止まることが大好きです。</p>
+                        </div>
+                    </div>
+
+                    <!-- ギンバト -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ギンバト" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ギンバト</h3>
+                            <p>たいはくくん</p>
+                            <p>優雅な姿が特徴のギンバト。静かな佇まいで心を癒してくれます。</p>
+                        </div>
+                    </div>
+
+                    <!-- コールダック -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="コールダック" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>コールダック</h3>
+                            <p>ぶりちゃん</p>
+                            <p>ユニークな鳴き声が特徴のコールダック。愛らしい姿で人気を集めています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- うさぎ・チンチラ（デスクトップ） -->
+            <div id="rabbits" class="desktop-animal-sections" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">
+                    うさぎ・チンチラ</h3>
+                <div class="animals-grid">
+                    <!-- チンチラ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="チンチラ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>チンチラ</h3>
+                            <p>ねねちゃん</p>
+                            <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
+                        </div>
+                    </div>
+
+                    <!-- アメリカンファジーロップ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>アメリカンファジーロップ</h3>
+                            <p>もふこちゃん</p>
+                            <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
+                        </div>
+                    </div>
+
+                    <!-- ホーランドロップ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ホーランドロップ</h3>
+                            <p>ぼーくん</p>
+                            <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
+                        </div>
+                    </div>
+
+                    <!-- ホーランドロップ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ホーランドロップ</h3>
+                            <p>さっちゃん</p>
+                            <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 小動物（デスクトップ） -->
+            <div id="small-animals" class="desktop-animal-sections" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">小動物
+                </h3>
+                <div class="animals-grid">
+                    <!-- ハムスター -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ハムスター" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ハムスター</h3>
+                            <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
+                        </div>
+                    </div>
+
+                    <!-- モルモット -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="モルモット" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>モルモット</h3>
+                            <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ハリネズミ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ハリネズミ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ハリネズミ</h3>
+                            <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
+                        </div>
+                    </div>
+
+                    <!-- モモンガ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="モモンガ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>モモンガ</h3>
+                            <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 珍しい動物（デスクトップ） -->
+            <div id="special-animals" class="desktop-animal-sections" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">珍しい動物
+                </h3>
+                <div class="animals-grid">
+                    <!-- フトアゴヒゲトカゲ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="フトアゴヒゲトカゲ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>フトアゴヒゲトカゲ</h3>
+                            <p>穏やかな性格で人気の爬虫類。ドラゴンのような見た目に触れる珍しい体験ができます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ショウガラゴ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ショウガラゴ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ショウガラゴ</h3>
+                            <p>大きな目が特徴的な夜行性の霊長類。珍しい動物との貴重なふれあいが体験できます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ミーアキャット -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ミーアキャット" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ミーアキャット</h3>
+                            <p>好奇心旺盛で愛らしい姿が人気のミーアキャット。その独特の仕草に癒されます。</p>
+                        </div>
+                    </div>
+
+                    <!-- チワワ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="チワワ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>チワワ</h3>
+                            <p>小さな体に大きな魅力を持つ犬種。愛らしい姿と甘えん坊な性格が人気です。</p>
+                        </div>
+                    </div>
+
+                    <!-- マイクロブタ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="マイクロブタ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>マイクロブタ</h3>
+                            <p>普通の豚よりもコンパクトなサイズで親しみやすいマイクロブタ。賢くてじゃれつくのが大好きです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- 動物カテゴリーナビゲーション -->
-        <div class="desktop-animal-nav" style="display: flex; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; gap: 10px;">
-            <a href="#birds" class="btn" style="background-color: var(--primary-light);">鳥類</a>
-            <a href="#rabbits" class="btn" style="background-color: var(--primary-light);">うさぎ・チンチラ</a>
-            <a href="#small-animals" class="btn" style="background-color: var(--primary-light);">小動物</a>
-            <a href="#special-animals" class="btn" style="background-color: var(--primary-light);">珍しい動物</a>
-        </div>
-
-        <!-- モバイル用アコーディオン -->
-        <div class="animal-category-mobile">
-            <!-- 鳥類 -->
-            <div class="animal-category">
-                <div class="animal-category-header" data-target="birds-content">
-                    <h3>鳥類</h3>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div id="birds-content" class="animal-category-content">
-                    <div class="animals-grid">
-                        <!-- シロハラインコ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="シロハラインコ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>シロハラインコ</h3>
-                                <p>ぽっぴちゃん</p>
-                                <p>カラフルな羽と賢い性格が魅力のシロハラインコ。人懐っこい性格で触れ合いを楽しめます。</p>
-                            </div>
-                        </div>
-
-                        <!-- ウロコインコ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="ウロコインコ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>ウロコインコ</h3>
-                                <p>ぱいんちゃん</p>
-                                <p>ウロコ模様の美しい羽を持つインコ。温厚で穏やかな性格をしています。</p>
-                            </div>
-                        </div>
-
-                        <!-- セキセイインコ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="セキセイインコ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>セキセイインコ</h3>
-                                <p>そらちゃん</p>
-                                <p>小さな体に大きな魅力を持つセキセイインコ。活発で愛嬌のある姿が人気です。</p>
-                            </div>
-                        </div>
-
-                        <!-- オカメインコ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="オカメインコ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>オカメインコ</h3>
-                                <p>れもんちゃん</p>
-                                <p>頭の冠羽が特徴的なオカメインコ。優しく穏やかな性格で、初めての方にもおすすめです。</p>
-                            </div>
-                        </div>
-
-                        <!-- ボタンインコ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="ボタンインコ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>ボタンインコ</h3>
-                                <p>ぺんちゃん</p>
-                                <p>小さな体が特徴のボタンインコ。とても活発で好奇心旺盛な性格をしています。</p>
-                            </div>
-                        </div>
-
-                        <!-- コザクラインコ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="コザクラインコ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>コザクラインコ</h3>
-                                <p>さくらちゃん</p>
-                                <p>愛情深く社交的なコザクラインコ。人の指に止まることが大好きです。</p>
-                            </div>
-                        </div>
-
-                        <!-- ギンバト -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="ギンバト" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>ギンバト</h3>
-                                <p>たいはくくん</p>
-                                <p>優雅な姿が特徴のギンバト。静かな佇まいで心を癒してくれます。</p>
-                            </div>
-                        </div>
-
-                        <!-- コールダック -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="コールダック" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>コールダック</h3>
-                                <p>ぶりちゃん</p>
-                                <p>ユニークな鳴き声が特徴のコールダック。愛らしい姿で人気を集めています。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- うさぎ・チンチラ -->
-            <div class="animal-category">
-                <div class="animal-category-header" data-target="rabbits-content">
-                    <h3>うさぎ・チンチラ</h3>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div id="rabbits-content" class="animal-category-content">
-                    <div class="animals-grid">
-                        <!-- チンチラ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="チンチラ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>チンチラ</h3>
-                                <p>ねねちゃん</p>
-                                <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
-                            </div>
-                        </div>
-
-                        <!-- アメリカンファジーロップ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>アメリカンファジーロップ</h3>
-                                <p>もふこちゃん</p>
-                                <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
-                            </div>
-                        </div>
-
-                        <!-- ホーランドロップ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>ホーランドロップ</h3>
-                                <p>ぼーくん</p>
-                                <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
-                            </div>
-                        </div>
-
-                        <!-- ホーランドロップ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>ホーランドロップ</h3>
-                                <p>さっちゃん</p>
-                                <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 小動物 -->
-            <div class="animal-category">
-                <div class="animal-category-header" data-target="small-animals-content">
-                    <h3>小動物</h3>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div id="small-animals-content" class="animal-category-content">
-                    <div class="animals-grid">
-                        <!-- ハムスター -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="ハムスター" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>ハムスター</h3>
-                                <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
-                            </div>
-                        </div>
-
-                        <!-- モルモット -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="モルモット" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>モルモット</h3>
-                                <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
-                            </div>
-                        </div>
-
-                        <!-- ハリネズミ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="ハリネズミ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>ハリネズミ</h3>
-                                <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
-                            </div>
-                        </div>
-
-                        <!-- モモンガ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="モモンガ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>モモンガ</h3>
-                                <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 珍しい動物 -->
-            <div class="animal-category">
-                <div class="animal-category-header" data-target="special-animals-content">
-                    <h3>珍しい動物</h3>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div id="special-animals-content" class="animal-category-content">
-                    <div class="animals-grid">
-                        <!-- フトアゴヒゲトカゲ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="フトアゴヒゲトカゲ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>フトアゴヒゲトカゲ</h3>
-                                <p>穏やかな性格で人気の爬虫類。ドラゴンのような見た目に触れる珍しい体験ができます。</p>
-                            </div>
-                        </div>
-
-                        <!-- ショウガラゴ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="ショウガラゴ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>ショウガラゴ</h3>
-                                <p>大きな目が特徴的な夜行性の霊長類。珍しい動物との貴重なふれあいが体験できます。</p>
-                            </div>
-                        </div>
-
-                        <!-- ミーアキャット -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="ミーアキャット" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>ミーアキャット</h3>
-                                <p>好奇心旺盛で愛らしい姿が人気のミーアキャット。その独特の仕草に癒されます。</p>
-                            </div>
-                        </div>
-
-                        <!-- チワワ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="チワワ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>チワワ</h3>
-                                <p>小さな体に大きな魅力を持つ犬種。愛らしい姿と甘えん坊な性格が人気です。</p>
-                            </div>
-                        </div>
-
-                        <!-- マイクロブタ -->
-                        <div class="animal-card">
-                            <div class="animal-img">
-                                <img src="/api/placeholder/400/300" alt="マイクロブタ" loading="lazy">
-                            </div>
-                            <div class="animal-info">
-                                <h3>マイクロブタ</h3>
-                                <p>普通の豚よりもコンパクトなサイズで親しみやすいマイクロブタ。賢くてじゃれつくのが大好きです。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 鳥類（デスクトップ） -->
-        <div id="birds" class="desktop-animal-sections" style="margin-bottom: 50px;">
-            <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">鳥類</h3>
-            <div class="animals-grid">
-                <!-- シロハラインコ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="シロハラインコ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>シロハラインコ</h3>
-                        <p>ぽっぴちゃん</p>
-                        <p>カラフルな羽と賢い性格が魅力のシロハラインコ。人懐っこい性格で触れ合いを楽しめます。</p>
-                    </div>
-                </div>
-
-                <!-- ウロコインコ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="ウロコインコ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>ウロコインコ</h3>
-                        <p>ぱいんちゃん</p>
-                        <p>ウロコ模様の美しい羽を持つインコ。温厚で穏やかな性格をしています。</p>
-                    </div>
-                </div>
-
-                <!-- セキセイインコ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="セキセイインコ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>セキセイインコ</h3>
-                        <p>そらちゃん</p>
-                        <p>小さな体に大きな魅力を持つセキセイインコ。活発で愛嬌のある姿が人気です。</p>
-                    </div>
-                </div>
-
-                <!-- オカメインコ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="オカメインコ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>オカメインコ</h3>
-                        <p>れもんちゃん</p>
-                        <p>頭の冠羽が特徴的なオカメインコ。優しく穏やかな性格で、初めての方にもおすすめです。</p>
-                    </div>
-                </div>
-
-                <!-- ボタンインコ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="ボタンインコ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>ボタンインコ</h3>
-                        <p>ぺんちゃん</p>
-                        <p>小さな体が特徴のボタンインコ。とても活発で好奇心旺盛な性格をしています。</p>
-                    </div>
-                </div>
-
-                <!-- コザクラインコ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="コザクラインコ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>コザクラインコ</h3>
-                        <p>さくらちゃん</p>
-                        <p>愛情深く社交的なコザクラインコ。人の指に止まることが大好きです。</p>
-                    </div>
-                </div>
-
-                <!-- ギンバト -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="ギンバト" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>ギンバト</h3>
-                        <p>たいはくくん</p>
-                        <p>優雅な姿が特徴のギンバト。静かな佇まいで心を癒してくれます。</p>
-                    </div>
-                </div>
-
-                <!-- コールダック -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="コールダック" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>コールダック</h3>
-                        <p>ぶりちゃん</p>
-                        <p>ユニークな鳴き声が特徴のコールダック。愛らしい姿で人気を集めています。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- うさぎ・チンチラ（デスクトップ） -->
-        <div id="rabbits" class="desktop-animal-sections" style="margin-bottom: 50px;">
-            <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">うさぎ・チンチラ</h3>
-            <div class="animals-grid">
-                <!-- チンチラ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="チンチラ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>チンチラ</h3>
-                        <p>ねねちゃん</p>
-                        <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
-                    </div>
-                </div>
-
-                <!-- アメリカンファジーロップ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>アメリカンファジーロップ</h3>
-                        <p>もふこちゃん</p>
-                        <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
-                    </div>
-                </div>
-
-                <!-- ホーランドロップ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>ホーランドロップ</h3>
-                        <p>ぼーくん</p>
-                        <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
-                    </div>
-                </div>
-
-                <!-- ホーランドロップ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>ホーランドロップ</h3>
-                        <p>さっちゃん</p>
-                        <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 小動物（デスクトップ） -->
-        <div id="small-animals" class="desktop-animal-sections" style="margin-bottom: 50px;">
-            <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">小動物</h3>
-            <div class="animals-grid">
-                <!-- ハムスター -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="ハムスター" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>ハムスター</h3>
-                        <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
-                    </div>
-                </div>
-
-                <!-- モルモット -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="モルモット" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>モルモット</h3>
-                        <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
-                    </div>
-                </div>
-
-                <!-- ハリネズミ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="ハリネズミ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>ハリネズミ</h3>
-                        <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
-                    </div>
-                </div>
-
-                <!-- モモンガ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="モモンガ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>モモンガ</h3>
-                        <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 珍しい動物（デスクトップ） -->
-        <div id="special-animals" class="desktop-animal-sections" style="margin-bottom: 50px;">
-            <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">珍しい動物</h3>
-            <div class="animals-grid">
-                <!-- フトアゴヒゲトカゲ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="フトアゴヒゲトカゲ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>フトアゴヒゲトカゲ</h3>
-                        <p>穏やかな性格で人気の爬虫類。ドラゴンのような見た目に触れる珍しい体験ができます。</p>
-                    </div>
-                </div>
-
-                <!-- ショウガラゴ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="ショウガラゴ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>ショウガラゴ</h3>
-                        <p>大きな目が特徴的な夜行性の霊長類。珍しい動物との貴重なふれあいが体験できます。</p>
-                    </div>
-                </div>
-
-                <!-- ミーアキャット -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="ミーアキャット" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>ミーアキャット</h3>
-                        <p>好奇心旺盛で愛らしい姿が人気のミーアキャット。その独特の仕草に癒されます。</p>
-                    </div>
-                </div>
-
-                <!-- チワワ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="チワワ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>チワワ</h3>
-                        <p>小さな体に大きな魅力を持つ犬種。愛らしい姿と甘えん坊な性格が人気です。</p>
-                    </div>
-                </div>
-
-                <!-- マイクロブタ -->
-                <div class="animal-card">
-                    <div class="animal-img">
-                        <img src="/api/placeholder/400/300" alt="マイクロブタ" loading="lazy">
-                    </div>
-                    <div class="animal-info">
-                        <h3>マイクロブタ</h3>
-                        <p>普通の豚よりもコンパクトなサイズで親しみやすいマイクロブタ。賢くてじゃれつくのが大好きです。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Pricing Section -->
     <section id="pricing" class="section pricing">
@@ -2233,229 +2133,258 @@
     </section>
 
     <!-- 初めての方へ Section -->
-<section id="for-beginners" class="section" style="background-color: var(--background-alt);">
-    <div class="container">
-        <div class="section-title">
-            <h2>初めての方へ</h2>
-        </div>
-        <div style="max-width: 800px; margin: 0 auto;">
-            <!-- モバイル用スライダー -->
-<div class="beginners-mobile-slider">
-    <div class="beginners-slider-container">
-        <div class="beginners-slider-wrapper" id="beginnersSlider">
-            <!-- スライド1: ご来店前に -->
-            <div class="beginners-slide">
-                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px; margin: 0 10px;">
-                    <div style="text-align: center; margin-bottom: 15px;">
-                        <span style="font-size: 36px; color: var(--primary);">📝</span>
-                        <h3 style="margin-top: 10px; color: var(--primary-dark);">ご来店前に</h3>
-                    </div>
-                    <ul style="padding-left: 20px; line-height: 1.8;">
-                        <li>動物にアレルギーがある方は事前にご相談ください</li>
-                        <li>予約すると待ち時間なくご案内できます</li>
-                        <li>香水や強い臭いのするものは避けてください</li>
-                        <li>動物が驚くため、大きな声や急な動きは控えましょう</li>
-                    </ul>
-                </div>
+    <section id="for-beginners" class="section" style="background-color: var(--background-alt);">
+        <div class="container">
+            <div class="section-title">
+                <h2>初めての方へ</h2>
             </div>
-            
-            <!-- スライド2: おすすめの服装 -->
-            <div class="beginners-slide">
-                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px; margin: 0 10px;">
-                    <div style="text-align: center; margin-bottom: 15px;">
-                        <span style="font-size: 36px; color: var(--primary);">👕</span>
-                        <h3 style="margin-top: 10px; color: var(--primary-dark);">おすすめの服装</h3>
-                    </div>
-                    <ul style="padding-left: 20px; line-height: 1.8;">
-                        <li>動物の爪が引っかかりにくい服装がおすすめです</li>
-                        <li>ボタンやビーズなど、小さなパーツが取れやすい服装は避けましょう</li>
-                        <li>動物の毛が付きやすいため、黒い服は避けることをおすすめします</li>
-                        <li>肩や膝が出ている服装は、小さな引っかき傷の可能性があります</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- スライド3: 触れ合い方のコツ -->
-            <div class="beginners-slide">
-                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px; margin: 0 10px;">
-                    <div style="text-align: center; margin-bottom: 15px;">
-                        <span style="font-size: 36px; color: var(--primary);">🐾</span>
-                        <h3 style="margin-top: 10px; color: var(--primary-dark);">触れ合い方のコツ</h3>
-                    </div>
-                    <ul style="padding-left: 20px; line-height: 1.8;">
-                        <li>最初はゆっくりと手を差し出し、動物に近づかせましょう</li>
-                        <li>頭や背中を優しく撫でると喜びます</li>
-                        <li>急な動きは動物を驚かせるので避けましょう</li>
-                        <li>動物の体をしっかり支えて抱っこしてください</li>
-                        <li>スタッフの指示に従い、安全に触れ合いましょう</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- スライダーインジケーター -->
-        <div class="beginners-slider-indicators">
-            <span class="beginners-indicator active" data-index="0"></span>
-            <span class="beginners-indicator" data-index="1"></span>
-            <span class="beginners-indicator" data-index="2"></span>
-        </div>
-        
-        <!-- スライダーナビゲーション -->
-        <div class="beginners-slider-nav">
-            <button id="prevSlide">←</button>
-            <button id="nextSlide">→</button>
-        </div>
-    </div>
-</div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <!-- カード1: ご来店前に -->
-                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
-                    <div style="text-align: center; margin-bottom: 15px;">
-                        <span style="font-size: 36px; color: var(--primary);">📝</span>
-                        <h3 style="margin-top: 10px; color: var(--primary-dark);">ご来店前に</h3>
-                    </div>
-                    <ul style="padding-left: 20px; line-height: 1.8;">
-                        <li>動物にアレルギーがある方は事前にご相談ください</li>
-                        <li>予約すると待ち時間なくご案内できます</li>
-                        <li>香水や強い臭いのするものは避けてください</li>
-                        <li>動物が驚くため、大きな声や急な動きは控えましょう</li>
-                    </ul>
-                </div>
-                
-                <!-- カード2: おすすめの服装 -->
-                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
-                    <div style="text-align: center; margin-bottom: 15px;">
-                        <span style="font-size: 36px; color: var(--primary);">👕</span>
-                        <h3 style="margin-top: 10px; color: var(--primary-dark);">おすすめの服装</h3>
-                    </div>
-                    <ul style="padding-left: 20px; line-height: 1.8;">
-                        <li>動物の爪が引っかかりにくい服装がおすすめです</li>
-                        <li>ボタンやビーズなど、小さなパーツが取れやすい服装は避けましょう</li>
-                        <li>動物の毛が付きやすいため、黒い服は避けることをおすすめします</li>
-                        <li>肩や膝が出ている服装は、小さな引っかき傷の可能性があります</li>
-                    </ul>
-                </div>
-                
-                <!-- カード3: 触れ合い方のコツ -->
-                <div style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
-                    <div style="text-align: center; margin-bottom: 15px;">
-                        <span style="font-size: 36px; color: var(--primary);">🐾</span>
-                        <h3 style="margin-top: 10px; color: var(--primary-dark);">触れ合い方のコツ</h3>
-                    </div>
-                    <ul style="padding-left: 20px; line-height: 1.8;">
-                        <li>最初はゆっくりと手を差し出し、動物に近づかせましょう</li>
-                        <li>頭や背中を優しく撫でると喜びます</li>
-                        <li>急な動きは動物を驚かせるので避けましょう</li>
-                        <li>動物の体をしっかり支えて抱っこしてください</li>
-                        <li>スタッフの指示に従い、安全に触れ合いましょう</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- 補足情報 -->
-            <div style="margin-top: 40px; text-align: center; padding: 20px; background-color: rgba(76, 175, 80, 0.1); border-radius: 10px;">
-                <p style="margin-bottom: 10px;">初めてのご来店でも安心してお楽しみいただけるよう、スタッフがしっかりとサポートいたします。</p>
-                <p>不安なことがあれば、お気軽に<a href="#contact" style="color: var(--primary-dark); text-decoration: underline;">お問い合わせ</a>ください。</p>
-            </div>
-        </div>
-    </div>
-</section>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <!-- モバイル用スライダー -->
+                <div class="beginners-mobile-slider">
+                    <div class="beginners-slider-container">
+                        <div class="beginners-slider-wrapper" id="beginnersSlider">
+                            <!-- スライド1: ご来店前に -->
+                            <div class="beginners-slide">
+                                <div
+                                    style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px; margin: 0 10px;">
+                                    <div style="text-align: center; margin-bottom: 15px;">
+                                        <span style="font-size: 36px; color: var(--primary);">📝</span>
+                                        <h3 style="margin-top: 10px; color: var(--primary-dark);">ご来店前に</h3>
+                                    </div>
+                                    <ul style="padding-left: 20px; line-height: 1.8;">
+                                        <li>動物にアレルギーがある方は事前にご相談ください</li>
+                                        <li>予約すると待ち時間なくご案内できます</li>
+                                        <li>香水や強い臭いのするものは避けてください</li>
+                                        <li>動物が驚くため、大きな声や急な動きは控えましょう</li>
+                                    </ul>
+                                </div>
+                            </div>
 
-<!-- ギャラリー Section -->
-<section id="gallery" class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>ギャラリー</h2>
-        </div>
-        
-        <!-- ギャラリーグリッド -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-bottom: 30px;">
-            <!-- 画像アイテム (必要な数だけ複製) -->
-            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-        </div>
-        
-        <!-- もっと見るボタン -->
-        <div style="text-align: center; margin-top: 20px;">
-            <a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank" class="btn" style="padding: 12px 25px;">
-                <span style="display: flex; align-items: center; justify-content: center;">
-                    <span style="margin-right: 8px;">📱</span> Instagramでもっと見る
-                </span>
-            </a>
-        </div>
-    </div>
-</section>
+                            <!-- スライド2: おすすめの服装 -->
+                            <div class="beginners-slide">
+                                <div
+                                    style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px; margin: 0 10px;">
+                                    <div style="text-align: center; margin-bottom: 15px;">
+                                        <span style="font-size: 36px; color: var(--primary);">👕</span>
+                                        <h3 style="margin-top: 10px; color: var(--primary-dark);">おすすめの服装</h3>
+                                    </div>
+                                    <ul style="padding-left: 20px; line-height: 1.8;">
+                                        <li>動物の爪が引っかかりにくい服装がおすすめです</li>
+                                        <li>ボタンやビーズなど、小さなパーツが取れやすい服装は避けましょう</li>
+                                        <li>動物の毛が付きやすいため、黒い服は避けることをおすすめします</li>
+                                        <li>肩や膝が出ている服装は、小さな引っかき傷の可能性があります</li>
+                                    </ul>
+                                </div>
+                            </div>
 
-   <!-- Calendar Section -->
-<section id="calendar" class="section" style="background-color: var(--background-alt);">
-    <div class="container">
-        <div class="section-title">
-            <h2>営業カレンダー</h2>
+                            <!-- スライド3: 触れ合い方のコツ -->
+                            <div class="beginners-slide">
+                                <div
+                                    style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px; margin: 0 10px;">
+                                    <div style="text-align: center; margin-bottom: 15px;">
+                                        <span style="font-size: 36px; color: var(--primary);">🐾</span>
+                                        <h3 style="margin-top: 10px; color: var(--primary-dark);">触れ合い方のコツ</h3>
+                                    </div>
+                                    <ul style="padding-left: 20px; line-height: 1.8;">
+                                        <li>最初はゆっくりと手を差し出し、動物に近づかせましょう</li>
+                                        <li>頭や背中を優しく撫でると喜びます</li>
+                                        <li>急な動きは動物を驚かせるので避けましょう</li>
+                                        <li>動物の体をしっかり支えて抱っこしてください</li>
+                                        <li>スタッフの指示に従い、安全に触れ合いましょう</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- スライダーインジケーター -->
+                        <div class="beginners-slider-indicators">
+                            <span class="beginners-indicator active" data-index="0"></span>
+                            <span class="beginners-indicator" data-index="1"></span>
+                            <span class="beginners-indicator" data-index="2"></span>
+                        </div>
+
+                        <!-- スライダーナビゲーション -->
+                        <div class="beginners-slider-nav">
+                            <button id="prevSlide">←</button>
+                            <button id="nextSlide">→</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <!-- カード1: ご来店前に -->
+                    <div
+                        style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <span style="font-size: 36px; color: var(--primary);">📝</span>
+                            <h3 style="margin-top: 10px; color: var(--primary-dark);">ご来店前に</h3>
+                        </div>
+                        <ul style="padding-left: 20px; line-height: 1.8;">
+                            <li>動物にアレルギーがある方は事前にご相談ください</li>
+                            <li>予約すると待ち時間なくご案内できます</li>
+                            <li>香水や強い臭いのするものは避けてください</li>
+                            <li>動物が驚くため、大きな声や急な動きは控えましょう</li>
+                        </ul>
+                    </div>
+
+                    <!-- カード2: おすすめの服装 -->
+                    <div
+                        style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <span style="font-size: 36px; color: var(--primary);">👕</span>
+                            <h3 style="margin-top: 10px; color: var(--primary-dark);">おすすめの服装</h3>
+                        </div>
+                        <ul style="padding-left: 20px; line-height: 1.8;">
+                            <li>動物の爪が引っかかりにくい服装がおすすめです</li>
+                            <li>ボタンやビーズなど、小さなパーツが取れやすい服装は避けましょう</li>
+                            <li>動物の毛が付きやすいため、黒い服は避けることをおすすめします</li>
+                            <li>肩や膝が出ている服装は、小さな引っかき傷の可能性があります</li>
+                        </ul>
+                    </div>
+
+                    <!-- カード3: 触れ合い方のコツ -->
+                    <div
+                        style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 25px;">
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <span style="font-size: 36px; color: var(--primary);">🐾</span>
+                            <h3 style="margin-top: 10px; color: var(--primary-dark);">触れ合い方のコツ</h3>
+                        </div>
+                        <ul style="padding-left: 20px; line-height: 1.8;">
+                            <li>最初はゆっくりと手を差し出し、動物に近づかせましょう</li>
+                            <li>頭や背中を優しく撫でると喜びます</li>
+                            <li>急な動きは動物を驚かせるので避けましょう</li>
+                            <li>動物の体をしっかり支えて抱っこしてください</li>
+                            <li>スタッフの指示に従い、安全に触れ合いましょう</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 補足情報 -->
+                <div
+                    style="margin-top: 40px; text-align: center; padding: 20px; background-color: rgba(76, 175, 80, 0.1); border-radius: 10px;">
+                    <p style="margin-bottom: 10px;">初めてのご来店でも安心してお楽しみいただけるよう、スタッフがしっかりとサポートいたします。</p>
+                    <p>不安なことがあれば、お気軽に<a href="#contact"
+                            style="color: var(--primary-dark); text-decoration: underline;">お問い合わせ</a>ください。</p>
+                </div>
+            </div>
         </div>
-        <div class="calendar-container"
-            style="display: flex; flex-direction: column; max-width: 800px; margin: 0 auto;">
-            <div class="calendar-nav" style="display: flex; justify-content: center; margin-bottom: 20px;">
-                <button id="currentMonthBtn" class="btn"
-                    style="margin-right: 10px; background-color: var(--primary-dark); display: none;">今月</button>
-                <button id="nextMonthBtn" class="btn" style="background-color: var(--primary-light); display: none;">来月</button>
+    </section>
+
+    <!-- ギャラリー Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>ギャラリー</h2>
             </div>
 
-            <div id="currentMonthCalendar" style="margin-bottom: 30px;">
-                <h3 id="currentMonthTitle"
-                    style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
+            <!-- ギャラリーグリッド -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-bottom: 30px;">
+                <!-- 画像アイテム (必要な数だけ複製) -->
+                <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/api/placeholder/400/300" alt="動物たちの様子" loading="lazy"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- もっと見るボタン -->
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank"
+                    class="btn" style="padding: 12px 25px;">
+                    <span style="display: flex; align-items: center; justify-content: center;">
+                        <span style="margin-right: 8px;">📱</span> Instagramでもっと見る
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="section" style="background-color: var(--background-alt);">
+        <div class="container">
+            <div class="section-title">
+                <h2>営業カレンダー</h2>
+            </div>
+            <div class="calendar-container"
+                style="display: flex; flex-direction: column; max-width: 800px; margin: 0 auto;">
+                <div class="calendar-nav" style="display: flex; justify-content: center; margin-bottom: 20px;">
+                    <button id="currentMonthBtn" class="btn"
+                        style="margin-right: 10px; background-color: var(--primary-dark); display: none;">今月</button>
+                    <button id="nextMonthBtn" class="btn"
+                        style="background-color: var(--primary-light); display: none;">来月</button>
+                </div>
+
+                <div id="currentMonthCalendar" style="margin-bottom: 30px;">
+                    <h3 id="currentMonthTitle"
+                        style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
                     <p style="text-align: center; margin-bottom: 15px; line-height: 1.7;">
-                        ※来月のスケジュールは毎月20日頃に更新します。<br>
-                        最新情報は<a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank"
+                        ※次月のスケジュールは毎月20日頃に更新します。<br>
+                        最新情報は<a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr"
+                            target="_blank"
                             style="color: var(--primary-dark); text-decoration: underline; font-weight: 600;">公式Instagram</a>でもご確認いただけます。
                     </p>
-                
-                <!-- カレンダー画像を表示 -->
-                <div style="width: 100%; text-align: center; margin-bottom: 15px;">
-                    <img id="currentMonthImage" src="images/calendar_current.png" alt="今月のカレンダー" loading="lazy" style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
-                </div>
-            </div>
 
-            <div id="nextMonthCalendar" style="display: none;">
-                <h3 id="nextMonthTitle"
-                    style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
+                    <!-- カレンダー画像を表示 -->
+                    <div style="width: 100%; text-align: center; margin-bottom: 15px;">
+                        <img id="currentMonthImage" src="images/calendar_current.png" alt="今月のカレンダー" loading="lazy"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    </div>
+                </div>
+
+                <div id="nextMonthCalendar" style="display: none;">
+                    <h3 id="nextMonthTitle"
+                        style="text-align: center; margin-bottom: 15px; color: var(--primary-dark);"></h3>
                     <p style="text-align: center; margin-bottom: 15px; line-height: 1.7;">
-                        ※来月のスケジュールは毎月20日頃に更新します。<br>
-                        最新情報は<a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank"
+                        ※次月のスケジュールは毎月20日頃に更新します。<br>
+                        最新情報は<a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr"
+                            target="_blank"
                             style="color: var(--primary-dark); text-decoration: underline; font-weight: 600;">公式Instagram</a>でもご確認いただけます。
                     </p>
-                
-                <!-- 来月のカレンダー画像を表示 -->
-                <div style="width: 100%; text-align: center; margin-bottom: 15px;">
-                    <img id="nextMonthImage" src="images/calendar_next.png" alt="来月のカレンダー" loading="lazy" style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+
+                    <!-- 来月のカレンダー画像を表示 -->
+                    <div style="width: 100%; text-align: center; margin-bottom: 15px;">
+                        <img id="nextMonthImage" src="images/calendar_next.png" alt="来月のカレンダー" loading="lazy"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="contact" class="section">
         <div class="container">
             <div class="section-title">
                 <h2>アクセス・お問い合わせ</h2>
             </div>
-            <div class="contact-content" style="display: grid; grid-template-columns: 45% 55%; gap: 30px; align-items: flex-start;">
-                <div class="contact-info" style="background-color: #f9fbf9; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);">
+            <div class="contact-content"
+                style="display: grid; grid-template-columns: 45% 55%; gap: 30px; align-items: flex-start;">
+                <div class="contact-info"
+                    style="background-color: #f9fbf9; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);">
                     <h3 style="margin-bottom: 20px; color: var(--primary-dark);">Luff s.a.family</h3>
                     <!-- 絵文字と文章の整列を修正 -->
                     <div class="contact-info-item" style="display: flex; align-items: center; margin-bottom: 12px;">
@@ -2485,14 +2414,11 @@
                 </div>
                 <!-- マップの部分を修正 - サイズを大きくし、左テキストとバランスを取る -->
                 <div style="display: flex; align-items: flex-start; height: 100%;">
-                    <div style="width: 100%; height: 100%; min-height: 340px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);">
-                        <iframe 
+                    <div
+                        style="width: 100%; height: 100%; min-height: 340px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);">
+                        <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.453943677601!2d135.76805529049258!3d34.81967750294489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001176b4b1efe31%3A0x6b9db6606b0bdd25!2z5YuV54mp44G144KM44GC44GEIEx1ZmYgLSBzLmEuZmFtaWx5!5e0!3m2!1sja!2sjp!4v1742710096069!5m2!1sja!2sjp"
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -2501,283 +2427,301 @@
         </div>
     </section>
 
-   <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <!-- ロゴの比率を正確に保ち、文字の太さを元に戻す -->
-                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                    <div style="width: 60px; height: 60px; flex-shrink: 0; margin-right: 15px;">
-                        <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" loading="lazy" 
-                             style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <!-- ロゴの比率を正確に保ち、文字の太さを元に戻す -->
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div style="width: 60px; height: 60px; flex-shrink: 0; margin-right: 15px;">
+                            <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" loading="lazy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; 
                                     border: 2px solid rgba(255, 255, 255, 0.2); padding: 2px;">
+                        </div>
+                        <h2 style="color: white; font-size: 24px; margin: 0; font-weight: 600;">Luff s.a.family</h2>
                     </div>
-                    <h2 style="color: white; font-size: 24px; margin: 0; font-weight: 600;">Luff s.a.family</h2>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; font-size: 14px;">Luff s.a.family
+                        では、小さな動物たちとのふれあいを通して、心温まるひとときをご提供しています。多種多様な小動物との出会いをお楽しみください。</p>
                 </div>
-                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; font-size: 14px;">Luff s.a.family では、小さな動物たちとのふれあいを通して、心温まるひとときをご提供しています。多種多様な小動物との出会いをお楽しみください。</p>
+                <div class="footer-links">
+                    <h3>サイトマップ</h3>
+                    <ul>
+                        <li><a href="#about">コンセプト</a></li>
+                        <li><a href="#animals">動物たち</a></li>
+                        <li><a href="#pricing">料金プラン</a></li>
+                        <li><a href="#for-beginners">初めての方へ</a></li>
+                        <li><a href="#gallery">ギャラリー</a></li>
+                        <li><a href="#faq">よくある質問</a></li>
+                        <li><a href="#calendar">営業カレンダー</a></li>
+                        <li><a href="#contact">アクセス</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>フォローする</h3>
+                    <ul style="padding-left: 0;">
+                        <li><a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr"
+                                target="_blank"
+                                style="transition: all 0.2s ease; display: inline-block; padding: 3px 0;">
+                                <span style="display: flex; align-items: center;">
+                                    <span
+                                        style="display: inline-block; width: 20px; text-align: center; margin-right: 8px;">📸</span>
+                                    Instagram
+                                </span>
+                            </a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links">
-                <h3>サイトマップ</h3>
-                <ul>
-                    <li><a href="#about">コンセプト</a></li>
-                    <li><a href="#animals">動物たち</a></li>
-                    <li><a href="#pricing">料金プラン</a></li>
-                    <li><a href="#for-beginners">初めての方へ</a></li>
-                    <li><a href="#gallery">ギャラリー</a></li>
-                    <li><a href="#faq">よくある質問</a></li>
-                    <li><a href="#calendar">営業カレンダー</a></li>
-                    <li><a href="#contact">アクセス</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h3>フォローする</h3>
-                <ul style="padding-left: 0;">
-                    <li><a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank" style="transition: all 0.2s ease; display: inline-block; padding: 3px 0;">
-                        <span style="display: flex; align-items: center;">
-                            <span style="display: inline-block; width: 20px; text-align: center; margin-right: 8px;">📸</span> Instagram
-                        </span>
-                    </a></li>
-                </ul>
+            <div class="footer-bottom"
+                style="padding-top: 25px; margin-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <p>&copy; 2025 Luff s.a.family All Rights Reserved.</p>
             </div>
         </div>
-        <div class="footer-bottom" style="padding-top: 25px; margin-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-            <p>&copy; 2025 Luff s.a.family All Rights Reserved.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
-<script>
-    // ページが読み込まれたときに実行
-    window.addEventListener('DOMContentLoaded', function() {
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentNode;
-                const isActive = item.classList.contains('active');
+    <script>
+        // ページが読み込まれたときに実行
+        window.addEventListener('DOMContentLoaded', function () {
+            // FAQ Accordion
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentNode;
+                    const isActive = item.classList.contains('active');
 
-                // Close all items
-                document.querySelectorAll('.faq-item').forEach(faqItem => {
-                    faqItem.classList.remove('active');
-                });
+                    // Close all items
+                    document.querySelectorAll('.faq-item').forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                    });
 
-                // If clicked item wasn't active, make it active
-                if (!isActive) {
-                    item.classList.add('active');
-                }
+                    // If clicked item wasn't active, make it active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
 
-                // Change plus/minus icon
-                document.querySelectorAll('.faq-question span:last-child').forEach(icon => {
-                    icon.textContent = '+';
-                });
+                    // Change plus/minus icon
+                    document.querySelectorAll('.faq-question span:last-child').forEach(icon => {
+                        icon.textContent = '+';
+                    });
 
-                if (!isActive) {
-                    question.querySelector('span:last-child').textContent = '-';
-                }
-            });
-        });
-
-        // Mobile Menu Toggle - エラー対策版
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                const nav = document.querySelector('nav ul');
-                if (nav) {
-                    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-                }
-            });
-        }
-
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const target = document.querySelector(this.getAttribute('href'));
-                if (!target) return; // 対象要素が存在しない場合は何もしない
-                
-                const headerOffset = 80;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
+                    if (!isActive) {
+                        question.querySelector('span:last-child').textContent = '-';
+                    }
                 });
             });
-        });
-    });
 
-    // Calendar Functionality
-document.addEventListener('DOMContentLoaded', function () {
-    // Get current date
-    const today = new Date();
-    const currentMonth = today.getMonth();
-    const currentYear = today.getFullYear();
-
-    // Set month titles
-    const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
-    const currentMonthTitle = document.getElementById('currentMonthTitle');
-    const nextMonthTitle = document.getElementById('nextMonthTitle');
-    
-    if (currentMonthTitle) {
-        currentMonthTitle.textContent = `${currentYear}年 ${months[currentMonth]}`;
-    }
-
-    // Calculate next month
-    const nextMonthDate = new Date(today);
-    nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
-    const nextMonth = nextMonthDate.getMonth();
-    const nextMonthYear = nextMonthDate.getFullYear();
-    
-    if (nextMonthTitle) {
-        nextMonthTitle.textContent = `${nextMonthYear}年 ${months[nextMonth]}`;
-    }
-
-    // ボタンとコンテナの取得
-    const nextMonthBtn = document.getElementById('nextMonthBtn');
-    const currentMonthBtn = document.getElementById('currentMonthBtn');
-    const currentMonthCalendar = document.getElementById('currentMonthCalendar');
-    const nextMonthCalendar = document.getElementById('nextMonthCalendar');
-    
-    // 最初は両方のボタンを表示する（デフォルトで表示）
-    if (nextMonthBtn && currentMonthBtn) {
-        nextMonthBtn.style.display = 'inline-block';
-        currentMonthBtn.style.display = 'inline-block';
-        
-        // Tab switching
-        currentMonthBtn.addEventListener('click', function () {
-            if (currentMonthCalendar) currentMonthCalendar.style.display = 'block';
-            if (nextMonthCalendar) nextMonthCalendar.style.display = 'none';
-            
-            currentMonthBtn.style.backgroundColor = 'var(--primary-dark)';
-            nextMonthBtn.style.backgroundColor = 'var(--primary-light)';
-        });
-
-        nextMonthBtn.addEventListener('click', function () {
-            if (currentMonthCalendar) currentMonthCalendar.style.display = 'none';
-            if (nextMonthCalendar) nextMonthCalendar.style.display = 'block';
-            
-            currentMonthBtn.style.backgroundColor = 'var(--primary-light)';
-            nextMonthBtn.style.backgroundColor = 'var(--primary-dark)';
-        });
-    }
-});
-
-    // 一番上までスクロールする関数
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-</script>
-<script>
-    // スライダー機能
-document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.getElementById('beginnersSlider');
-    const indicators = document.querySelectorAll('.beginners-indicator');
-    const prevBtn = document.getElementById('prevSlide');
-    const nextBtn = document.getElementById('nextSlide');
-    
-    if (!slider || !prevBtn || !nextBtn) return;
-    
-    let currentSlide = 0;
-    const slideCount = slider.children.length;
-    
-    // スライドを表示
-    function showSlide(index) {
-        if (index < 0) index = slideCount - 1;
-        if (index >= slideCount) index = 0;
-        
-        currentSlide = index;
-        
-        // スライダーを移動
-        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        
-        // インジケーターを更新
-        indicators.forEach((indicator, i) => {
-            indicator.classList.toggle('active', i === currentSlide);
-        });
-    }
-    
-    // 前へボタン
-    prevBtn.addEventListener('click', () => {
-        showSlide(currentSlide - 1);
-    });
-    
-    // 次へボタン
-    nextBtn.addEventListener('click', () => {
-        showSlide(currentSlide + 1);
-    });
-    
-    // インジケーター
-    indicators.forEach(indicator => {
-        indicator.addEventListener('click', () => {
-            const index = parseInt(indicator.getAttribute('data-index'));
-            showSlide(index);
-        });
-    });
-    
-    // スワイプ機能（タッチデバイス用）
-    let startX, endX;
-    const minSwipeDistance = 50;
-    
-    slider.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-    
-    slider.addEventListener('touchend', (e) => {
-        endX = e.changedTouches[0].clientX;
-        
-        const distance = startX - endX;
-        
-        if (Math.abs(distance) >= minSwipeDistance) {
-            if (distance > 0) {
-                // 左スワイプ（次へ）
-                showSlide(currentSlide + 1);
-            } else {
-                // 右スワイプ（前へ）
-                showSlide(currentSlide - 1);
+            // Mobile Menu Toggle - エラー対策版
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const nav = document.querySelector('nav ul');
+                    if (nav) {
+                        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+                    }
+                });
             }
+
+            // Smooth Scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (!target) return; // 対象要素が存在しない場合は何もしない
+
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+
+        // Calendar Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get current date
+            const today = new Date();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+
+            // Set month titles
+            const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+            const currentMonthTitle = document.getElementById('currentMonthTitle');
+            const nextMonthTitle = document.getElementById('nextMonthTitle');
+
+            if (currentMonthTitle) {
+                currentMonthTitle.textContent = `${currentYear}年 ${months[currentMonth]}`;
+            }
+
+            // Calculate next month
+            const nextMonthDate = new Date(today);
+            nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
+            const nextMonth = nextMonthDate.getMonth();
+            const nextMonthYear = nextMonthDate.getFullYear();
+
+            if (nextMonthTitle) {
+                nextMonthTitle.textContent = `${nextMonthYear}年 ${months[nextMonth]}`;
+            }
+
+            // ボタンとコンテナの取得
+            const nextMonthBtn = document.getElementById('nextMonthBtn');
+            const currentMonthBtn = document.getElementById('currentMonthBtn');
+            const currentMonthCalendar = document.getElementById('currentMonthCalendar');
+            const nextMonthCalendar = document.getElementById('nextMonthCalendar');
+
+            // 最初は両方のボタンを表示する（デフォルトで表示）
+            if (nextMonthBtn && currentMonthBtn) {
+                nextMonthBtn.style.display = 'inline-block';
+                currentMonthBtn.style.display = 'inline-block';
+
+                // Tab switching
+                currentMonthBtn.addEventListener('click', function () {
+                    if (currentMonthCalendar) currentMonthCalendar.style.display = 'block';
+                    if (nextMonthCalendar) nextMonthCalendar.style.display = 'none';
+
+                    currentMonthBtn.style.backgroundColor = 'var(--primary-dark)';
+                    nextMonthBtn.style.backgroundColor = 'var(--primary-light)';
+                });
+
+                nextMonthBtn.addEventListener('click', function () {
+                    if (currentMonthCalendar) currentMonthCalendar.style.display = 'none';
+                    if (nextMonthCalendar) nextMonthCalendar.style.display = 'block';
+
+                    currentMonthBtn.style.backgroundColor = 'var(--primary-light)';
+                    nextMonthBtn.style.backgroundColor = 'var(--primary-dark)';
+                });
+            }
+        });
+
+        // 一番上までスクロールする関数
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
-    });
-});
-</script>
-<script>
-    // 動物カテゴリーアコーディオン機能
-document.addEventListener('DOMContentLoaded', function() {
-    // モバイル表示時のみ実行
-    if (window.innerWidth <= 768) {
-        const headers = document.querySelectorAll('.animal-category-header');
-        
-        headers.forEach(header => {
-            header.addEventListener('click', function() {
-                // アクティブ状態の切り替え
-                this.classList.toggle('active');
-                
-                // ターゲットコンテンツの取得
-                const targetId = this.getAttribute('data-target');
-                const content = document.getElementById(targetId);
-                
-                // コンテンツの表示/非表示切り替え
-                if (content) {
-                    if (this.classList.contains('active')) {
-                        content.style.maxHeight = content.scrollHeight + 'px';
+    </script>
+    <script>
+        // スライダー機能
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.getElementById('beginnersSlider');
+            const indicators = document.querySelectorAll('.beginners-indicator');
+            const prevBtn = document.getElementById('prevSlide');
+            const nextBtn = document.getElementById('nextSlide');
+
+            if (!slider || !prevBtn || !nextBtn) return;
+
+            let currentSlide = 0;
+            const slideCount = slider.children.length;
+
+            // スライドを表示
+            function showSlide(index) {
+                if (index < 0) index = slideCount - 1;
+                if (index >= slideCount) index = 0;
+
+                currentSlide = index;
+
+                // スライダーを移動
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                // インジケーターを更新
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === currentSlide);
+                });
+            }
+
+            // 前へボタン
+            prevBtn.addEventListener('click', () => {
+                showSlide(currentSlide - 1);
+            });
+
+            // 次へボタン
+            nextBtn.addEventListener('click', () => {
+                showSlide(currentSlide + 1);
+            });
+
+            // インジケーター
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', () => {
+                    const index = parseInt(indicator.getAttribute('data-index'));
+                    showSlide(index);
+                });
+            });
+
+            // スワイプ機能改善（タッチデバイス用）
+            let startX;
+            const minSwipeDistance = 50;
+
+            // スライダーコンテナ全体でのタッチ検知
+            const sliderContainer = slider.parentElement;
+
+            // タッチ開始
+            sliderContainer.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            }, { passive: true });
+
+            // タッチ終了
+            sliderContainer.addEventListener('touchend', (e) => {
+                if (!startX) return;
+
+                const endX = e.changedTouches[0].clientX;
+                const distance = startX - endX;
+
+                if (Math.abs(distance) >= minSwipeDistance) {
+                    if (distance > 0) {
+                        // 左スワイプ（次へ）
+                        showSlide(currentSlide + 1);
                     } else {
-                        content.style.maxHeight = '0';
+                        // 右スワイプ（前へ）
+                        showSlide(currentSlide - 1);
                     }
                 }
-            });
+
+                startX = null;
+            }, { passive: true });
+
+            // スワイプのキャンセル処理
+            sliderContainer.addEventListener('touchcancel', () => {
+                startX = null;
+            }, { passive: true });
         });
-        
-        // 初期状態で最初のカテゴリーを開く（オプション）
-        if (headers.length > 0) {
-            headers[0].click();
-        }
-    }
-});
-</script>
+    </script>
+    <script>
+        // 動物カテゴリーアコーディオン機能
+        document.addEventListener('DOMContentLoaded', function () {
+            // モバイル表示時のみ実行
+            if (window.innerWidth <= 768) {
+                const headers = document.querySelectorAll('.animal-category-header');
+
+                headers.forEach(header => {
+                    header.addEventListener('click', function () {
+                        // アクティブ状態の切り替え
+                        this.classList.toggle('active');
+
+                        // ターゲットコンテンツの取得
+                        const targetId = this.getAttribute('data-target');
+                        const content = document.getElementById(targetId);
+
+                        // コンテンツの表示/非表示切り替え
+                        if (content) {
+                            if (this.classList.contains('active')) {
+                                content.style.maxHeight = content.scrollHeight + 'px';
+                            } else {
+                                content.style.maxHeight = '0';
+                            }
+                        }
+                    });
+                });
+
+                // 初期状態で最初のカテゴリーを開く（オプション）
+                if (headers.length > 0) {
+                    headers[0].click();
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
