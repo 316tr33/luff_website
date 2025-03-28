@@ -1,3 +1,0 @@
-calendar_current.webp
-
-calendar_next.webp
