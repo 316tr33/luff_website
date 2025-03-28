@@ -124,7 +124,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/store-interior.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/store-interior.webP') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -647,59 +647,61 @@
         }
 
         /* ギャラリーセクションとカードのレスポンシブ調整 - 統合版 */
-/* タブレット用 */
-@media screen and (min-width: 769px) and (max-width: 992px) {
-    /* ギャラリーレイアウト */
-    #gallery .gallery-grid,
-    #gallery .container>div[style*="display: grid"] {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-    
-    #gallery .grid-item,
-    #gallery .container>div[style*="display: grid"]>div {
-        height: 180px !important;
-    }
-    
-    /* 動物カード */
-    .animal-img {
-        height: 200px;
-    }
-}
+        /* タブレット用 */
+        @media screen and (min-width: 769px) and (max-width: 992px) {
 
-/* スマホ用 */
-@media screen and (max-width: 768px) {
-    /* ギャラリーレイアウト */
-    #gallery .gallery-grid,
-    #gallery .container>div[style*="display: grid"] {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-    }
-    
-    #gallery .grid-item,
-    #gallery .container>div[style*="display: grid"]>div {
-        height: 160px !important;
-    }
-    
-    /* 動物カード */
-    .animal-img {
-        height: 180px;
-    }
-    
-    .animal-info {
-        padding: 15px;
-    }
-    
-    .animal-info h3 {
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
-    
-    .animal-info p {
-        font-size: 14px;
-        margin-bottom: 10px;
-        line-height: 1.4;
-    }
-}
+            /* ギャラリーレイアウト */
+            #gallery .gallery-grid,
+            #gallery .container>div[style*="display: grid"] {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+
+            #gallery .grid-item,
+            #gallery .container>div[style*="display: grid"]>div {
+                height: 180px !important;
+            }
+
+            /* 動物カード */
+            .animal-img {
+                height: 200px;
+            }
+        }
+
+        /* スマホ用 */
+        @media screen and (max-width: 768px) {
+
+            /* ギャラリーレイアウト */
+            #gallery .gallery-grid,
+            #gallery .container>div[style*="display: grid"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+            }
+
+            #gallery .grid-item,
+            #gallery .container>div[style*="display: grid"]>div {
+                height: 160px !important;
+            }
+
+            /* 動物カード */
+            .animal-img {
+                height: 180px;
+            }
+
+            .animal-info {
+                padding: 15px;
+            }
+
+            .animal-info h3 {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            .animal-info p {
+                font-size: 14px;
+                margin-bottom: 10px;
+                line-height: 1.4;
+            }
+        }
 
         @media screen and (min-width: 992px) {
             nav ul li {
@@ -1342,8 +1344,12 @@
 
             /* ヒーロー全体の高さも少し調整 */
             .hero {
-                min-height: 80vh !important;
-                height: auto !important;
+                height: 95vh !important;
+                /* 高さを画面サイズの90%に */
+                max-height: 680px !important;
+                /* 最大値を設定して大きすぎないように */
+                min-height: 400px !important;
+                /* 最小値を設定して小さすぎないように */
                 padding: 100px 0 60px !important;
             }
         }
@@ -1373,7 +1379,7 @@
             <div class="header-content">
                 <a href="javascript:void(0);" onclick="scrollToTop()" class="logo-link">
                     <div class="logo">
-                        <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" width="50" height="50"
+                        <img src="images/luff-logo.webP" alt="Luff s.a.family ロゴ" width="50" height="50"
                             style="min-width: 50px;">
                         <h1>Luff s.a.family</h1>
                     </div>
@@ -1400,7 +1406,7 @@
         <div class="hero-content">
             <a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank"
                 class="hero-logo-link">
-                <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" class="hero-logo">
+                <img src="images/luff-logo.webP" alt="Luff s.a.family ロゴ" class="hero-logo">
             </a>
             <h2>動物たちとの素敵な出会い</h2>
             <p>Luff s.a.familyでは、様々な小動物たちとのゼロ距離の触れ合いを通して、癒しと感動のひとときをお届けします。</p>
@@ -1425,7 +1431,7 @@
                     <p>当店では動物たちの健康と幸福を第一に考え、ストレスのない環境づくりを心がけています。皆様のご来店を心よりお待ちしております。</p>
                 </div>
                 <div class="about-image">
-                    <img src="images/meerkat-interior.jpg" alt="Luff s.a.family ミーアキャット">
+                    <img src="images/meerkat-interior.webP" alt="Luff s.a.family ミーアキャット">
                 </div>
             </div>
         </div>
@@ -1568,7 +1574,7 @@
                             <!-- チンチラ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="チンチラ" loading="lazy">
+                                    <img src="images/chinchilla.webP" alt="チンチラ" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>チンチラ</h3>
@@ -1638,10 +1644,11 @@
                             <!-- モルモット -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="モルモット" loading="lazy">
+                                    <img src="images/omusubi.webP" alt="モルモット" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>モルモット</h3>
+                                    <p>おむすびくん</p>
                                     <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
                                 </div>
                             </div>
@@ -1649,10 +1656,11 @@
                             <!-- ハリネズミ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="ハリネズミ" loading="lazy">
+                                    <img src="images/hario.webP" alt="ハリネズミ" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>ハリネズミ</h3>
+                                    <p>はりおくん</p>
                                     <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
                                 </div>
                             </div>
@@ -1665,6 +1673,29 @@
                                 <div class="animal-info">
                                     <h3>モモンガ</h3>
                                     <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
+                                </div>
+                            </div>
+
+                            <!-- アフリカヤマネ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/african-yamane.webP" alt="アフリカヤマネ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>アフリカヤマネ</h3>
+                                    <p>小型で夜行性、大きな目と耳、長い尾を持ち、木の上で暮らす齧歯類です。</p>
+                                </div>
+                            </div>
+
+                            <!-- リチャードソンジリス -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/richard.webP" alt="リチャードソンジリス" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>リチャードソンジリス</h3>
+                                    <p>りちゃこちゃん</p>
+                                    <p>愛らしい丸い目と茶色の柔らかな毛並みで、触れ合うと心が和む小動物です。</p>
                                 </div>
                             </div>
                         </div>
@@ -1682,10 +1713,11 @@
                             <!-- フトアゴヒゲトカゲ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="フトアゴヒゲトカゲ" loading="lazy">
+                                    <img src="images/zaurus.webP" alt="フトアゴヒゲトカゲ" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>フトアゴヒゲトカゲ</h3>
+                                    <p>ざうるすくん</p>
                                     <p>穏やかな性格で人気の爬虫類。ドラゴンのような見た目に触れる珍しい体験ができます。</p>
                                 </div>
                             </div>
@@ -1693,7 +1725,7 @@
                             <!-- ショウガラゴ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="ショウガラゴ" loading="lazy">
+                                    <img src="images/garago.webP" alt="ショウガラゴ" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>ショウガラゴ</h3>
@@ -1715,10 +1747,11 @@
                             <!-- チワワ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="チワワ" loading="lazy">
+                                    <img src="images/chihuahua.webP" alt="チワワ" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>チワワ</h3>
+                                    <p>ちくわのちっくん</p>
                                     <p>小さな体に大きな魅力を持つ犬種。愛らしい姿と甘えん坊な性格が人気です。</p>
                                 </div>
                             </div>
@@ -1726,7 +1759,7 @@
                             <!-- マイクロブタ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="マイクロブタ" loading="lazy">
+                                    <img src="images/pig.webP" alt="マイクロブタ" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>マイクロブタ</h3>
@@ -1849,7 +1882,7 @@
                     <!-- チンチラ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="チンチラ" loading="lazy">
+                            <img src="images/chinchilla.webp" alt="チンチラ" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>チンチラ</h3>
@@ -1915,10 +1948,11 @@
                     <!-- モルモット -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="モルモット" loading="lazy">
+                            <img src="images/omusubi.webP" alt="モルモット" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>モルモット</h3>
+                            <p>おむすびくん</p>
                             <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
                         </div>
                     </div>
@@ -1926,10 +1960,11 @@
                     <!-- ハリネズミ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ハリネズミ" loading="lazy">
+                            <img src="images/hario.webP" alt="ハリネズミ" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>ハリネズミ</h3>
+                            <p>はりおくん</p>
                             <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
                         </div>
                     </div>
@@ -1944,6 +1979,29 @@
                             <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
                         </div>
                     </div>
+
+                    <!-- アフリカヤマネ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/african-yamane.webP" alt="アフリカヤマネ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>アフリカヤマネ</h3>
+                            <p>小型で夜行性、大きな目と耳、長い尾を持ち、木の上で暮らす齧歯類です。</p>
+                        </div>
+                    </div>
+
+                    <!-- リチャードソンジリス -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/richard.webP" alt="リチャードソンジリス" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>リチャードソンジリス</h3>
+                            <p>りちゃこちゃん</p>
+                            <p>愛らしい丸い目と茶色の柔らかな毛並みで、触れ合うと心が和む小動物です。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1955,10 +2013,11 @@
                     <!-- フトアゴヒゲトカゲ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="フトアゴヒゲトカゲ" loading="lazy">
+                            <img src="images/zaurus.webP" alt="フトアゴヒゲトカゲ" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>フトアゴヒゲトカゲ</h3>
+                            <p>ざうるすくん</p>
                             <p>穏やかな性格で人気の爬虫類。ドラゴンのような見た目に触れる珍しい体験ができます。</p>
                         </div>
                     </div>
@@ -1966,7 +2025,7 @@
                     <!-- ショウガラゴ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ショウガラゴ" loading="lazy">
+                            <img src="images/garago.webP" alt="ショウガラゴ" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>ショウガラゴ</h3>
@@ -1988,10 +2047,11 @@
                     <!-- チワワ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="チワワ" loading="lazy">
+                            <img src="images/chihuahua.webP" alt="チワワ" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>チワワ</h3>
+                            <p>ちくわのちっくん</p>
                             <p>小さな体に大きな魅力を持つ犬種。愛らしい姿と甘えん坊な性格が人気です。</p>
                         </div>
                     </div>
@@ -1999,7 +2059,7 @@
                     <!-- マイクロブタ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="マイクロブタ" loading="lazy">
+                            <img src="images/pig.webP" alt="マイクロブタ" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>マイクロブタ</h3>
@@ -2351,7 +2411,7 @@
 
                     <!-- カレンダー画像を表示 -->
                     <div style="width: 100%; text-align: center; margin-bottom: 15px;">
-                        <img id="currentMonthImage" src="images/calendar_current.png" alt="今月のカレンダー" loading="lazy"
+                        <img id="currentMonthImage" src="images/calendar_current.webP" alt="今月のカレンダー" loading="lazy"
                             style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
                     </div>
                 </div>
@@ -2368,7 +2428,7 @@
 
                     <!-- 来月のカレンダー画像を表示 -->
                     <div style="width: 100%; text-align: center; margin-bottom: 15px;">
-                        <img id="nextMonthImage" src="images/calendar_next.png" alt="来月のカレンダー" loading="lazy"
+                        <img id="nextMonthImage" src="images/calendar_next.webP" alt="来月のカレンダー" loading="lazy"
                             style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
                     </div>
                 </div>
@@ -2435,7 +2495,7 @@
                     <!-- ロゴの比率を正確に保ち、文字の太さを元に戻す -->
                     <div style="display: flex; align-items: center; margin-bottom: 15px;">
                         <div style="width: 60px; height: 60px; flex-shrink: 0; margin-right: 15px;">
-                            <img src="images/luff-logo.png" alt="Luff s.a.family ロゴ" loading="lazy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; 
+                            <img src="images/luff-logo.webP" alt="Luff s.a.family ロゴ" loading="lazy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; 
                                     border: 2px solid rgba(255, 255, 255, 0.2); padding: 2px;">
                         </div>
                         <h2 style="color: white; font-size: 24px; margin: 0; font-weight: 600;">Luff s.a.family</h2>
@@ -2570,29 +2630,62 @@
             const currentMonthBtn = document.getElementById('currentMonthBtn');
             const currentMonthCalendar = document.getElementById('currentMonthCalendar');
             const nextMonthCalendar = document.getElementById('nextMonthCalendar');
+            const nextMonthImage = document.getElementById('nextMonthImage');
 
-            // 最初は両方のボタンを表示する（デフォルトで表示）
-            if (nextMonthBtn && currentMonthBtn) {
-                nextMonthBtn.style.display = 'inline-block';
-                currentMonthBtn.style.display = 'inline-block';
-
-                // Tab switching
-                currentMonthBtn.addEventListener('click', function () {
-                    if (currentMonthCalendar) currentMonthCalendar.style.display = 'block';
-                    if (nextMonthCalendar) nextMonthCalendar.style.display = 'none';
-
-                    currentMonthBtn.style.backgroundColor = 'var(--primary-dark)';
-                    nextMonthBtn.style.backgroundColor = 'var(--primary-light)';
-                });
-
-                nextMonthBtn.addEventListener('click', function () {
-                    if (currentMonthCalendar) currentMonthCalendar.style.display = 'none';
-                    if (nextMonthCalendar) nextMonthCalendar.style.display = 'block';
-
-                    currentMonthBtn.style.backgroundColor = 'var(--primary-light)';
-                    nextMonthBtn.style.backgroundColor = 'var(--primary-dark)';
+            // 来月の画像が存在するかチェック
+            function checkNextMonthImageExists() {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = function () {
+                        resolve(true); // 画像が存在する
+                    };
+                    img.onerror = function () {
+                        resolve(false); // 画像が存在しない
+                    };
+                    // キャッシュを回避するためにタイムスタンプを追加
+                    img.src = nextMonthImage.src + '?t=' + new Date().getTime();
                 });
             }
+
+            // 画像の存在を確認してからボタンを表示
+            checkNextMonthImageExists().then(imageExists => {
+                // 今月ボタンは常に表示
+                if (currentMonthBtn) {
+                    currentMonthBtn.style.display = 'inline-block';
+                }
+
+                // 来月ボタンは画像が存在する場合のみ表示
+                if (nextMonthBtn) {
+                    nextMonthBtn.style.display = imageExists ? 'inline-block' : 'none';
+                }
+
+                // 初期表示は常に今月カレンダー
+                if (currentMonthCalendar) currentMonthCalendar.style.display = 'block';
+                if (nextMonthCalendar) nextMonthCalendar.style.display = 'none';
+
+                // ボタンのイベントリスナーは画像が存在する場合のみ設定
+                if (imageExists && nextMonthBtn && currentMonthBtn) {
+                    // Tab switching
+                    currentMonthBtn.addEventListener('click', function () {
+                        if (currentMonthCalendar) currentMonthCalendar.style.display = 'block';
+                        if (nextMonthCalendar) nextMonthCalendar.style.display = 'none';
+
+                        currentMonthBtn.style.backgroundColor = 'var(--primary-dark)';
+                        nextMonthBtn.style.backgroundColor = 'var(--primary-light)';
+                    });
+
+                    nextMonthBtn.addEventListener('click', function () {
+                        if (currentMonthCalendar) currentMonthCalendar.style.display = 'none';
+                        if (nextMonthCalendar) nextMonthCalendar.style.display = 'block';
+
+                        currentMonthBtn.style.backgroundColor = 'var(--primary-light)';
+                        nextMonthBtn.style.backgroundColor = 'var(--primary-dark)';
+                    });
+                } else {
+                    // 来月画像がない場合は今月ボタンも非表示（必要に応じて）
+                    // if (currentMonthBtn) currentMonthBtn.style.display = 'none';
+                }
+            });
         });
 
         // 一番上までスクロールする関数
