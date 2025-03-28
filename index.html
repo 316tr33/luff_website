@@ -124,7 +124,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/store-interior.webP') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/store-interior.webp') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1379,7 +1379,7 @@
             <div class="header-content">
                 <a href="javascript:void(0);" onclick="scrollToTop()" class="logo-link">
                     <div class="logo">
-                        <img src="images/luff-logo.webP" alt="Luff s.a.family ロゴ" width="50" height="50"
+                        <img src="images/luff-logo.webp" alt="Luff s.a.family ロゴ" width="50" height="50"
                             style="min-width: 50px;">
                         <h1>Luff s.a.family</h1>
                     </div>
@@ -1406,7 +1406,7 @@
         <div class="hero-content">
             <a href="https://www.instagram.com/luff_s.a.family?igsh=dDkya2Z5czNxa2Jm&utm_source=qr" target="_blank"
                 class="hero-logo-link">
-                <img src="images/luff-logo.webP" alt="Luff s.a.family ロゴ" class="hero-logo">
+                <img src="images/luff-logo.webp" alt="Luff s.a.family ロゴ" class="hero-logo">
             </a>
             <h2>動物たちとの素敵な出会い</h2>
             <p>Luff s.a.familyでは、様々な小動物たちとのゼロ距離の触れ合いを通して、癒しと感動のひとときをお届けします。</p>
@@ -1431,7 +1431,7 @@
                     <p>当店では動物たちの健康と幸福を第一に考え、ストレスのない環境づくりを心がけています。皆様のご来店を心よりお待ちしております。</p>
                 </div>
                 <div class="about-image">
-                    <img src="images/meerkat-interior.webP" alt="Luff s.a.family ミーアキャット">
+                    <img src="images/meerkat-interior.webp" alt="Luff s.a.family ミーアキャット">
                 </div>
             </div>
         </div>
@@ -1448,14 +1448,172 @@
             <!-- 動物カテゴリーナビゲーション -->
             <div class="desktop-animal-nav"
                 style="display: flex; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; gap: 10px;">
-                <a href="#birds" class="btn" style="background-color: var(--primary-light);">鳥類</a>
-                <a href="#rabbits" class="btn" style="background-color: var(--primary-light);">うさぎ・チンチラ</a>
                 <a href="#small-animals" class="btn" style="background-color: var(--primary-light);">小動物</a>
+                <a href="#rabbits" class="btn" style="background-color: var(--primary-light);">うさぎ・チンチラ</a>
+                <a href="#birds" class="btn" style="background-color: var(--primary-light);">鳥類</a>
                 <a href="#special-animals" class="btn" style="background-color: var(--primary-light);">珍しい動物</a>
             </div>
 
             <!-- モバイル用アコーディオン -->
             <div class="animal-category-mobile">
+                <!-- 小動物 -->
+                <div class="animal-category">
+                    <div class="animal-category-header" data-target="small-animals-content">
+                        <h3>小動物</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div id="small-animals-content" class="animal-category-content">
+                        <div class="animals-grid">
+                            <!-- ハムスター -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/ham.webp" alt="ハムスター" loading="lazy"
+                                    style="transform: scale(1.5);">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ハムスター</h3>
+                                    <p>しらたまくん</p>
+                                    <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
+                                </div>
+                            </div>
+
+                            <!-- テディモルモット -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/omusubi.webp" alt="テディモルモット" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>テディモルモット</h3>
+                                    <p>おむすびくん</p>
+                                    <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
+                                </div>
+                            </div>
+
+                            <!-- ハリネズミ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/hario.webp" alt="ハリネズミ" loading="lazy"
+                                    style="object-position: center 35%;">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ハリネズミ</h3>
+                                    <p>はりおくん</p>
+                                    <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
+                                </div>
+                            </div>
+
+                            <!-- モモンガ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/momonga.webp" alt="モモンガ" loading="lazy"
+                                    style="object-position: center 42%;">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>モモンガ</h3>
+                                    <p>ぷうちゃん</p>
+                                    <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
+                                </div>
+                            </div>
+
+                            <!-- アフリカヤマネ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/african-yamane.webp" alt="アフリカヤマネ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>アフリカヤマネ</h3>
+                                    <p>小型で夜行性、大きな目と耳、長い尾を持ち、木の上で暮らす齧歯類です。</p>
+                                </div>
+                            </div>
+
+                            <!-- リチャードソンジリス -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/richard.webp" alt="リチャードソンジリス" loading="lazy"
+                                    style="transform: scale(1.1); object-position: 90% center;">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>リチャードソンジリス</h3>
+                                    <p>りちゃこちゃん</p>
+                                    <p>愛らしい丸い目と茶色の柔らかな毛並みで、触れ合うと心が和む小動物です。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- うさぎ・チンチラ -->
+                <div class="animal-category">
+                    <div class="animal-category-header" data-target="rabbits-content">
+                        <h3>うさぎ・チンチラ</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div id="rabbits-content" class="animal-category-content">
+                        <div class="animals-grid">
+                            <!-- チンチラ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/chinchilla.webp" alt="チンチラ" loading="lazy"
+                                    style="transform: scale(1.15);">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>チンチラ</h3>
+                                    <p>ねねちゃん</p>
+                                    <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
+                                </div>
+                            </div>
+
+                            <!-- ネザーランドドワーフ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/jumbo.webp" alt="ネザーランドドワーフ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ネザーランドドワーフ</h3>
+                                    <p>じゃんぼくん</p>
+                                    <p>短い耳と丸い頭を持つ超小型のウサギで、愛らしい見た目が特徴です。</p>
+                                </div>
+                            </div>
+
+                            <!-- アメリカンファジーロップ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>アメリカンファジーロップ</h3>
+                                    <p>もふこちゃん</p>
+                                    <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
+                                </div>
+                            </div>
+
+                            <!-- ホーランドロップ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ホーランドロップ</h3>
+                                    <p>ぼーくん</p>
+                                    <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
+                                </div>
+                            </div>
+
+                            <!-- ホーランドロップ -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ホーランドロップ</h3>
+                                    <p>さっちゃん</p>
+                                    <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- 鳥類 -->
                 <div class="animal-category">
                     <div class="animal-category-header" data-target="birds-content">
@@ -1515,7 +1673,7 @@
                             <!-- ボタンインコ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="ボタンインコ" loading="lazy">
+                                    <img src="images/pen.webp" alt="ボタンインコ" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>ボタンインコ</h3>
@@ -1539,7 +1697,7 @@
                             <!-- ギンバト -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="ギンバト" loading="lazy">
+                                    <img src="images/taihaku.webp" alt="ギンバト" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>ギンバト</h3>
@@ -1563,145 +1721,6 @@
                     </div>
                 </div>
 
-                <!-- うさぎ・チンチラ -->
-                <div class="animal-category">
-                    <div class="animal-category-header" data-target="rabbits-content">
-                        <h3>うさぎ・チンチラ</h3>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div id="rabbits-content" class="animal-category-content">
-                        <div class="animals-grid">
-                            <!-- チンチラ -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="images/chinchilla.webP" alt="チンチラ" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>チンチラ</h3>
-                                    <p>ねねちゃん</p>
-                                    <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
-                                </div>
-                            </div>
-
-                            <!-- アメリカンファジーロップ -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>アメリカンファジーロップ</h3>
-                                    <p>もふこちゃん</p>
-                                    <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
-                                </div>
-                            </div>
-
-                            <!-- ホーランドロップ -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>ホーランドロップ</h3>
-                                    <p>ぼーくん</p>
-                                    <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
-                                </div>
-                            </div>
-
-                            <!-- ホーランドロップ -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>ホーランドロップ</h3>
-                                    <p>さっちゃん</p>
-                                    <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 小動物 -->
-                <div class="animal-category">
-                    <div class="animal-category-header" data-target="small-animals-content">
-                        <h3>小動物</h3>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div id="small-animals-content" class="animal-category-content">
-                        <div class="animals-grid">
-                            <!-- ハムスター -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="ハムスター" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>ハムスター</h3>
-                                    <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
-                                </div>
-                            </div>
-
-                            <!-- モルモット -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="images/omusubi.webP" alt="モルモット" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>モルモット</h3>
-                                    <p>おむすびくん</p>
-                                    <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
-                                </div>
-                            </div>
-
-                            <!-- ハリネズミ -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="images/hario.webP" alt="ハリネズミ" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>ハリネズミ</h3>
-                                    <p>はりおくん</p>
-                                    <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
-                                </div>
-                            </div>
-
-                            <!-- モモンガ -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="モモンガ" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>モモンガ</h3>
-                                    <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
-                                </div>
-                            </div>
-
-                            <!-- アフリカヤマネ -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="images/african-yamane.webP" alt="アフリカヤマネ" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>アフリカヤマネ</h3>
-                                    <p>小型で夜行性、大きな目と耳、長い尾を持ち、木の上で暮らす齧歯類です。</p>
-                                </div>
-                            </div>
-
-                            <!-- リチャードソンジリス -->
-                            <div class="animal-card">
-                                <div class="animal-img">
-                                    <img src="images/richard.webP" alt="リチャードソンジリス" loading="lazy">
-                                </div>
-                                <div class="animal-info">
-                                    <h3>リチャードソンジリス</h3>
-                                    <p>りちゃこちゃん</p>
-                                    <p>愛らしい丸い目と茶色の柔らかな毛並みで、触れ合うと心が和む小動物です。</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- 珍しい動物 -->
                 <div class="animal-category">
                     <div class="animal-category-header" data-target="special-animals-content">
@@ -1713,7 +1732,7 @@
                             <!-- フトアゴヒゲトカゲ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="images/zaurus.webP" alt="フトアゴヒゲトカゲ" loading="lazy">
+                                    <img src="images/zaurus.webp" alt="フトアゴヒゲトカゲ" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>フトアゴヒゲトカゲ</h3>
@@ -1725,29 +1744,57 @@
                             <!-- ショウガラゴ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="images/garago.webP" alt="ショウガラゴ" loading="lazy">
+                                    <img src="images/garago.webp" alt="ショウガラゴ" loading="lazy"
+                                    style="object-position: center 38%;">
                                 </div>
                                 <div class="animal-info">
                                     <h3>ショウガラゴ</h3>
+                                    <p>あいちゃん</p>
                                     <p>大きな目が特徴的な夜行性の霊長類。珍しい動物との貴重なふれあいが体験できます。</p>
+                                </div>
+                            </div>
+
+                            <!-- コモンマーモセット -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/common.webp" alt="コモンマーモセット" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>コモンマーモセット</h3>
+                                    <p>まっちょくん</p>
+                                    <p>白い耳飾りと縞模様の尾を持つ小型サル、好奇心旺盛な表情に心奪われます。</p>
                                 </div>
                             </div>
 
                             <!-- ミーアキャット -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="/api/placeholder/400/300" alt="ミーアキャット" loading="lazy">
+                                    <img src="images/ari.webp" alt="ミーアキャット" loading="lazy"
+                                    style="transform: scale(1.3);">
                                 </div>
                                 <div class="animal-info">
                                     <h3>ミーアキャット</h3>
-                                    <p>好奇心旺盛で愛らしい姿が人気のミーアキャット。その独特の仕草に癒されます。</p>
+                                    <p>ありちゃん</p>
+                                    <p>堂々とした立ち姿が特徴的なミーアキャット。その独特の仕草に癒されます。</p>
+                                </div>
+                            </div>
+
+                            <!-- ミーアキャット -->
+                            <div class="animal-card">
+                                <div class="animal-img">
+                                    <img src="images/timon.webp" alt="ミーアキャット" loading="lazy">
+                                </div>
+                                <div class="animal-info">
+                                    <h3>ミーアキャット</h3>
+                                    <p>てぃもんくん</p>
+                                    <p>好奇心旺盛な子ミーアキャット、ぎこちない立ち姿と遊び心いっぱいの仕草が魅力です。</p>
                                 </div>
                             </div>
 
                             <!-- チワワ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="images/chihuahua.webP" alt="チワワ" loading="lazy">
+                                    <img src="images/chihuahua.webp" alt="チワワ" loading="lazy">
                                 </div>
                                 <div class="animal-info">
                                     <h3>チワワ</h3>
@@ -1759,13 +1806,165 @@
                             <!-- マイクロブタ -->
                             <div class="animal-card">
                                 <div class="animal-img">
-                                    <img src="images/pig.webP" alt="マイクロブタ" loading="lazy">
+                                    <img src="images/pig.webp" alt="マイクロブタ" loading="lazy"
+                                    style="object-position: center 90%;">
                                 </div>
                                 <div class="animal-info">
                                     <h3>マイクロブタ</h3>
+                                    <p>とんちゃん</p>
                                     <p>普通の豚よりもコンパクトなサイズで親しみやすいマイクロブタ。賢くてじゃれつくのが大好きです。</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 小動物（デスクトップ） -->
+            <div id="small-animals" class="desktop-animal-sections" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">小動物
+                </h3>
+                <div class="animals-grid">
+                    <!-- ハムスター -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/ham.webp" alt="ハムスター" loading="lazy"
+                            style="transform: scale(1.3);">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ハムスター</h3>
+                            <p>しらたまくん</p>
+                            <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
+                        </div>
+                    </div>
+
+                    <!-- テディモルモット -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/omusubi.webp" alt="テディモルモット" loading="lazy"
+                            style="object-position: center 38%;">
+                        </div>
+                        <div class="animal-info">
+                            <h3>テディモルモット</h3>
+                            <p>おむすびくん</p>
+                            <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ハリネズミ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/hario.webp" alt="ハリネズミ" loading="lazy"
+                            style="object-position: center 38%;">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ハリネズミ</h3>
+                            <p>はりおくん</p>
+                            <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
+                        </div>
+                    </div>
+
+                    <!-- モモンガ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/momonga.webp" alt="モモンガ" loading="lazy"
+                            style="object-position: center 40%;">
+                        </div>
+                        <div class="animal-info">
+                            <h3>モモンガ</h3>
+                            <p>ぷうちゃん</p>
+                            <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
+                        </div>
+                    </div>
+
+                    <!-- アフリカヤマネ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/african-yamane.webp" alt="アフリカヤマネ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>アフリカヤマネ</h3>
+                            <p>小型で夜行性、大きな目と耳、長い尾を持ち、木の上で暮らす齧歯類です。</p>
+                        </div>
+                    </div>
+
+                    <!-- リチャードソンジリス -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/richard.webp" alt="リチャードソンジリス" loading="lazy"
+                            style="object-position: center 45%;">
+                        </div>
+                        <div class="animal-info">
+                            <h3>リチャードソンジリス</h3>
+                            <p>りちゃこちゃん</p>
+                            <p>愛らしい丸い目と茶色の柔らかな毛並みで、触れ合うと心が和む小動物です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- うさぎ・チンチラ（デスクトップ） -->
+            <div id="rabbits" class="desktop-animal-sections" style="margin-bottom: 50px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">
+                    うさぎ・チンチラ</h3>
+                <div class="animals-grid">
+                    <!-- チンチラ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/chinchilla.webp" alt="チンチラ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>チンチラ</h3>
+                            <p>ねねちゃん</p>
+                            <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
+                        </div>
+                    </div>
+
+                    <!-- ネザーランドドワーフ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/jumbo.webp" alt="ネザーランドドワーフ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ネザーランドドワーフ</h3>
+                            <p>じゃんぼくん</p>
+                            <p>短い耳と丸い頭を持つ超小型のウサギで、愛らしい見た目が特徴です。</p>
+                        </div>
+                    </div>
+
+                    <!-- アメリカンファジーロップ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>アメリカンファジーロップ</h3>
+                            <p>もふこちゃん</p>
+                            <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
+                        </div>
+                    </div>
+
+                    <!-- ホーランドロップ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ホーランドロップ</h3>
+                            <p>ぼーくん</p>
+                            <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
+                        </div>
+                    </div>
+
+                    <!-- ホーランドロップ -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ホーランドロップ</h3>
+                            <p>さっちゃん</p>
+                            <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
                         </div>
                     </div>
                 </div>
@@ -1827,7 +2026,8 @@
                     <!-- ボタンインコ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ボタンインコ" loading="lazy">
+                            <img src="images/pen.webp" alt="ボタンインコ" loading="lazy"
+                            style="transform: scale(1); object-position: center 45%;">
                         </div>
                         <div class="animal-info">
                             <h3>ボタンインコ</h3>
@@ -1851,7 +2051,8 @@
                     <!-- ギンバト -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ギンバト" loading="lazy">
+                            <img src="images/taihaku.webp" alt="ギンバト" loading="lazy"
+                            style="transform: scale(1); object-position: center 43%;">
                         </div>
                         <div class="animal-info">
                             <h3>ギンバト</h3>
@@ -1874,137 +2075,6 @@
                 </div>
             </div>
 
-            <!-- うさぎ・チンチラ（デスクトップ） -->
-            <div id="rabbits" class="desktop-animal-sections" style="margin-bottom: 50px;">
-                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">
-                    うさぎ・チンチラ</h3>
-                <div class="animals-grid">
-                    <!-- チンチラ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="images/chinchilla.webp" alt="チンチラ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>チンチラ</h3>
-                            <p>ねねちゃん</p>
-                            <p>世界一柔らかい毛皮を持つと言われるチンチラ。その触り心地は一度体験する価値があります。</p>
-                        </div>
-                    </div>
-
-                    <!-- アメリカンファジーロップ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="アメリカンファジーロップ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>アメリカンファジーロップ</h3>
-                            <p>もふこちゃん</p>
-                            <p>もふもふの毛並みが魅力のアメリカンファジーロップ。垂れ耳がとても愛らしいうさぎです。</p>
-                        </div>
-                    </div>
-
-                    <!-- ホーランドロップ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>ホーランドロップ</h3>
-                            <p>ぼーくん</p>
-                            <p>大きな垂れ耳と丸い体型が特徴のホーランドロップ。穏やかで優しい性格の男の子です。</p>
-                        </div>
-                    </div>
-
-                    <!-- ホーランドロップ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ホーランドロップ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>ホーランドロップ</h3>
-                            <p>さっちゃん</p>
-                            <p>愛らしい顔立ちと人懐っこい性格が魅力のホーランドロップの女の子。抱っこされるのが大好きです。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 小動物（デスクトップ） -->
-            <div id="small-animals" class="desktop-animal-sections" style="margin-bottom: 50px;">
-                <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">小動物
-                </h3>
-                <div class="animals-grid">
-                    <!-- ハムスター -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ハムスター" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>ハムスター</h3>
-                            <p>小さな体に詰まった愛らしさ。手のひらに乗せて、その小さな命の鼓動を感じてみてください。</p>
-                        </div>
-                    </div>
-
-                    <!-- モルモット -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="images/omusubi.webP" alt="モルモット" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>モルモット</h3>
-                            <p>おむすびくん</p>
-                            <p>おしゃべりな鳴き声が魅力的なモルモット。人懐っこい性格で触れ合いを楽しめます。</p>
-                        </div>
-                    </div>
-
-                    <!-- ハリネズミ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="images/hario.webP" alt="ハリネズミ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>ハリネズミ</h3>
-                            <p>はりおくん</p>
-                            <p>ツンツンとした見た目とは裏腹に、お腹はふわふわ。独特の魅力を持つハリネズミたち。</p>
-                        </div>
-                    </div>
-
-                    <!-- モモンガ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="モモンガ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>モモンガ</h3>
-                            <p>空を滑空する姿が人気のモモンガ。大きな瞳と小さな体に癒されます。</p>
-                        </div>
-                    </div>
-
-                    <!-- アフリカヤマネ -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="images/african-yamane.webP" alt="アフリカヤマネ" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>アフリカヤマネ</h3>
-                            <p>小型で夜行性、大きな目と耳、長い尾を持ち、木の上で暮らす齧歯類です。</p>
-                        </div>
-                    </div>
-
-                    <!-- リチャードソンジリス -->
-                    <div class="animal-card">
-                        <div class="animal-img">
-                            <img src="images/richard.webP" alt="リチャードソンジリス" loading="lazy">
-                        </div>
-                        <div class="animal-info">
-                            <h3>リチャードソンジリス</h3>
-                            <p>りちゃこちゃん</p>
-                            <p>愛らしい丸い目と茶色の柔らかな毛並みで、触れ合うと心が和む小動物です。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- 珍しい動物（デスクトップ） -->
             <div id="special-animals" class="desktop-animal-sections" style="margin-bottom: 50px;">
                 <h3 style="color: var(--primary-dark); margin-bottom: 20px; text-align: center; font-size: 24px;">珍しい動物
@@ -2013,7 +2083,7 @@
                     <!-- フトアゴヒゲトカゲ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="images/zaurus.webP" alt="フトアゴヒゲトカゲ" loading="lazy">
+                            <img src="images/zaurus.webp" alt="フトアゴヒゲトカゲ" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>フトアゴヒゲトカゲ</h3>
@@ -2025,29 +2095,57 @@
                     <!-- ショウガラゴ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="images/garago.webP" alt="ショウガラゴ" loading="lazy">
+                            <img src="images/garago.webp" alt="ショウガラゴ" loading="lazy"
+                            style="transform: scale(0.9); object-position: center 37%;">
                         </div>
                         <div class="animal-info">
                             <h3>ショウガラゴ</h3>
+                            <p>あいちゃん</p>
                             <p>大きな目が特徴的な夜行性の霊長類。珍しい動物との貴重なふれあいが体験できます。</p>
+                        </div>
+                    </div>
+
+                    <!-- コモンマーモセット -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/common.webp" alt="コモンマーモセット" loading="lazy">
+                        </div>
+                        <div class="animal-info">
+                            <h3>コモンマーモセット</h3>
+                            <p>まっちょくん</p>
+                            <p>白い耳飾りと縞模様の尾を持つ小型サル、好奇心旺盛な表情に心奪われます。</p>
                         </div>
                     </div>
 
                     <!-- ミーアキャット -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="/api/placeholder/400/300" alt="ミーアキャット" loading="lazy">
+                            <img src="images/ari.webp" alt="ミーアキャット" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>ミーアキャット</h3>
-                            <p>好奇心旺盛で愛らしい姿が人気のミーアキャット。その独特の仕草に癒されます。</p>
+                            <p>ありちゃん</p>
+                            <p>堂々とした立ち姿が特徴的なミーアキャット。その独特の仕草に癒されます。</p>
+                        </div>
+                    </div>
+
+                    <!-- ミーアキャット -->
+                    <div class="animal-card">
+                        <div class="animal-img">
+                            <img src="images/timon.webp" alt="ミーアキャット" loading="lazy"
+                            style="transform: scale(0.95); object-position: center 48%;">
+                        </div>
+                        <div class="animal-info">
+                            <h3>ミーアキャット</h3>
+                            <p>てぃもんくん</p>
+                            <p>好奇心旺盛な子ミーアキャット、ぎこちない立ち姿と遊び心いっぱいの仕草が魅力です。</p>
                         </div>
                     </div>
 
                     <!-- チワワ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="images/chihuahua.webP" alt="チワワ" loading="lazy">
+                            <img src="images/chihuahua.webp" alt="チワワ" loading="lazy">
                         </div>
                         <div class="animal-info">
                             <h3>チワワ</h3>
@@ -2059,10 +2157,12 @@
                     <!-- マイクロブタ -->
                     <div class="animal-card">
                         <div class="animal-img">
-                            <img src="images/pig.webP" alt="マイクロブタ" loading="lazy">
+                            <img src="images/pig.webp" alt="マイクロブタ" loading="lazy"
+                            style="object-position: center 80%;">
                         </div>
                         <div class="animal-info">
                             <h3>マイクロブタ</h3>
+                            <p>とんちゃん</p>
                             <p>普通の豚よりもコンパクトなサイズで親しみやすいマイクロブタ。賢くてじゃれつくのが大好きです。</p>
                         </div>
                     </div>
@@ -2411,7 +2511,7 @@
 
                     <!-- カレンダー画像を表示 -->
                     <div style="width: 100%; text-align: center; margin-bottom: 15px;">
-                        <img id="currentMonthImage" src="images/calendar_current.webP" alt="今月のカレンダー" loading="lazy"
+                        <img id="currentMonthImage" src="images/calendar_current.webp" alt="今月のカレンダー" loading="lazy"
                             style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
                     </div>
                 </div>
@@ -2428,7 +2528,7 @@
 
                     <!-- 来月のカレンダー画像を表示 -->
                     <div style="width: 100%; text-align: center; margin-bottom: 15px;">
-                        <img id="nextMonthImage" src="images/calendar_next.webP" alt="来月のカレンダー" loading="lazy"
+                        <img id="nextMonthImage" src="images/calendar_next.webp" alt="来月のカレンダー" loading="lazy"
                             style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
                     </div>
                 </div>
@@ -2495,7 +2595,7 @@
                     <!-- ロゴの比率を正確に保ち、文字の太さを元に戻す -->
                     <div style="display: flex; align-items: center; margin-bottom: 15px;">
                         <div style="width: 60px; height: 60px; flex-shrink: 0; margin-right: 15px;">
-                            <img src="images/luff-logo.webP" alt="Luff s.a.family ロゴ" loading="lazy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; 
+                            <img src="images/luff-logo.webp" alt="Luff s.a.family ロゴ" loading="lazy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; 
                                     border: 2px solid rgba(255, 255, 255, 0.2); padding: 2px;">
                         </div>
                         <h2 style="color: white; font-size: 24px; margin: 0; font-weight: 600;">Luff s.a.family</h2>
